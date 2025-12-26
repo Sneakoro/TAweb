@@ -20,6 +20,9 @@
 
   <style>
     :root{
+        --btn-secondary-text: var(--text);
+  --btn-secondary-bg: rgba(0,0,0,.02);
+
       /* Concentrix palette */
       --cx-blue:#003D5B;
       --cx-seafoam:#25E2CC;
@@ -54,7 +57,10 @@
     }
 
     html[data-theme="dark"]{
-  /* Dark “đậm” */
+    --btn-secondary-text: rgba(255,255,255,.92);
+  --btn-secondary-bg: rgba(255,255,255,.05);
+
+      /* Dark “đậm” */
   --bg: #040a0f;            /* gần black */
   --panel: #07131a;
   --card: #0a1820;
@@ -127,12 +133,17 @@
 
     .nav{display:flex; gap:8px; flex-wrap:wrap; justify-content:flex-end}
     .chip{
-      font-size:12px; color:var(--muted);
-      border:1px solid var(--line);
-      padding:8px 10px; border-radius:999px;
-      background: rgba(255,255,255,.04);
-      display:inline-flex; align-items:center; gap:6px;
-    }
+  font-size:12px;
+  color: var(--btn-secondary-text);
+  border:1px solid rgba(255,255,255,.14);
+  padding:8px 10px; border-radius:999px;
+  background: var(--btn-secondary-bg);
+  display:inline-flex; align-items:center; gap:6px;
+}
+html[data-theme="light"] .chip{
+  border-color: var(--line);
+}
+
     button.chip{
       cursor:pointer;
       font-family:inherit;
@@ -175,11 +186,28 @@
     }
     html[data-theme="dark"] .btn{ color:#001820; }
     .btn.secondary{
-      background: rgba(255,255,255,.04);
-      color: var(--text);
-      border: 1px solid var(--line);
-      box-shadow:none;
-    }
+  background: var(--btn-secondary-bg);
+  color: var(--btn-secondary-text);
+  border: 1px solid rgba(255,255,255,.14);
+  box-shadow:none;
+}
+    .btn.secondary:hover,
+.chip:hover,
+.copybtn:hover{
+  filter: brightness(1.08);
+}
+
+.btn.secondary:focus,
+.chip:focus,
+.copybtn:focus{
+  outline: 2px solid rgba(37,226,204,.35);
+  outline-offset: 2px;
+}
+
+html[data-theme="light"] .btn.secondary{
+  border-color: var(--line);
+}
+
 
     .bullets{display:grid; gap:8px; margin-top:14px}
     .bullet{
@@ -284,15 +312,19 @@ html[data-theme="dark"] .qa details{
       padding-top:14px;
     }
     .copybtn{
-      border:1px solid var(--line);
-      background: rgba(255,255,255,.04);
-      color: var(--text);
-      padding:8px 10px;
-      border-radius: 12px;
-      cursor:pointer;
-      font-weight:800;
-      font-size:12px;
-    }
+  border:1px solid rgba(255,255,255,.14);
+  background: var(--btn-secondary-bg);
+  color: var(--btn-secondary-text);
+  padding:8px 10px;
+  border-radius: 12px;
+  cursor:pointer;
+  font-weight:900;
+  font-size:12px;
+}
+html[data-theme="light"] .copybtn{
+  border-color: var(--line);
+}
+
 
     ..sticky-cta{
   position:fixed; left:0; right:0; bottom:0; z-index:60;
@@ -1216,3 +1248,4 @@ Nhờ anh/chị hỗ trợ sắp lịch screening/PV giúp em ạ.`;
 </script>
 </body>
 </html>
+
