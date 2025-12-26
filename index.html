@@ -390,90 +390,120 @@
   const FORM_URL = "https://forms.gle/AG3NxdTm3QW7MddE9";
 
   const JOBS = [
-    {
-      id: "mxh",
-      title: "CSKH Ứng dụng Mạng xã hội",
-      locationGroup: "Q12",
-      address: "Quận 12 – Tòa nhà Tech Valley (Onsite)",
-      english: "basic-writing",
-      schedule: "fixed-window",
-      badges: ["Quận 12", "Tiếng Anh cơ bản (viết)", "Ca trong khung"],
-      summary: "CSKH qua chat/email/voice theo guideline. Phù hợp cả bạn muốn bắt đầu với CS.",
-      details: [
-        "Ca trong khung: 9–18 | 11–20 | 12–21 | 14–23 (off 2 ngày/tuần).",
-        "Yêu cầu: giao tiếp tốt, dùng máy tính ổn; tiếng Anh cơ bản (viết) để trả lời tin nhắn/email đơn giản.",
-        "Chỉ phù hợp nếu: onsite Quận 12 + làm được ca trong khung giờ."
-      ],
-      warn: ""
-    },
-    {
-      id: "travel",
-      title: "Customer Service (English) – Travel App",
-      locationGroup: "Q12",
-      address: "Quận 12 – Tòa nhà QTSC1 (Onsite)",
-      english: "yes",
-      schedule: "24-7",
-      badges: ["English", "24/7", "Tòa nhà QTSC1"],
-      summary: "Hỗ trợ khách quốc tế, làm việc 100% tiếng Anh.",
-      details: [
-        "Lịch làm: xoay ca 24/7 (có ca tối/đêm, cuối tuần, ngày lễ).",
-        "Quan trọng: ca do Team Lead sắp xếp, không chọn ca.",
-        "Yêu cầu: tiếng Anh giao tiếp tốt; có kinh nghiệm CS là lợi thế.",
-        "Chỉ phù hợp nếu: xác nhận làm được 24/7 theo sắp xếp TL."
-      ],
-      warn: "24/7 bắt buộc, không chọn ca."
-    },
-    {
-  id: "flight",
-  title: "Customer Service (English) – Flight Ticket App",
-  locationGroup: "Q12",
-  address: "Quận 12 – Tòa nhà QTSC1 (Onsite)",
-  english: "yes",
-  schedule: "24-7",
-  badges: ["English", "24/7", "Tòa nhà QTSC1"],
-  summary: "Dự án vé máy bay, quy trình rõ, môi trường quốc tế.",
-  details: [
-    "Lịch làm: xoay ca 24/7 (có ca tối/đêm, cuối tuần, ngày lễ).",
-    "Quan trọng: ca do Team Lead sắp xếp, không chọn ca.",
-    "Yêu cầu: tiếng Anh giao tiếp tốt; có kinh nghiệm CS là lợi thế.",
-    "Chỉ phù hợp nếu: xác nhận làm được 24/7 theo sắp xếp TL."
-  ],
-  warn: "24/7 bắt buộc, không chọn ca."
-},
-    {
-      id: "milk",
-      title: "Tư vấn chốt đơn – Sản phẩm sữa",
-      locationGroup: "Q12",
-      address: "Quận 12 – Tòa nhà QTSC9 (Onsite)",
-      english: "no",
-      schedule: "office",
-      badges: ["Giờ hành chính", "KPI", "Tòa nhà QTSC9"],
-      summary: "Tư vấn theo quy trình, chốt đơn theo KPI.",
-      details: [
-        "Lịch làm: T2–T7, 8:00–18:30.",
-        "Yêu cầu: thoải mái KPI; giao tiếp tốt; sales/telesales/CS là lợi thế.",
-        "Chỉ phù hợp nếu: làm được T2–T7 giờ hành chính + ok KPI."
-      ],
-      warn: ""
-    },
-    {
-      id: "fee",
-      title: "CSKH Sau vay / Nhân viên nhắc & Gia hạn phí",
-      locationGroup: "Q11",
-      address: "Quận 11 – Tòa nhà Flemington (Onsite). Dự kiến chuyển về Tòa nhà OneHub – Quận 9.",
-      english: "no",
-      schedule: "office",
-      badges: ["Outbound", "Fresher OK", "Quận 11", "Dự kiến Quận 9"],
-      summary: "Gọi outbound theo data công ty cấp để nhắc phí/gia hạn; có training.",
-      details: [
-        "Địa điểm hiện tại: Quận 11 – Tòa nhà Flemington. (Dự kiến sắp tới chuyển về Tòa nhà OneHub – Quận 9).",
-        "Lịch làm: 08:00–18:15, off Chủ Nhật.",
-        "Yêu cầu: sẵn sàng gọi outbound (nhắc phí/gia hạn); training provided; fresher ok.",
-        "Chỉ phù hợp nếu: ok outbound + đi làm Quận 11 (và/hoặc Quận 9 khi chuyển)."
-      ],
-      warn: ""
-    },
-  ];
+  {
+    id: "mxh",
+    title: "CSKH Ứng dụng Mạng xã hội",
+    locationGroup: "Q12",
+    address: "Quận 12 – Tòa nhà Tech Valley, Công viên Phần mềm Quang Trung (Onsite)",
+    english: "basic-writing",
+    schedule: "fixed-window",
+    badges: ["Quận 12", "7.4–8.0tr", "Tiếng Anh cơ bản", "Off 2 ngày/tuần", "100% lương thử việc"],
+    summary: "CSKH app mạng xã hội qua call/email/chat, làm việc văn phòng tại Quận 12.",
+    details: [
+      "📌 Công việc: nhận cuộc gọi/email/chat từ khách hàng liên quan đến sản phẩm.",
+      "📌 Công việc: cung cấp kiến thức sản phẩm và hỗ trợ xử lý yêu cầu của khách.",
+      "💰 Thu nhập TB: 7.400.000 – 8.000.000 VNĐ/tháng.",
+      "🎁 Phúc lợi: 100% lương trong 2 tháng thử việc, 14 ngày phép/năm, lương tháng 13.",
+      "🎁 Phúc lợi: BHXH, BHYT, bảo hiểm tai nạn 24/7 đầy đủ.",
+      "🕒 Thời gian: Full-time, xoay ca, làm 5 ngày/tuần – off 2 ngày bất kỳ.",
+      "🎯 Yêu cầu: Tốt nghiệp THPT; Tiếng Anh cơ bản; đánh máy nhanh và chính xác.",
+      "Chỉ phù hợp nếu: làm onsite Quận 12 + làm được ca xoay theo sắp xếp."
+    ],
+    warn: ""
+  },
+
+  {
+    id: "travel",
+    title: "Customer Service (English) – Travel App",
+    locationGroup: "Q12",
+    address: "Quận 12 – Tòa nhà QTSC1, Công viên Phần mềm Quang Trung (Onsite)",
+    english: "yes",
+    schedule: "24-7",
+    badges: ["English", "24/7", "10–12tr", "Off 2 ngày/tuần", "100% lương thử việc"],
+    summary: "Hỗ trợ khách dùng app du lịch qua điện thoại/chat/email, làm việc 100% tiếng Anh.",
+    details: [
+      "📌 Công việc: hỗ trợ khách sử dụng app du lịch qua điện thoại, chat, email, tin nhắn.",
+      "📌 Công việc: tư vấn chuyến đi/chỗ ở, xử lý đặt – đổi – hủy và thắc mắc cơ bản.",
+      "📌 Công việc: thao tác hệ thống, tuân thủ quy trình, đảm bảo trải nghiệm khách hàng.",
+      "💰 Thu nhập TB: 10.000.000 – 12.000.000 VNĐ/tháng.",
+      "🎁 Phúc lợi: 100% lương trong 2 tháng thử việc; BHXH, BHYT, BH tai nạn 24/7.",
+      "🎁 Phúc lợi: 14 ngày phép/năm, lương tháng 13, khám sức khỏe định kỳ.",
+      "🕒 Thời gian: làm 5 ngày/tuần, nghỉ 2 ngày bất kỳ; xoay ca 24/7.",
+      "🎯 Yêu cầu: Tốt nghiệp THPT; Tiếng Anh thành thạo 4 kỹ năng; làm việc 100% bằng tiếng Anh.",
+      "Chỉ phù hợp nếu: xác nhận làm được 24/7 theo sắp xếp TL."
+    ],
+    warn: "24/7 bắt buộc, ca do Team Lead sắp xếp, không chọn ca."
+  },
+
+  {
+    id: "flight",
+    title: "Customer Service (English) – Flight Ticket App",
+    locationGroup: "Q12",
+    address: "Quận 12 – Tòa nhà QTSC1, Công viên Phần mềm Quang Trung (Onsite)",
+    english: "yes",
+    schedule: "24-7",
+    badges: ["English", "24/7", "11–13tr", "100% lương thử việc", "BH sau thử việc"],
+    summary: "CSKH app vé máy bay: hỗ trợ khách book vé và xử lý yêu cầu cơ bản (call/chat/email), dùng tiếng Anh mỗi ngày.",
+    details: [
+      "📌 Công việc: nhận call/chat/email, hỗ trợ khách book vé máy bay, xử lý yêu cầu cơ bản.",
+      "📌 Điểm mạnh: phù hợp làm “cửa vào ngành” BPO, học quy trình CSKH & làm với khách quốc tế.",
+      "💰 Thu nhập TB: 11.000.000 – 13.000.000 VNĐ/tháng.",
+      "💯 Thử việc: 2 tháng thử việc nhận 100% lương.",
+      "🎁 Phúc lợi: BHXH, BHYT, BHTN + BH tai nạn 24/7 sau 2 tháng thử việc.",
+      "🎁 Phúc lợi: 14 ngày phép/năm, lương tháng 13.",
+      "🕒 Thời gian: xoay ca 24/7 (có ca tối/đêm, cuối tuần, ngày lễ).",
+      "🎯 Yêu cầu: THPT trở lên; Tiếng Anh 4 kỹ năng ổn.",
+      "Chỉ phù hợp nếu: xác nhận làm được 24/7 theo sắp xếp TL."
+    ],
+    warn: "24/7 bắt buộc, ca do Team Lead sắp xếp, không chọn ca."
+  },
+
+  {
+    id: "milk",
+    title: "Tư vấn chốt đơn – Sản phẩm sữa",
+    locationGroup: "Q12",
+    address: "Quận 12 – Tòa nhà QTSC9, Công viên Phần mềm Quang Trung (Onsite)",
+    english: "no",
+    schedule: "office",
+    badges: ["Giờ hành chính", "9–25tr", "Có sẵn data", "100% lương thử việc"],
+    summary: "Telesales tư vấn sữa theo data có sẵn, chốt đơn và bám KPI.",
+    details: [
+      "📌 Công việc: gọi khách theo data có sẵn, tư vấn sản phẩm sữa phù hợp.",
+      "📌 Công việc: chăm sóc khách, giải đáp thắc mắc, chốt đơn, bám chỉ tiêu/KPI.",
+      "💰 Thu nhập: 9.000.000 – 25.000.000 VNĐ/tháng (tùy năng lực).",
+      "💯 Thử việc: 2 tháng thử việc nhận 100% lương.",
+      "🎁 Phúc lợi: BHXH, BHYT, BHTN theo quy định sau 2 tháng thử việc.",
+      "🎁 Phúc lợi: 14 ngày phép/năm, lương tháng 13.",
+      "🕒 Thời gian: T2–T7, 8:00–18:30.",
+      "🎯 Yêu cầu: THPT trở lên; giọng rõ ràng, dễ nghe; có mục tiêu thu nhập, chịu khó học hỏi.",
+      "Chỉ phù hợp nếu: ok KPI + đi làm onsite Quận 12."
+    ],
+    warn: ""
+  },
+
+  {
+    id: "fee",
+    title: "CSKH Sau vay / Nhân viên nhắc & Gia hạn phí",
+    locationGroup: "Q11",
+    address: "Quận 11 – Tòa nhà Flemington, 182 Lê Đại Hành (Onsite). Dự kiến chuyển về Tòa nhà OneHub – Quận 9.",
+    english: "no",
+    schedule: "office",
+    badges: ["Outbound", "8–25tr", "Không yêu cầu kinh nghiệm", "Không tăng ca"],
+    summary: "Gọi theo data khách vay có sẵn để nhắc phí & gia hạn phí, định hướng thu nhập theo KPI.",
+    details: [
+      "📌 Công việc: gọi và thuyết phục khách theo data có sẵn; nhắc phí & gia hạn phí.",
+      "💰 Thu nhập TB: 8.000.000 – 25.000.000 VNĐ/tháng.",
+      "💯 Thử việc: 2 tháng thử việc nhận 100% lương.",
+      "🕒 Thời gian: 08:00–18:15, nghỉ trưa 1h20; off Chủ nhật (trừ CN đầu tiên của tháng).",
+      "🕒 Không tăng ca.",
+      "🎁 Phúc lợi: BHXH, BHYT, BHTN, BH tai nạn 24/7; 14 ngày phép/năm; lương tháng 13.",
+      "📍 Địa điểm: Quận 11 – Tòa nhà Flemington (dự kiến chuyển về Tòa nhà OneHub – Quận 9).",
+      "🎯 Yêu cầu: THCS trở lên; không yêu cầu kinh nghiệm; có mục tiêu về thu nhập.",
+      "Chỉ phù hợp nếu: ok outbound + đi làm Quận 11 (và/hoặc Quận 9 khi chuyển)."
+    ],
+    warn: ""
+  },
+];
 
   /* ✅ Updated Q&A per your request */
   const FULL_QA = [
@@ -1025,3 +1055,4 @@ Nhờ anh/chị hỗ trợ sắp lịch screening/PV giúp em ạ.`;
 </script>
 </body>
 </html>
+
