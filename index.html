@@ -186,7 +186,8 @@
     .qa details{padding:12px 14px; background: rgba(17,24,39,.01); border-top:1px solid var(--line)}
     .qa details:first-child{border-top:0}
     .qa summary{cursor:pointer; font-weight:750}
-    .qa p{margin:10px 0 0; color: var(--muted); line-height:1.55}
+    .qa p{margin:10px 0 0; color: var(--muted); line-height:1.55; white-space:pre-line}
+
 
     .footer{
       margin:18px 0 90px;
@@ -477,21 +478,52 @@
   ];
 
   const FULL_QA = [
-    { q: "Apply như thế nào?", a: "Bấm “Apply ngay” để mở Google Form và điền thông tin. Team liên hệ trong 24–48h nếu phù hợp." },
-    { q: "Làm ở đâu?", a: "MXH: Q12 Tech Valley • Travel/Flight: Q12 QTSC1 • Chốt đơn: Q12 QTSC9 • CSKH Sau vay/Nhắc & Gia hạn: hiện Q11 Flemington, dự kiến chuyển OneHub Q9." },
-    { q: "Có nhận ứng viên chưa có kinh nghiệm không?", a: "Có, tùy vị trí/tùy hồ sơ. Lưu ý: Flight Ticket App thường yêu cầu tối thiểu 6 tháng CS." },
-    { q: "“Tiếng Anh cơ bản (viết)” là như nào?", a: "Bạn có thể đọc hiểu và trả lời tin nhắn/email tiếng Anh đơn giản (câu ngắn, nội dung cơ bản)." },
-    { q: "Job English có bắt buộc xoay ca 24/7 không?", a: "Có. Travel/Flight xoay ca 24/7 (có ca tối/đêm, cuối tuần, lễ). Ca do Team Lead sắp xếp, không chọn ca." },
-    { q: "24/7 nghĩa là gì? Có phải làm 24 tiếng/ngày không?", a: "Không phải. 24/7 nghĩa là dự án vận hành cả ngày, bạn làm theo ca xoay theo lịch phân công." },
-    { q: "Quy trình phỏng vấn gồm mấy vòng?", a: "Thường screening nhanh (call/Zalo) + phỏng vấn theo dự án; job English có thể có test/trao đổi tiếng Anh ngắn." },
-    { q: "Bao lâu có phản hồi sau khi apply?", a: "Nếu phù hợp tiêu chí (địa điểm/ca/tiếng Anh/kinh nghiệm), team thường liên hệ trong 24–48h. Bạn cũng có thể nhắn Zalo để được hỗ trợ nhanh." },
-    { q: "Có remote/WFH không?", a: "Hiện các vị trí đang tuyển là onsite tại văn phòng (Q12/Q11). Khi có hybrid/remote team sẽ cập nhật." },
-    { q: "Không làm 24/7 được thì chọn job nào?", a: "Bạn có thể chọn CSKH MXH (ca trong khung), Chốt đơn (giờ hành chính), hoặc CSKH Sau vay/Nhắc & Gia hạn (giờ hành chính theo lịch dự án)." }
-  ];
+  {
+    q: "Apply như thế nào?",
+    a: "Bấm “Apply ngay” để mở Google Form và điền thông tin. Team liên hệ trong 24–48h nếu phù hợp."
+  },
+  {
+    q: "Địa điểm làm việc",
+    a: "• CSKH Ứng dụng Mạng xã hội: Quận 12 – Tòa nhà Tech Valley\n" +
+       "• CS Travel App (English): Quận 12 – Tòa nhà QTSC1\n" +
+       "• CS Flight Ticket App (English): Quận 12 – Tòa nhà QTSC1\n" +
+       "• Tư vấn chốt đơn – Sản phẩm sữa: Quận 12 – Tòa nhà QTSC9\n" +
+       "• CSKH Sau vay / Nhân viên nhắc & Gia hạn phí: Quận 11 – Tòa nhà Flemington (dự kiến chuyển về Tòa nhà OneHub – Quận 9)"
+  },
+  {
+    q: "Có nhận ứng viên chưa có kinh nghiệm không?",
+    a: "Nếu bạn chưa có kinh nghiệm, công ty sẽ đào tạo bài bản."
+  },
+  {
+    q: "“Tiếng Anh cơ bản (viết)” là như nào?",
+    a: "Bạn có thể đọc hiểu và trả lời tin nhắn/email tiếng Anh đơn giản (câu ngắn, nội dung cơ bản)."
+  },
+  {
+    q: "Job English có bắt buộc xoay ca 24/7 không?",
+    a: "Có. Travel/Flight xoay ca 24/7 (có ca tối/đêm, cuối tuần, lễ). Ca do Team Lead sắp xếp, không chọn ca."
+  },
+  {
+    q: "24/7 nghĩa là gì? Có phải làm 24 tiếng/ngày không?",
+    a: "Không phải. 24/7 nghĩa là dự án vận hành cả ngày, bạn làm theo ca xoay theo lịch phân công."
+  },
+  {
+    q: "Bao lâu có phản hồi sau khi apply?",
+    a: "Nếu phù hợp tiêu chí (địa điểm/ca/tiếng Anh/kinh nghiệm), team thường liên hệ trong 24–48h. Bạn cũng có thể nhắn Zalo để được hỗ trợ nhanh."
+  },
+  {
+    q: "Có remote/WFH không?",
+    a: "Hiện các vị trí đang tuyển là onsite tại văn phòng. Khi có hybrid/remote team sẽ cập nhật."
+  },
+  {
+    q: "Không làm 24/7 được thì chọn job nào?",
+    a: "Bạn có thể chọn CSKH Ứng dụng Mạng xã hội (ca trong khung), Tư vấn chốt đơn (giờ hành chính), hoặc CSKH Sau vay/Nhắc & Gia hạn (giờ hành chính theo lịch dự án)."
+  }
+];
+
 
   const SHORT_QA = [
     "Apply: bấm link, điền form 1 phút.",
-    "Địa điểm: Q12 (Tech Valley/QTSC1/QTSC9) + Q11 Flemington (dự kiến OneHub Q9).",
+    "Địa điểm làm việc: Quận 12 (Tòa nhà Tech Valley/Tòa nhà QTSC1/Tòa nhà QTSC9) + Quận 11 (Tòa nhà Flemington, dự kiến Tòa nhà OneHub Quận 9).",
     "Fresher: có job nhận fresher (tùy hồ sơ).",
     "MXH: tiếng Anh cơ bản (viết).",
     "Travel/Flight: 24/7 bắt buộc, TL sắp ca, không chọn ca.",
@@ -1058,3 +1090,4 @@ Nhờ anh/chị hỗ trợ sắp lịch screening/PV giúp em ạ.`;
 </script>
 </body>
 </html>
+
