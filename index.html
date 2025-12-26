@@ -1,117 +1,157 @@
 <!doctype html>
-<html lang="vi">
+<html lang="vi" data-theme="dark">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Concentrix HCM Tuyển dụng | Apply nhanh</title>
-  <meta name="description" content="Concentrix HCM tuyển dụng (Quận 12/Quận 11). Chọn vị trí phù hợp và apply 1 phút. Job English 24/7 bắt buộc (TL sắp ca, không chọn ca)." />
+  <meta name="description" content="Concentrix HCM tuyển dụng (Quận 12/Quận 11). Chọn vị trí phù hợp và apply 1 phút. Job English 24/7 có xoay ca theo sắp xếp Team Lead." />
   <meta property="og:title" content="Concentrix HCM Tuyển dụng | Apply nhanh" />
-  <meta property="og:description" content="Chọn vị trí phù hợp và apply 1 phút. Quận 12: Tòa nhà Tech Valley/Tòa nhà QTSC1/Tòa nhà QTSC9. Quận 11: Tòa nhà Flemington (dự kiến Tòa nhà OneHub Quận 9)." />
+  <meta property="og:description" content="Chọn vị trí phù hợp và apply 1 phút. Quận 12: Tòa nhà Tech Valley/QTSC1/QTSC9. Quận 11: Flemington (dự kiến OneHub Quận 9)." />
   <meta property="og:type" content="website" />
+
+  <!-- Set theme ASAP to avoid flash; default = dark -->
+  <script>
+    (function(){
+      const saved = localStorage.getItem("cx_theme");
+      const theme = saved || "dark";
+      document.documentElement.dataset.theme = theme;
+    })();
+  </script>
 
   <style>
     :root{
-  /* Concentrix palette */
-  --cx-blue:#003D5B;
-  --cx-seafoam:#25E2CC;
-  --cx-jade:#007380;
-  --cx-raspberry:#CC3262;
-  --cx-orange:#FF8400;
-  --cx-yellow:#FBCA18;
-  --cx-coolgray:#F2F2F2;
-  --cx-charcoal:#2A2B2C;
-  --cx-white:#FFFFFF;
+      /* Concentrix palette */
+      --cx-blue:#003D5B;
+      --cx-seafoam:#25E2CC;
+      --cx-jade:#007380;
+      --cx-raspberry:#CC3262;
+      --cx-orange:#FF8400;
+      --cx-yellow:#FBCA18;
+      --cx-coolgray:#F2F2F2;
+      --cx-charcoal:#2A2B2C;
+      --cx-white:#FFFFFF;
 
-  /* Light (fallback) */
-  --bg: #f7fafc;
-  --panel: var(--cx-white);
-  --card: var(--cx-white);
+      /* Light (fallback) */
+      --bg: #f7fafc;
+      --panel: var(--cx-white);
+      --card: var(--cx-white);
 
-  --text: var(--cx-charcoal);
-  --muted: rgba(42,43,44,.75);
-  --line: rgba(42,43,44,.12);
+      --text: var(--cx-charcoal);
+      --muted: rgba(42,43,44,.75);
+      --line: rgba(42,43,44,.12);
 
-  /* Accent */
-  --accent: var(--cx-blue);
-  --accent2: var(--cx-seafoam);
+      /* Accent */
+      --accent: var(--cx-blue);
+      --accent2: var(--cx-seafoam);
 
-  /* Note (friendly info) */
-  --note-bg: rgba(37,226,204,.12);
-  --note-line: rgba(37,226,204,.55);
-  --note-text: rgba(42,43,44,.85);
+      /* Friendly note (instead of warning) */
+      --note-bg: rgba(37,226,204,.12);
+      --note-line: rgba(37,226,204,.55);
+      --note-text: rgba(42,43,44,.85);
 
-  --shadow: 0 12px 30px rgba(42,43,44,.10);
-  --radius:18px;
-}
+      --shadow: 0 12px 30px rgba(42,43,44,.10);
+      --radius:18px;
+    }
 
-/* Dark theme */
-html[data-theme="dark"]{
-  --bg: #07131a;            /* deep blue-black */
-  --panel: #0b1f29;
-  --card: #0f2530;
+    html[data-theme="dark"]{
+  /* Dark “đậm” */
+  --bg: #040a0f;            /* gần black */
+  --panel: #07131a;
+  --card: #0a1820;
 
   --text: rgba(255,255,255,.92);
-  --muted: rgba(255,255,255,.70);
+  --muted: rgba(255,255,255,.68);
   --line: rgba(255,255,255,.10);
 
-  --accent: var(--cx-seafoam);   /* buttons pop in dark */
+  --accent: var(--cx-seafoam);
   --accent2: #2dd4bf;
 
-  --note-bg: rgba(37,226,204,.14);
+  --note-bg: rgba(37,226,204,.12);
   --note-line: rgba(37,226,204,.70);
   --note-text: rgba(255,255,255,.82);
 
-  --shadow: 0 16px 40px rgba(0,0,0,.35);
+  --shadow: 0 18px 55px rgba(0,0,0,.55);
 }
+
 
     *{box-sizing:border-box}
     body{
   margin:0;
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
-  background: linear-gradient(180deg, var(--bg), rgba(37,226,204,.06));
+  background: var(--bg);
   color:var(--text);
+      body::before{
+  content:"";
+  position:fixed;
+  inset:-200px;
+  pointer-events:none;
+  background:
+    radial-gradient(800px 420px at 15% 10%, rgba(37,226,204,.12), transparent 60%),
+    radial-gradient(700px 360px at 85% 18%, rgba(0,115,128,.10), transparent 60%),
+    radial-gradient(900px 520px at 50% 95%, rgba(37,226,204,.06), transparent 65%);
+  z-index:-1;
+}
+
 }
     a{color:inherit; text-decoration:none}
     .container{max-width:1080px; margin:0 auto; padding:18px}
 
     .topbar{
-  position:sticky; top:0; z-index:50;
-  background: rgba(255,255,255,.75);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--line);
-}
-html[data-theme="dark"] .topbar{
-  background: rgba(7,19,26,.72);
-}
+      position:sticky; top:0; z-index:50;
+      background: rgba(255,255,255,.75);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--line);
+    }
+    html[data-theme="dark"] .topbar{
+      background: rgba(7,19,26,.72);
+    }
     .topbar-inner{display:flex; align-items:center; justify-content:space-between; gap:12px; padding:14px 18px}
-    .brand{display:flex; align-items:center; gap:10px}
-    .logo{
-  width:38px; height:38px; border-radius:12px;
-  background: linear-gradient(135deg, var(--cx-blue), var(--cx-raspberry), var(--cx-seafoam));
-  box-shadow: var(--shadow);
-}
+
+    .brand{display:flex; align-items:center; gap:12px}
     .brand h1{font-size:14px; margin:0; letter-spacing:.2px}
     .brand p{margin:0; font-size:12px; color:var(--muted)}
+
+    .brandmark{
+      width: 132px;
+      height: 34px;
+      display:flex;
+      align-items:center;
+      border-radius: 10px;
+      padding: 6px 8px;
+      background: rgba(255,255,255,.06);
+      border: 1px solid var(--line);
+    }
+    html[data-theme="dark"] .brandmark{ background: rgba(255,255,255,.03); }
+    .brandmark svg{ width:100%; height:100%; display:block; }
+    html[data-theme="dark"] .brandmark svg .st1{ fill: #eaf7ff; }
+
     .nav{display:flex; gap:8px; flex-wrap:wrap; justify-content:flex-end}
     .chip{
       font-size:12px; color:var(--muted);
       border:1px solid var(--line);
       padding:8px 10px; border-radius:999px;
-      background: rgba(17,24,39,.03);
+      background: rgba(255,255,255,.04);
+      display:inline-flex; align-items:center; gap:6px;
     }
-  .chip.active{
-  color: var(--text);
-  border-color: rgba(204,50,98,.35);
-  background: rgba(204,50,98,.08);
-}
+    button.chip{
+      cursor:pointer;
+      font-family:inherit;
+      color:var(--muted);
+      outline:none;
+      -webkit-appearance:none;
+      appearance:none;
+    }
+    .chip.active{
+      color: var(--text);
+      border-color: rgba(37,226,204,.35);
+      background: rgba(37,226,204,.10);
+    }
 
     .hero{
       padding:22px 0 6px;
       display:grid; grid-template-columns: 1.35fr .65fr; gap:16px;
     }
-    @media (max-width: 880px){
-      .hero{grid-template-columns:1fr}
-    }
+    @media (max-width: 880px){ .hero{grid-template-columns:1fr} }
 
     .panel{
       background: var(--panel);
@@ -128,13 +168,14 @@ html[data-theme="dark"] .topbar{
       border:0; cursor:pointer;
       padding:11px 14px;
       border-radius: 14px;
-      font-weight:700;
-      color: #ffffff;
+      font-weight:800;
+      color: #001820;
       background: linear-gradient(135deg, var(--accent), var(--accent2));
       box-shadow: var(--shadow);
     }
+    html[data-theme="dark"] .btn{ color:#001820; }
     .btn.secondary{
-      background: rgba(17,24,39,.03);
+      background: rgba(255,255,255,.04);
       color: var(--text);
       border: 1px solid var(--line);
       box-shadow:none;
@@ -145,72 +186,66 @@ html[data-theme="dark"] .topbar{
       display:flex; gap:10px; align-items:flex-start;
       color: var(--muted); font-size:13px;
     }
-    .dot{width:10px; height:10px; border-radius:999px; background: var(--cx-raspberry); margin-top:4px}
-    .dot.warn{background: rgba(220,38,38,.9)}
+    .dot{width:10px; height:10px; border-radius:999px; background: var(--cx-seafoam); margin-top:4px}
+    .dot.note{background: var(--cx-jade)}
 
     .grid{
       display:grid; gap:12px;
       grid-template-columns: repeat(2, 1fr);
     }
-    @media (max-width: 820px){
-      .grid{grid-template-columns:1fr}
-    }
+    @media (max-width: 820px){ .grid{grid-template-columns:1fr} }
 
     .card{
       background: var(--card);
       border: 1px solid var(--line);
       border-radius: var(--radius);
       padding:14px;
-      box-shadow: 0 8px 20px rgba(17,24,39,.06);
+      box-shadow: 0 8px 20px rgba(0,0,0,.08);
     }
+    html[data-theme="light"] .card{ box-shadow: 0 8px 20px rgba(17,24,39,.06); }
+
     .card h3{margin:0 0 6px; font-size:16px}
 
     .meta{display:flex; flex-wrap:wrap; gap:8px; margin:8px 0}
     .badge{
       font-size:12px; color: var(--muted);
       border: 1px solid var(--line);
-      background: rgba(17,24,39,.02);
+      background: rgba(255,255,255,.04);
       padding:6px 10px; border-radius:999px;
     }
+    /* keep class hot but make it friendly info, NOT red */
     .badge.hot{
-  border-color: rgba(37,226,204,.35);
-  background: rgba(37,226,204,.10);
-  color: var(--text);
-  font-weight:800;
-}
-    .badge.ok{
-      border-color: rgba(22,163,74,.22);
-      background: rgba(22,163,74,.06);
-      color: #14532d;
-      font-weight:700;
+      border-color: rgba(37,226,204,.35);
+      background: rgba(37,226,204,.10);
+      color: var(--text);
+      font-weight:800;
     }
 
     .addr{color: var(--muted); font-size:13px; line-height:1.45}
 
+    /* friendly note style (not warning) */
     .warnline{
-  margin-top:10px;
-  color: var(--note-text);
-  font-size:13px;
-  border-left: 3px solid var(--note-line);
-  padding:8px 10px;
-  background: var(--note-bg);
-  border-radius: 12px;
-}
+      margin-top:10px;
+      color: var(--note-text);
+      font-size:13px;
+      border-left: 3px solid var(--note-line);
+      padding:8px 10px;
+      background: var(--note-bg);
+      border-radius: 12px;
+    }
 
     .actions{display:flex; gap:10px; margin-top:12px; flex-wrap:wrap}
     .actions .btn{padding:10px 12px; border-radius: 12px; font-size:13px}
-    .actions .btn.secondary{font-weight:700}
+    .actions .btn.secondary{font-weight:800}
 
-    .filters{
-      display:flex; gap:10px; flex-wrap:wrap; align-items:flex-end;
-    }
+    .filters{display:flex; gap:10px; flex-wrap:wrap; align-items:flex-end;}
     label{font-size:12px; color: var(--muted); display:block; margin-bottom:6px}
     select, input, textarea{
       width:100%;
       padding:10px 10px;
       border-radius: 12px;
       border:1px solid var(--line);
-      background: rgba(255,255,255,.95);
+      background: rgba(255,255,255,.05);
       color: var(--text);
       outline:none;
     }
@@ -221,13 +256,26 @@ html[data-theme="dark"] .topbar{
     .muted{color: var(--muted)}
 
     .qa{border:1px solid var(--line); border-radius: var(--radius); overflow:hidden}
-    .qa details{padding:12px 14px; background: rgba(17,24,39,.01); border-top:1px solid var(--line)}
+    .qa details{
+  padding:12px 14px;
+  background: rgba(255,255,255,.04);
+  border-top:1px solid var(--line);
+}
+html[data-theme="dark"] .qa details{
+  background: rgba(255,255,255,.02);
+}
+
     .qa details:first-child{border-top:0}
-    .qa summary{cursor:pointer; font-weight:750}
-    /* updated: keep line breaks in answers */
+    .qa summary{cursor:pointer; font-weight:800}
     .qa p{margin:10px 0 0; color: var(--muted); line-height:1.55; white-space: pre-line}
+.qa summary{ color: var(--text); }
+.qa p{ color: var(--muted); }
 
     .footer{
+      html[data-theme="dark"] .footer{
+  border-top: 1px solid var(--line);
+}
+
       margin:18px 0 90px;
       color: var(--muted);
       font-size:12px;
@@ -237,28 +285,32 @@ html[data-theme="dark"] .topbar{
     }
     .copybtn{
       border:1px solid var(--line);
-      background: rgba(17,24,39,.02);
+      background: rgba(255,255,255,.04);
       color: var(--text);
       padding:8px 10px;
       border-radius: 12px;
       cursor:pointer;
-      font-weight:750;
+      font-weight:800;
       font-size:12px;
     }
 
-    .sticky-cta{
-      position:fixed; left:0; right:0; bottom:0; z-index:60;
-      background: rgba(255,255,255,.85);
-      backdrop-filter: blur(10px);
-      border-top: 1px solid var(--line);
-    }
+    ..sticky-cta{
+  position:fixed; left:0; right:0; bottom:0; z-index:60;
+  background: rgba(255,255,255,.70);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid var(--line);
+}
+html[data-theme="dark"] .sticky-cta{
+  background: rgba(4,10,15,.78);
+}
+
     .sticky-inner{
       max-width:1080px; margin:0 auto;
       padding:12px 16px; display:flex; gap:10px; align-items:center; justify-content:space-between;
     }
     .sticky-inner .left{display:flex; flex-direction:column; gap:2px}
     .sticky-title{font-size:12px; color: var(--muted)}
-    .sticky-job{font-size:13px; font-weight:800}
+    .sticky-job{font-size:13px; font-weight:900}
 
     .toast{
       position:fixed; top:14px; right:14px; z-index:100;
@@ -271,6 +323,9 @@ html[data-theme="dark"] .topbar{
       font-size:13px;
       display:none;
     }
+    html[data-theme="dark"] .toast{
+      background: rgba(11,31,41,.95);
+    }
 
     .hr{height:1px; background: var(--line); margin:12px 0}
     .small{font-size:12px; color: var(--muted)}
@@ -280,7 +335,7 @@ html[data-theme="dark"] .topbar{
       padding:7px 10px;
       border-radius: 999px;
       border:1px solid var(--line);
-      background: rgba(17,24,39,.02);
+      background: rgba(255,255,255,.04);
       color: var(--muted);
     }
 
@@ -290,13 +345,13 @@ html[data-theme="dark"] .topbar{
     .hidden{display:none !important}
 
     .modal-backdrop{
-      position:fixed; inset:0; background: rgba(0,0,0,.45);
+      position:fixed; inset:0; background: rgba(0,0,0,.55);
       display:none; align-items:center; justify-content:center;
       padding:16px; z-index:200;
     }
     .modal{
       max-width: 720px; width:100%;
-      background: rgba(255,255,255,.98);
+      background: var(--panel);
       border:1px solid var(--line);
       border-radius: var(--radius);
       box-shadow: var(--shadow);
@@ -306,15 +361,15 @@ html[data-theme="dark"] .topbar{
     .modal .close{
       float:right;
       border:1px solid var(--line);
-      background: rgba(17,24,39,.02);
+      background: rgba(255,255,255,.04);
       color: var(--text);
       padding:8px 10px;
       border-radius: 12px;
       cursor:pointer;
-      font-weight:800;
+      font-weight:900;
     }
 
-    /* Floating actions: Zalo + Call */
+    /* Floating actions */
     .float-actions{
       position:fixed;
       right:16px;
@@ -329,20 +384,22 @@ html[data-theme="dark"] .topbar{
       height:52px;
       border-radius: 16px;
       border:1px solid var(--line);
-      background: #ffffff;
+      background: var(--panel);
       box-shadow: var(--shadow);
       display:flex;
       align-items:center;
       justify-content:center;
       cursor:pointer;
       transition: transform .12s ease;
+      color: var(--accent);
     }
     .float-btn:hover{ transform: translateY(-1px); }
     .float-btn svg{ width:26px; height:26px; }
+    .float-btn svg path{ stroke: currentColor; }
     .float-label{
       position:absolute;
       right:62px;
-      background:#111827;
+      background: rgba(0,0,0,.72);
       color:#fff;
       padding:6px 10px;
       border-radius: 999px;
@@ -352,6 +409,7 @@ html[data-theme="dark"] .topbar{
       transform: translateX(6px);
       transition: .18s ease;
     }
+    html[data-theme="dark"] .float-label{ background: rgba(255,255,255,.12); }
     .float-wrap{ position:relative; }
     .float-wrap:hover .float-label{ opacity:1; transform: translateX(0); }
   </style>
@@ -362,38 +420,38 @@ html[data-theme="dark"] .topbar{
     <div class="topbar-inner container">
       <div class="brand" onclick="go('#/')" style="cursor:pointer">
         <div class="brandmark" aria-hidden="true">
-  <svg viewBox="0 0 720 216" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Concentrix">
-    <style>
-      .st0{fill:#25E2CC;}
-      .st1{fill:#003D5B;}
-    </style>
-    <g>
-      <path class="st0" d="M575.7,83.8h-22.5c-6.2,0-11.3-5-11.3-11.3v0c0-6.2,5-11.3,11.3-11.3h22.5c6.2,0,11.3,5,11.3,11.3v0C587,78.8,581.9,83.8,575.7,83.8z"/>
-      <path class="st1" d="M64.8,123.4c0-17.6,14.3-31.3,33.1-31.3c11.9,0,18.6,4.2,22.1,6.7l-6.9,13c-2.8-1.8-6.9-4.1-13.2-4.1
-        c-10.5,0-17.6,6.6-17.6,15.7c0,9.2,6.9,15.7,17.3,15.7c6.7,0,10.7-2.2,13.5-4.1l6.8,12.8c-3.7,2.4-10.1,6.8-22,6.8
-        C78.7,154.7,64.8,141.1,64.8,123.4z"/>
-      <path class="st1" d="M122.9,123.4c0-17.8,14.5-31.3,32.6-31.3s32.6,13.5,32.6,31.3s-14.5,31.3-32.6,31.3S122.9,141.2,122.9,123.4z
-        M171.8,123.4c0-9.3-6.9-15.7-16.3-15.7s-16.3,6.4-16.3,15.7s6.9,15.7,16.3,15.7S171.8,132.7,171.8,123.4z"/>
-      <path class="st1" d="M195.6,93.4H211v6.8c3.2-5.2,8.9-8.1,15.7-8.1c12.2,0,20.8,8.2,20.8,21.7v39.6h-15.7v-35.8
-        c0-6.7-3.7-10.5-9.5-10.5c-6.3,0-11.1,4.2-11.1,11.4v34.9h-15.7V93.4z"/>
-      <path class="st1" d="M258.8,107.5h-9.6V93.4h9.6V76.5h15.7v16.9h13v14.1h-13v19.6c0,8,2.4,11.2,8.6,11.2c1.9,0,3.6-0.3,4.7-0.6v15.1
-        c-1.9,0.6-4.7,1.3-9,1.3c-14.4,0-20.1-7.9-20.1-22.9V107.5z"/>
-      <path class="st1" d="M291.5,123.4c0-18.1,13.7-31.3,32.9-31.3c12.2,0,20,4.4,23.4,7l-6.8,12.8c-3-2.1-7.2-4.3-13.9-4.3
-        c-10.6,0-18.1,6.7-18.1,15.8c0,9.1,7.5,15.7,18.1,15.7c6.6,0,11.1-2.2,14-4.3l6.7,12.8c-3.4,2.5-11.2,7.2-23.4,7.2
-        C305.2,154.7,291.5,141.4,291.5,123.4z"/>
-      <path class="st1" d="M354.2,70.1c0-5.1,4-9.1,9.1-9.1c5.1,0,9.1,4,9.1,9.1c0,5-4,9-9.1,9C358.2,79.1,354.2,75.1,354.2,70.1z
-        M355.5,93.4h15.7v60h-15.7V93.4z"/>
-      <path class="st1" d="M378.9,93.4h15.4v7.4c3-5.1,7.6-8.7,14.4-8.7c1.9,0,3.4,0.3,4.3,0.6v15.2c-1.1-0.4-2.7-0.7-5-0.7
-        c-7.6,0-13.4,5.1-13.4,14.1v32.1h-15.7V93.4z"/>
-      <path class="st1" d="M413.5,123.4c0-17.8,13.6-31.3,32.6-31.3c19.1,0,32.5,13.2,32.5,31c0,2.1-0.1,3.7-0.3,4.8h-49.4
-        c1.6,7.6,7.8,12.4,16.7,12.4c7.3,0,11.8-2.7,15.1-5l7.1,12.3c-3.6,3-11.2,7.2-22.8,7.2C426.7,154.7,413.5,141.4,413.5,123.4z
-        M462.9,116.8c-1-6.2-6.5-10.6-16.2-10.6c-8.6,0-14.6,4.1-16.6,10.6H462.9z"/>
-      <path class="st1" d="M485.5,93.4h17.8l13.2,20.7l13.2-20.7h17.4l-21.6,30.1l22.7,30h-18.1l-14.3-21.1l-14.1,21.1h-17.6l22.6-30.2
-        L485.5,93.4z"/>
-    </g>
-  </svg>
-</div>
-
+          <!-- Concentrix logo (inline SVG) -->
+          <svg viewBox="0 0 720 216" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Concentrix">
+            <style>
+              .st0{fill:#25E2CC;}
+              .st1{fill:#003D5B;}
+            </style>
+            <g>
+              <path class="st0" d="M575.7,83.8h-22.5c-6.2,0-11.3-5-11.3-11.3v0c0-6.2,5-11.3,11.3-11.3h22.5c6.2,0,11.3,5,11.3,11.3v0C587,78.8,581.9,83.8,575.7,83.8z"/>
+              <path class="st1" d="M64.8,123.4c0-17.6,14.3-31.3,33.1-31.3c11.9,0,18.6,4.2,22.1,6.7l-6.9,13c-2.8-1.8-6.9-4.1-13.2-4.1
+                c-10.5,0-17.6,6.6-17.6,15.7c0,9.2,6.9,15.7,17.3,15.7c6.7,0,10.7-2.2,13.5-4.1l6.8,12.8c-3.7,2.4-10.1,6.8-22,6.8
+                C78.7,154.7,64.8,141.1,64.8,123.4z"/>
+              <path class="st1" d="M122.9,123.4c0-17.8,14.5-31.3,32.6-31.3s32.6,13.5,32.6,31.3s-14.5,31.3-32.6,31.3S122.9,141.2,122.9,123.4z
+                M171.8,123.4c0-9.3-6.9-15.7-16.3-15.7s-16.3,6.4-16.3,15.7s6.9,15.7,16.3,15.7S171.8,132.7,171.8,123.4z"/>
+              <path class="st1" d="M195.6,93.4H211v6.8c3.2-5.2,8.9-8.1,15.7-8.1c12.2,0,20.8,8.2,20.8,21.7v39.6h-15.7v-35.8
+                c0-6.7-3.7-10.5-9.5-10.5c-6.3,0-11.1,4.2-11.1,11.4v34.9h-15.7V93.4z"/>
+              <path class="st1" d="M258.8,107.5h-9.6V93.4h9.6V76.5h15.7v16.9h13v14.1h-13v19.6c0,8,2.4,11.2,8.6,11.2c1.9,0,3.6-0.3,4.7-0.6v15.1
+                c-1.9,0.6-4.7,1.3-9,1.3c-14.4,0-20.1-7.9-20.1-22.9V107.5z"/>
+              <path class="st1" d="M291.5,123.4c0-18.1,13.7-31.3,32.9-31.3c12.2,0,20,4.4,23.4,7l-6.8,12.8c-3-2.1-7.2-4.3-13.9-4.3
+                c-10.6,0-18.1,6.7-18.1,15.8c0,9.1,7.5,15.7,18.1,15.7c6.6,0,11.1-2.2,14-4.3l6.7,12.8c-3.4,2.5-11.2,7.2-23.4,7.2
+                C305.2,154.7,291.5,141.4,291.5,123.4z"/>
+              <path class="st1" d="M354.2,70.1c0-5.1,4-9.1,9.1-9.1c5.1,0,9.1,4,9.1,9.1c0,5-4,9-9.1,9C358.2,79.1,354.2,75.1,354.2,70.1z
+                M355.5,93.4h15.7v60h-15.7V93.4z"/>
+              <path class="st1" d="M378.9,93.4h15.4v7.4c3-5.1,7.6-8.7,14.4-8.7c1.9,0,3.4,0.3,4.3,0.6v15.2c-1.1-0.4-2.7-0.7-5-0.7
+                c-7.6,0-13.4,5.1-13.4,14.1v32.1h-15.7V93.4z"/>
+              <path class="st1" d="M413.5,123.4c0-17.8,13.6-31.3,32.6-31.3c19.1,0,32.5,13.2,32.5,31c0,2.1-0.1,3.7-0.3,4.8h-49.4
+                c1.6,7.6,7.8,12.4,16.7,12.4c7.3,0,11.8-2.7,15.1-5l7.1,12.3c-3.6,3-11.2,7.2-22.8,7.2C426.7,154.7,413.5,141.4,413.5,123.4z
+                M462.9,116.8c-1-6.2-6.5-10.6-16.2-10.6c-8.6,0-14.6,4.1-16.6,10.6H462.9z"/>
+              <path class="st1" d="M485.5,93.4h17.8l13.2,20.7l13.2-20.7h17.4l-21.6,30.1l22.7,30h-18.1l-14.3-21.1l-14.1,21.1h-17.6l22.6-30.2
+                L485.5,93.4z"/>
+            </g>
+          </svg>
+        </div>
         <div>
           <h1>Concentrix HCM Tuyển dụng</h1>
           <p>Recruiter: Minh Hieu • Zalo/Phone: 0349865229 • Email: minhhieupk02.ta@gmail.com</p>
@@ -405,8 +463,7 @@ html[data-theme="dark"] .topbar{
         <a class="chip" href="#/jobs">Vị trí</a>
         <a class="chip" href="#/apply">Apply</a>
         <a class="chip" href="#/qa">Q&A</a>
-        <button class="chip" id="themeToggle" type="button">Dark</button>
-
+        <button class="chip" id="themeToggle" type="button">Light</button>
       </div>
     </div>
   </div>
@@ -431,26 +488,27 @@ html[data-theme="dark"] .topbar{
       <div class="float-label">Nhắn Zalo tuyển dụng</div>
       <a class="float-btn" href="https://zalo.me/0349865229" target="_blank" rel="noopener noreferrer" aria-label="Nhắn Zalo">
         <svg viewBox="0 0 24 24" fill="none">
-          <path d="M7 18l-3 3V6a3 3 0 013-3h10a3 3 0 013 3v8a3 3 0 01-3 3H9l-2 1z" stroke="#2563eb" stroke-width="1.8" stroke-linejoin="round"/>
-          <path d="M8 8h8M8 12h6" stroke="#2563eb" stroke-width="1.8" stroke-linecap="round"/>
+          <path d="M7 18l-3 3V6a3 3 0 013-3h10a3 3 0 013 3v8a3 3 0 01-3 3H9l-2 1z" stroke-width="1.8" stroke-linejoin="round"/>
+          <path d="M8 8h8M8 12h6" stroke-width="1.8" stroke-linecap="round"/>
         </svg>
       </a>
     </div>
-<div class="float-wrap">
-  <div class="float-label">Gửi email</div>
-  <a class="float-btn" href="mailto:minhhieupk02.ta@gmail.com" aria-label="Gửi email">
-    <svg viewBox="0 0 24 24" fill="none">
-      <path d="M4 7.5A2.5 2.5 0 016.5 5h11A2.5 2.5 0 0120 7.5v9A2.5 2.5 0 0117.5 19h-11A2.5 2.5 0 014 16.5v-9z" stroke="#003D5B" stroke-width="1.8"/>
-      <path d="M5.5 7.5l6.5 5 6.5-5" stroke="#003D5B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>
-  </a>
-</div>
+
+    <div class="float-wrap">
+      <div class="float-label">Gửi email</div>
+      <a class="float-btn" href="mailto:minhhieupk02.ta@gmail.com" aria-label="Gửi email">
+        <svg viewBox="0 0 24 24" fill="none">
+          <path d="M4 7.5A2.5 2.5 0 016.5 5h11A2.5 2.5 0 0120 7.5v9A2.5 2.5 0 0117.5 19h-11A2.5 2.5 0 01 4 16.5v-9z" stroke-width="1.8"/>
+          <path d="M5.5 7.5l6.5 5 6.5-5" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+    </div>
 
     <div class="float-wrap">
       <div class="float-label">Gọi nhanh</div>
       <a class="float-btn" href="tel:0349865229" aria-label="Gọi điện">
         <svg viewBox="0 0 24 24" fill="none">
-          <path d="M6.5 3.5l3 1.5-1.2 3c-.2.5 0 1 .4 1.4l2.4 2.4c.4.4.9.6 1.4.4l3-1.2 1.5 3c.3.7 0 1.5-.7 1.8-1.2.6-2.7 1-4.3.6-3.1-.7-6.6-4.2-7.3-7.3-.4-1.6 0-3.1.6-4.3.3-.7 1.1-1 1.8-.7z" stroke="#7c3aed" stroke-width="1.8" stroke-linejoin="round"/>
+          <path d="M6.5 3.5l3 1.5-1.2 3c-.2.5 0 1 .4 1.4l2.4 2.4c.4.4.9.6 1.4.4l3-1.2 1.5 3c.3.7 0 1.5-.7 1.8-1.2.6-2.7 1-4.3.6-3.1-.7-6.6-4.2-7.3-7.3-.4-1.6 0-3.1.6-4.3.3-.7 1.1-1 1.8-.7z" stroke-width="1.8" stroke-linejoin="round"/>
         </svg>
       </a>
     </div>
@@ -467,129 +525,122 @@ html[data-theme="dark"] .topbar{
 
 <script>
   const RECRUITER_NAME = "Minh Hieu";
-const PHONE = "0349865229";
-const EMAIL = "minhhieupk02.ta@gmail.com";
+  const PHONE = "0349865229";
+  const EMAIL = "minhhieupk02.ta@gmail.com";
   const FORM_URL = "https://forms.gle/AG3NxdTm3QW7MddE9";
 
   const JOBS = [
-  {
-    id: "mxh",
-    title: "CSKH Ứng dụng Mạng xã hội",
-    locationGroup: "Q12",
-    address: "Quận 12 – Tòa nhà Tech Valley, Công viên Phần mềm Quang Trung (Onsite)",
-    english: "basic-writing",
-    schedule: "fixed-window",
-    badges: ["Quận 12", "7.4–8.0tr", "Tiếng Anh cơ bản", "Off 2 ngày/tuần", "100% lương thử việc"],
-    summary: "CSKH app mạng xã hội qua call/email/chat, làm việc văn phòng tại Quận 12.",
-    details: [
-      "📌 Công việc: nhận cuộc gọi/email/chat từ khách hàng liên quan đến sản phẩm.",
-      "📌 Công việc: cung cấp kiến thức sản phẩm và hỗ trợ xử lý yêu cầu của khách.",
-      "💰 Thu nhập TB: 7.400.000 – 8.000.000 VNĐ/tháng.",
-      "🎁 Phúc lợi: 100% lương trong 2 tháng thử việc, 14 ngày phép/năm, lương tháng 13.",
-      "🎁 Phúc lợi: BHXH, BHYT, bảo hiểm tai nạn 24/7 đầy đủ.",
-      "🕒 Thời gian: Full-time, xoay ca, làm 5 ngày/tuần – off 2 ngày bất kỳ.",
-      "🎯 Yêu cầu: Tốt nghiệp THPT; Tiếng Anh cơ bản; đánh máy nhanh và chính xác.",
-      "Chỉ phù hợp nếu: làm onsite Quận 12 + làm được ca xoay theo sắp xếp."
-    ],
-    warn: ""
-  },
+    {
+      id: "mxh",
+      title: "CSKH Ứng dụng Mạng xã hội",
+      locationGroup: "Q12",
+      address: "Quận 12 – Tòa nhà Tech Valley, Công viên Phần mềm Quang Trung (Onsite)",
+      english: "basic-writing",
+      schedule: "fixed-window",
+      badges: ["Quận 12", "7.4–8.0tr", "Tiếng Anh cơ bản", "Off 2 ngày/tuần", "100% lương thử việc"],
+      summary: "CSKH app mạng xã hội qua call/email/chat, làm việc văn phòng tại Quận 12.",
+      details: [
+        "📌 Công việc: nhận cuộc gọi/email/chat từ khách hàng liên quan đến sản phẩm.",
+        "📌 Công việc: cung cấp kiến thức sản phẩm và hỗ trợ xử lý yêu cầu của khách.",
+        "💰 Thu nhập TB: 7.400.000 – 8.000.000 VNĐ/tháng.",
+        "🎁 Phúc lợi: 100% lương trong 2 tháng thử việc, 14 ngày phép/năm, lương tháng 13.",
+        "🎁 Phúc lợi: BHXH, BHYT, bảo hiểm tai nạn 24/7 đầy đủ.",
+        "🕒 Thời gian: Full-time, xoay ca, làm 5 ngày/tuần – off 2 ngày bất kỳ.",
+        "🎯 Yêu cầu: Tốt nghiệp THPT; Tiếng Anh cơ bản; đánh máy nhanh và chính xác.",
+        "Chỉ phù hợp nếu: làm onsite Quận 12 + làm được ca xoay theo sắp xếp."
+      ],
+      warn: ""
+    },
+    {
+      id: "travel",
+      title: "Customer Service (English) – Travel App",
+      locationGroup: "Q12",
+      address: "Quận 12 – Tòa nhà QTSC1, Công viên Phần mềm Quang Trung (Onsite)",
+      english: "yes",
+      schedule: "24-7",
+      badges: ["English", "24/7", "10–12tr", "Off 2 ngày/tuần", "100% lương thử việc"],
+      summary: "Hỗ trợ khách dùng app du lịch qua điện thoại/chat/email, làm việc 100% tiếng Anh.",
+      details: [
+        "📌 Công việc: hỗ trợ khách sử dụng app du lịch qua điện thoại, chat, email, tin nhắn.",
+        "📌 Công việc: tư vấn chuyến đi/chỗ ở, xử lý đặt – đổi – hủy và thắc mắc cơ bản.",
+        "📌 Công việc: thao tác hệ thống, tuân thủ quy trình, đảm bảo trải nghiệm khách hàng.",
+        "💰 Thu nhập TB: 10.000.000 – 12.000.000 VNĐ/tháng.",
+        "🎁 Phúc lợi: 100% lương trong 2 tháng thử việc; BHXH, BHYT, BH tai nạn 24/7.",
+        "🎁 Phúc lợi: 14 ngày phép/năm, lương tháng 13, khám sức khỏe định kỳ.",
+        "🕒 Thời gian: làm 5 ngày/tuần, nghỉ 2 ngày bất kỳ; xoay ca 24/7.",
+        "🎯 Yêu cầu: Tốt nghiệp THPT; Tiếng Anh thành thạo 4 kỹ năng; làm việc 100% bằng tiếng Anh.",
+        "Chỉ phù hợp nếu: xác nhận làm được 24/7 theo sắp xếp TL."
+      ],
+      warn: "Lưu ý: Dự án xoay ca 24/7. Ca do Team Lead sắp xếp (không chọn ca)."
+    },
+    {
+      id: "flight",
+      title: "Customer Service (English) – Flight Ticket App",
+      locationGroup: "Q12",
+      address: "Quận 12 – Tòa nhà QTSC1, Công viên Phần mềm Quang Trung (Onsite)",
+      english: "yes",
+      schedule: "24-7",
+      badges: ["English", "24/7", "11–13tr", "100% lương thử việc", "BH sau thử việc"],
+      summary: "CSKH app vé máy bay: hỗ trợ khách book vé và xử lý yêu cầu cơ bản (call/chat/email), dùng tiếng Anh mỗi ngày.",
+      details: [
+        "📌 Công việc: nhận call/chat/email, hỗ trợ khách book vé máy bay, xử lý yêu cầu cơ bản.",
+        "📌 Điểm mạnh: phù hợp làm “cửa vào ngành” BPO, học quy trình CSKH & làm với khách quốc tế.",
+        "💰 Thu nhập TB: 11.000.000 – 13.000.000 VNĐ/tháng.",
+        "💯 Thử việc: 2 tháng thử việc nhận 100% lương.",
+        "🎁 Phúc lợi: BHXH, BHYT, BHTN + BH tai nạn 24/7 sau 2 tháng thử việc.",
+        "🎁 Phúc lợi: 14 ngày phép/năm, lương tháng 13.",
+        "🕒 Thời gian: xoay ca 24/7 (có ca tối/đêm, cuối tuần, ngày lễ).",
+        "🎯 Yêu cầu: THPT trở lên; Tiếng Anh 4 kỹ năng ổn.",
+        "Chỉ phù hợp nếu: xác nhận làm được 24/7 theo sắp xếp TL."
+      ],
+      warn: "Lưu ý: Dự án xoay ca 24/7. Ca do Team Lead sắp xếp (không chọn ca)."
+    },
+    {
+      id: "milk",
+      title: "Tư vấn chốt đơn – Sản phẩm sữa",
+      locationGroup: "Q12",
+      address: "Quận 12 – Tòa nhà QTSC9, Công viên Phần mềm Quang Trung (Onsite)",
+      english: "no",
+      schedule: "office",
+      badges: ["Giờ hành chính", "9–25tr", "Có sẵn data", "100% lương thử việc"],
+      summary: "Telesales tư vấn sữa theo data có sẵn, chốt đơn và bám KPI.",
+      details: [
+        "📌 Công việc: gọi khách theo data có sẵn, tư vấn sản phẩm sữa phù hợp.",
+        "📌 Công việc: chăm sóc khách, giải đáp thắc mắc, chốt đơn, bám chỉ tiêu/KPI.",
+        "💰 Thu nhập: 9.000.000 – 25.000.000 VNĐ/tháng (tùy năng lực).",
+        "💯 Thử việc: 2 tháng thử việc nhận 100% lương.",
+        "🎁 Phúc lợi: BHXH, BHYT, BHTN theo quy định sau 2 tháng thử việc.",
+        "🎁 Phúc lợi: 14 ngày phép/năm, lương tháng 13.",
+        "🕒 Thời gian: T2–T7, 8:00–18:30.",
+        "🎯 Yêu cầu: THPT trở lên; giọng rõ ràng, dễ nghe; có mục tiêu thu nhập, chịu khó học hỏi.",
+        "Chỉ phù hợp nếu: ok KPI + đi làm onsite Quận 12."
+      ],
+      warn: ""
+    },
+    {
+      id: "fee",
+      title: "CSKH Sau vay / Nhân viên nhắc & Gia hạn phí",
+      locationGroup: "Q11",
+      address: "Quận 11 – Tòa nhà Flemington, 182 Lê Đại Hành (Onsite). Dự kiến chuyển về Tòa nhà OneHub – Quận 9.",
+      english: "no",
+      schedule: "office",
+      badges: ["Outbound", "8–25tr", "Không yêu cầu kinh nghiệm", "Không tăng ca"],
+      summary: "Gọi theo data khách vay có sẵn để nhắc phí & gia hạn phí, định hướng thu nhập theo KPI.",
+      details: [
+        "📌 Công việc: gọi và thuyết phục khách theo data có sẵn; nhắc phí & gia hạn phí.",
+        "💰 Thu nhập TB: 8.000.000 – 25.000.000 VNĐ/tháng.",
+        "💯 Thử việc: 2 tháng thử việc nhận 100% lương.",
+        "🕒 Thời gian: 08:00–18:15, nghỉ trưa 1h20; off Chủ nhật (trừ CN đầu tiên của tháng).",
+        "🕒 Không tăng ca.",
+        "🎁 Phúc lợi: BHXH, BHYT, BHTN, BH tai nạn 24/7; 14 ngày phép/năm; lương tháng 13.",
+        "📍 Địa điểm: Quận 11 – Tòa nhà Flemington (dự kiến chuyển về Tòa nhà OneHub – Quận 9).",
+        "🎯 Yêu cầu: THCS trở lên; không yêu cầu kinh nghiệm; có mục tiêu về thu nhập.",
+        "Chỉ phù hợp nếu: ok outbound + đi làm Quận 11 (và/hoặc Quận 9 khi chuyển)."
+      ],
+      warn: ""
+    },
+  ];
 
-  {
-    id: "travel",
-    title: "Customer Service (English) – Travel App",
-    locationGroup: "Q12",
-    address: "Quận 12 – Tòa nhà QTSC1, Công viên Phần mềm Quang Trung (Onsite)",
-    english: "yes",
-    schedule: "24-7",
-    badges: ["English", "24/7", "10–12tr", "Off 2 ngày/tuần", "100% lương thử việc"],
-    summary: "Hỗ trợ khách dùng app du lịch qua điện thoại/chat/email, làm việc 100% tiếng Anh.",
-    details: [
-      "📌 Công việc: hỗ trợ khách sử dụng app du lịch qua điện thoại, chat, email, tin nhắn.",
-      "📌 Công việc: tư vấn chuyến đi/chỗ ở, xử lý đặt – đổi – hủy và thắc mắc cơ bản.",
-      "📌 Công việc: thao tác hệ thống, tuân thủ quy trình, đảm bảo trải nghiệm khách hàng.",
-      "💰 Thu nhập TB: 10.000.000 – 12.000.000 VNĐ/tháng.",
-      "🎁 Phúc lợi: 100% lương trong 2 tháng thử việc; BHXH, BHYT, BH tai nạn 24/7.",
-      "🎁 Phúc lợi: 14 ngày phép/năm, lương tháng 13, khám sức khỏe định kỳ.",
-      "🕒 Thời gian: làm 5 ngày/tuần, nghỉ 2 ngày bất kỳ; xoay ca 24/7.",
-      "🎯 Yêu cầu: Tốt nghiệp THPT; Tiếng Anh thành thạo 4 kỹ năng; làm việc 100% bằng tiếng Anh.",
-      "Chỉ phù hợp nếu: xác nhận làm được 24/7 theo sắp xếp TL."
-    ],
-    warn: "Lưu ý: Dự án xoay ca 24/7. Ca do Team Lead sắp xếp (không chọn ca)."
-
-  },
-
-  {
-    id: "flight",
-    title: "Customer Service (English) – Flight Ticket App",
-    locationGroup: "Q12",
-    address: "Quận 12 – Tòa nhà QTSC1, Công viên Phần mềm Quang Trung (Onsite)",
-    english: "yes",
-    schedule: "24-7",
-    badges: ["English", "24/7", "11–13tr", "100% lương thử việc", "BH sau thử việc"],
-    summary: "CSKH app vé máy bay: hỗ trợ khách book vé và xử lý yêu cầu cơ bản (call/chat/email), dùng tiếng Anh mỗi ngày.",
-    details: [
-      "📌 Công việc: nhận call/chat/email, hỗ trợ khách book vé máy bay, xử lý yêu cầu cơ bản.",
-      "📌 Điểm mạnh: phù hợp làm “cửa vào ngành” BPO, học quy trình CSKH & làm với khách quốc tế.",
-      "💰 Thu nhập TB: 11.000.000 – 13.000.000 VNĐ/tháng.",
-      "💯 Thử việc: 2 tháng thử việc nhận 100% lương.",
-      "🎁 Phúc lợi: BHXH, BHYT, BHTN + BH tai nạn 24/7 sau 2 tháng thử việc.",
-      "🎁 Phúc lợi: 14 ngày phép/năm, lương tháng 13.",
-      "🕒 Thời gian: xoay ca 24/7 (có ca tối/đêm, cuối tuần, ngày lễ).",
-      "🎯 Yêu cầu: THPT trở lên; Tiếng Anh 4 kỹ năng ổn.",
-      "Chỉ phù hợp nếu: xác nhận làm được 24/7 theo sắp xếp TL."
-    ],
-    warn: "Lưu ý: Dự án xoay ca 24/7. Ca do Team Lead sắp xếp (không chọn ca)."
-
-  },
-
-  {
-    id: "milk",
-    title: "Tư vấn chốt đơn – Sản phẩm sữa",
-    locationGroup: "Q12",
-    address: "Quận 12 – Tòa nhà QTSC9, Công viên Phần mềm Quang Trung (Onsite)",
-    english: "no",
-    schedule: "office",
-    badges: ["Giờ hành chính", "9–25tr", "Có sẵn data", "100% lương thử việc"],
-    summary: "Telesales tư vấn sữa theo data có sẵn, chốt đơn và bám KPI.",
-    details: [
-      "📌 Công việc: gọi khách theo data có sẵn, tư vấn sản phẩm sữa phù hợp.",
-      "📌 Công việc: chăm sóc khách, giải đáp thắc mắc, chốt đơn, bám chỉ tiêu/KPI.",
-      "💰 Thu nhập: 9.000.000 – 25.000.000 VNĐ/tháng (tùy năng lực).",
-      "💯 Thử việc: 2 tháng thử việc nhận 100% lương.",
-      "🎁 Phúc lợi: BHXH, BHYT, BHTN theo quy định sau 2 tháng thử việc.",
-      "🎁 Phúc lợi: 14 ngày phép/năm, lương tháng 13.",
-      "🕒 Thời gian: T2–T7, 8:00–18:30.",
-      "🎯 Yêu cầu: THPT trở lên; giọng rõ ràng, dễ nghe; có mục tiêu thu nhập, chịu khó học hỏi.",
-      "Chỉ phù hợp nếu: ok KPI + đi làm onsite Quận 12."
-    ],
-    warn: ""
-  },
-
-  {
-    id: "fee",
-    title: "CSKH Sau vay / Nhân viên nhắc & Gia hạn phí",
-    locationGroup: "Q11",
-    address: "Quận 11 – Tòa nhà Flemington, 182 Lê Đại Hành (Onsite). Dự kiến chuyển về Tòa nhà OneHub – Quận 9.",
-    english: "no",
-    schedule: "office",
-    badges: ["Outbound", "8–25tr", "Không yêu cầu kinh nghiệm", "Không tăng ca"],
-    summary: "Gọi theo data khách vay có sẵn để nhắc phí & gia hạn phí, định hướng thu nhập theo KPI.",
-    details: [
-      "📌 Công việc: gọi và thuyết phục khách theo data có sẵn; nhắc phí & gia hạn phí.",
-      "💰 Thu nhập TB: 8.000.000 – 25.000.000 VNĐ/tháng.",
-      "💯 Thử việc: 2 tháng thử việc nhận 100% lương.",
-      "🕒 Thời gian: 08:00–18:15, nghỉ trưa 1h20; off Chủ nhật (trừ CN đầu tiên của tháng).",
-      "🕒 Không tăng ca.",
-      "🎁 Phúc lợi: BHXH, BHYT, BHTN, BH tai nạn 24/7; 14 ngày phép/năm; lương tháng 13.",
-      "📍 Địa điểm: Quận 11 – Tòa nhà Flemington (dự kiến chuyển về Tòa nhà OneHub – Quận 9).",
-      "🎯 Yêu cầu: THCS trở lên; không yêu cầu kinh nghiệm; có mục tiêu về thu nhập.",
-      "Chỉ phù hợp nếu: ok outbound + đi làm Quận 11 (và/hoặc Quận 9 khi chuyển)."
-    ],
-    warn: ""
-  },
-];
-
-  /* ✅ Updated Q&A per your request */
   const FULL_QA = [
     { q: "Apply như thế nào?", a: "Bấm “Apply ngay” để mở Google Form và điền thông tin. Team liên hệ trong 24–48h nếu phù hợp." },
     {
@@ -603,22 +654,21 @@ const EMAIL = "minhhieupk02.ta@gmail.com";
     },
     { q: "Có nhận ứng viên chưa có kinh nghiệm không?", a: "Nếu bạn chưa có kinh nghiệm, công ty sẽ đào tạo bài bản." },
     { q: "“Tiếng Anh cơ bản (viết)” là như nào?", a: "Bạn có thể đọc hiểu và trả lời tin nhắn/email tiếng Anh đơn giản (câu ngắn, nội dung cơ bản)." },
-    { q: "Job English có bắt buộc xoay ca 24/7 không?", a: "Có. Travel/Flight xoay ca 24/7 (có ca tối/đêm, cuối tuần, lễ). Ca do Team Lead sắp xếp, không chọn ca." },
+    { q: "Job English có xoay ca 24/7 không?", a: "Có. Travel/Flight xoay ca 24/7 (có ca tối/đêm, cuối tuần, lễ). Ca do Team Lead sắp xếp, không chọn ca." },
     { q: "24/7 nghĩa là gì? Có phải làm 24 tiếng/ngày không?", a: "Không phải. 24/7 nghĩa là dự án vận hành cả ngày, bạn làm theo ca xoay theo lịch phân công." },
-    { q: "Bao lâu có phản hồi sau khi apply?", a: "Nếu phù hợp tiêu chí (địa điểm/ca/tiếng Anh/kinh nghiệm), team thường liên hệ trong 24–48h. Bạn cũng có thể nhắn Zalo để được hỗ trợ nhanh." },
+    { q: "Bao lâu có phản hồi sau khi apply?", a: "Nếu phù hợp tiêu chí (địa điểm/ca/tiếng Anh/kinh nghiệm), team thường liên hệ trong 24–48h. Bạn cũng có thể nhắn Zalo/email để được hỗ trợ nhanh." },
     { q: "Có remote/WFH không?", a: "Hiện các vị trí đang tuyển là onsite tại văn phòng. Khi có hybrid/remote team sẽ cập nhật." },
-    { q: "Không làm 24/7 được thì chọn job nào?", a: "Bạn có thể chọn CSKH Ứng dụng Mạng xã hội (ca trong khung), Tư vấn chốt đơn (giờ hành chính), hoặc CSKH Sau vay/Nhắc & Gia hạn (giờ hành chính theo lịch dự án)." }
+    { q: "Không làm 24/7 được thì chọn job nào?", a: "Bạn có thể chọn CSKH Ứng dụng Mạng xã hội, Tư vấn chốt đơn, hoặc CSKH Sau vay/Nhắc & Gia hạn (theo lịch dự án)." }
   ];
 
   const SHORT_QA = [
     "Apply: bấm link, điền form 1 phút.",
-    "Địa điểm làm việc: Quận 12 (Tòa nhà Tech Valley/Tòa nhà QTSC1/Tòa nhà QTSC9) + Quận 11 (Tòa nhà Flemington, dự kiến Tòa nhà OneHub Quận 9).",
-    "Fresher: có job nhận fresher, công ty đào tạo bài bản.",
-    "MXH: tiếng Anh cơ bản (viết).",
-    "Travel/Flight: 24/7 bắt buộc, TL sắp ca, không chọn ca.",
+    "Địa điểm: Quận 12 (Tòa nhà Tech Valley/QTSC1/QTSC9) + Quận 11 (Tòa nhà Flemington, dự kiến Tòa nhà OneHub Quận 9).",
+    "Fresher: công ty đào tạo bài bản.",
+    "MXH: tiếng Anh cơ bản.",
+    "Travel/Flight: xoay ca 24/7 (TL sắp ca, không chọn ca).",
     "24/7: xoay ca theo lịch, không phải làm 24h/ngày.",
-    "Phản hồi: 24–48h nếu phù hợp.",
-    "Không làm 24/7: chọn MXH/Chốt đơn/CSKH Sau vay."
+    "Phản hồi: 24–48h nếu phù hợp."
   ];
 
   const state = { src: "website", selectedJobId: null, filters: { loc: "all", english: "all", schedule: "all" }, qaSearch: "" };
@@ -673,16 +723,15 @@ const EMAIL = "minhhieupk02.ta@gmail.com";
     const links = Array.from(document.querySelectorAll("#nav .chip"));
     links.forEach(a=>{
       a.classList.remove("active");
-      if(hash.startsWith(a.getAttribute("href"))) a.classList.add("active");
+      if(a.getAttribute("href") && hash.startsWith(a.getAttribute("href"))) a.classList.add("active");
     });
   }
 
   function jobCard(job){
-    const warnHtml = job.warn ? `<div class="warnline">⚠️ ${escapeHtml(job.warn)}</div>` : "";
+    const warnHtml = job.warn ? `<div class="warnline">ℹ️ ${escapeHtml(job.warn)}</div>` : "";
     const badges = job.badges.map(b=>{
       const hot = (b.includes("24/7")) ? "hot" : "";
-      const ok = (b.includes("Fresher")) ? "ok" : "";
-      return `<span class="badge ${hot} ${ok}">${escapeHtml(b)}</span>`;
+      return `<span class="badge ${hot}">${escapeHtml(b)}</span>`;
     }).join("");
     return `
       <div class="card">
@@ -713,7 +762,7 @@ const EMAIL = "minhhieupk02.ta@gmail.com";
       <div class="hero">
         <div class="panel">
           <h2>Concentrix HCM Tuyển dụng</h2>
-          <p>Chọn vị trí phù hợp và apply 1 phút. Với job English 24/7: <span style="color:var(--accent);font-weight:800">có xoay ca</span> và <b>Team Lead sắp ca (không chọn ca)</b>.</p>
+          <p>Chọn vị trí phù hợp và apply 1 phút. Với job English 24/7: <span style="color:var(--accent);font-weight:900">có xoay ca</span> và ca do <b>Team Lead sắp xếp (không chọn ca)</b>.</p>
           <div class="btnrow">
             <button class="btn" onclick="go('#/apply')">Apply ngay</button>
             <button class="btn secondary" onclick="go('#/jobs')">Xem vị trí</button>
@@ -722,7 +771,7 @@ const EMAIL = "minhhieupk02.ta@gmail.com";
           <div class="bullets">
             <div class="bullet"><span class="dot"></span><span>Onsite Quận 12/Quận 11. Team liên hệ trong 24–48h nếu phù hợp.</span></div>
             <div class="bullet"><span class="dot"></span><span>Nếu bạn chưa có kinh nghiệm, công ty sẽ đào tạo bài bản.</span></div>
-            <div class="bullet"><span class="dot warn"></span><span>Travel/Flight: xoay ca 24/7 bắt buộc, TL sắp ca, không chọn ca.</span></div>
+            <div class="bullet"><span class="dot note"></span><span>Job Travel/Flight xoay ca 24/7 theo lịch Team Lead.</span></div>
           </div>
         </div>
 
@@ -732,10 +781,10 @@ const EMAIL = "minhhieupk02.ta@gmail.com";
           <div class="muted" style="margin-top:8px">Zalo/Phone: <b>${escapeHtml(PHONE)}</b></div>
           <div class="muted" style="margin-top:6px">Email: <b><a href="mailto:${escapeHtml(EMAIL)}">${escapeHtml(EMAIL)}</a></b></div>
           <div class="actions" style="margin-top:12px">
-  <button class="btn secondary" onclick="copy('${PHONE}')">Copy số</button>
-  <button class="btn secondary" onclick="copy('${EMAIL}')">Copy email</button>
-  <button class="btn" onclick="go('#/apply')">Mở trang Apply</button>
-</div>
+            <button class="btn secondary" onclick="copy('${PHONE}')">Copy số</button>
+            <button class="btn secondary" onclick="copy('${EMAIL}')">Copy email</button>
+            <button class="btn" onclick="go('#/apply')">Mở trang Apply</button>
+          </div>
           <div class="hr"></div>
           <div class="small">Nguồn: <b>${escapeHtml(state.src)}</b></div>
           <div class="small" style="margin-top:8px">Lưu ý: Form có tải CV nên Google có thể yêu cầu đăng nhập.</div>
@@ -833,16 +882,16 @@ const EMAIL = "minhhieupk02.ta@gmail.com";
   function renderApply(){
     const job = state.selectedJobId ? JOBS.find(j=>j.id===state.selectedJobId) : null;
 
-    const warning = job && job.schedule === "24-7"
-      ? `<div class="warnline">⚠️ 24/7 bắt buộc. Ca do Team Lead sắp xếp, không chọn ca.</div>`
+    const note = job && job.schedule === "24-7"
+      ? `<div class="warnline">ℹ️ Lưu ý: Dự án xoay ca 24/7. Ca do Team Lead sắp xếp (không chọn ca).</div>`
       : "";
 
     const jobSummary = job ? `
       <div class="card" style="margin-top:12px">
         <h3 style="margin:0 0 6px">Bạn đang apply: ${escapeHtml(job.title)}</h3>
         <div class="addr">📍 ${escapeHtml(job.address)}</div>
-        ${warning}
-        <div class="small" style="margin-top:10px"><b>Chỉ phù hợp nếu:</b> ${escapeHtml(job.details[job.details.length-1] || "")}</div>
+        ${note}
+        <div class="small" style="margin-top:10px"><b>Tip:</b> Bạn nhớ chuẩn bị sẵn thời gian bắt đầu đi làm + ca có thể xoay (nếu là job 24/7).</div>
       </div>
     ` : `
       <div class="card" style="margin-top:12px">
@@ -862,7 +911,8 @@ const EMAIL = "minhhieupk02.ta@gmail.com";
 
         <div class="actions" style="margin-top:12px">
           <button class="btn" onclick="openForm()">Mở form ứng tuyển (Google Form)</button>
-          <button class="btn secondary" onclick="copy('${PHONE}')">Copy số Zalo/Phone</button>
+          <button class="btn secondary" onclick="copy('${PHONE}')">Copy số</button>
+          <button class="btn secondary" onclick="copy('${EMAIL}')">Copy email</button>
         </div>
 
         <div class="hr"></div>
@@ -960,11 +1010,12 @@ const EMAIL = "minhhieupk02.ta@gmail.com";
     return `
       <div class="footer">
         <div>
-          <div><b>${escapeHtml(RECRUITER_NAME)}</b> • Zalo/Phone: <b>${escapeHtml(PHONE)}</b> • Team liên hệ trong 24–48h nếu phù hợp.</div>
+          <div><b>${escapeHtml(RECRUITER_NAME)}</b> • Zalo/Phone: <b>${escapeHtml(PHONE)}</b> • Email: <b>${escapeHtml(EMAIL)}</b></div>
           <div class="small" style="margin-top:4px">Nguồn: <b>${escapeHtml(state.src)}</b> • Form có tải CV nên Google có thể yêu cầu đăng nhập.</div>
         </div>
         <div style="display:flex; gap:8px; flex-wrap:wrap; justify-content:flex-end">
           <button class="copybtn" onclick="copy('${PHONE}')">Copy số</button>
+          <button class="copybtn" onclick="copy('${EMAIL}')">Copy email</button>
           <button class="copybtn" onclick="copyBioLinks()">Copy link bio</button>
         </div>
       </div>
@@ -974,14 +1025,14 @@ const EMAIL = "minhhieupk02.ta@gmail.com";
   function openJobModal(id){
     const job = JOBS.find(j=>j.id===id);
     if(!job) return;
-    const badges = job.badges.map(b=>`<span class="badge">${escapeHtml(b)}</span>`).join(" ");
-    const warn = job.warn ? `<div class="warnline">⚠️ ${escapeHtml(job.warn)}</div>` : "";
+    const badges = job.badges.map(b=>`<span class="badge ${b.includes("24/7")?"hot":""}">${escapeHtml(b)}</span>`).join(" ");
+    const note = job.warn ? `<div class="warnline">ℹ️ ${escapeHtml(job.warn)}</div>` : "";
     const list = job.details.map(x=>`<li class="muted" style="margin:6px 0">${escapeHtml(x)}</li>`).join("");
     $("#modalContent").innerHTML = `
       <h3>${escapeHtml(job.title)}</h3>
       <div class="meta" style="margin:8px 0">${badges}</div>
       <div class="addr">📍 ${escapeHtml(job.address)}</div>
-      ${warn}
+      ${note}
       <div class="hr"></div>
       <div class="muted"><b>Mô tả nhanh</b></div>
       <div class="small" style="margin-top:6px">${escapeHtml(job.summary)}</div>
@@ -1012,34 +1063,34 @@ const EMAIL = "minhhieupk02.ta@gmail.com";
   }
 
   function onQuickJobChange(jobId){
-  const j = JOBS.find(x=>x.id===jobId);
-  const box = document.querySelector("#quickConditional");
-  if(!box) return;
+    const j = JOBS.find(x=>x.id===jobId);
+    const box = document.querySelector("#quickConditional");
+    if(!box) return;
 
-  let html = "";
-  if(j && j.schedule === "24-7"){
-    html += `
-      <div class="two-col">
-        <div>
-          <label>Xác nhận làm được xoay ca 24/7 (TL sắp ca, không chọn ca)</label>
-          <select name="confirm247" required>
-            <option value="Có" selected>Có</option>
-            <option value="Không">Không</option>
-          </select>
+    let html = "";
+    if(j && j.schedule === "24-7"){
+      html += `
+        <div class="two-col">
+          <div>
+            <label>Xác nhận làm được xoay ca 24/7 (TL sắp ca, không chọn ca)</label>
+            <select name="confirm247" required>
+              <option value="Có" selected>Có</option>
+              <option value="Không">Không</option>
+            </select>
+          </div>
+          <div>
+            <label>English level (tự đánh giá)</label>
+            <select name="englishLevel" required>
+              <option value="Basic">Basic</option>
+              <option value="Intermediate" selected>Intermediate</option>
+              <option value="Upper">Upper</option>
+            </select>
+          </div>
         </div>
-        <div>
-          <label>English level (tự đánh giá)</label>
-          <select name="englishLevel" required>
-            <option value="Basic">Basic</option>
-            <option value="Intermediate" selected>Intermediate</option>
-            <option value="Upper">Upper</option>
-          </select>
-        </div>
-      </div>
-    `;
+      `;
+    }
+    box.innerHTML = html;
   }
-  box.innerHTML = html;
-}
 
   function submitQuickApply(e){
     e.preventDefault();
@@ -1072,13 +1123,14 @@ Nhờ anh/chị hỗ trợ sắp lịch screening/PV giúp em ạ.`;
     result.classList.remove("hidden");
     result.innerHTML = `
       <h3 style="margin:0 0 8px">Xong rồi ✅</h3>
-      <div class="small">Copy tin nhắn dưới đây và gửi Zalo/SMS tới <b>${escapeHtml(PHONE)}</b>.</div>
+      <div class="small">Copy tin nhắn dưới đây và gửi Zalo/SMS tới <b>${escapeHtml(PHONE)}</b> (hoặc email <b>${escapeHtml(EMAIL)}</b>).</div>
       <div class="hr"></div>
       <pre style="white-space:pre-wrap; margin:0; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas; color: var(--text);
-                  background: rgba(17,24,39,.02); border:1px solid var(--line); border-radius: 14px; padding:12px">${escapeHtml(msg)}</pre>
+                  background: rgba(255,255,255,.04); border:1px solid var(--line); border-radius: 14px; padding:12px">${escapeHtml(msg)}</pre>
       <div class="actions" style="margin-top:12px">
         <button class="btn" onclick="copy(${JSON.stringify(msg)})">Copy tin nhắn</button>
         <button class="btn secondary" onclick="copy('${PHONE}')">Copy số</button>
+        <button class="btn secondary" onclick="copy('${EMAIL}')">Copy email</button>
         <button class="btn secondary" onclick="openForm()">Mở form Google</button>
       </div>
     `;
@@ -1092,6 +1144,27 @@ Nhờ anh/chị hỗ trợ sắp lịch screening/PV giúp em ạ.`;
     const fb = base + "fb.html";
     const block = `Bio links:\n- TikTok: ${tiktok}\n- Threads: ${threads}\n- Facebook: ${fb}`;
     copy(block);
+  }
+
+  function applyTheme(theme){
+    document.documentElement.dataset.theme = theme;
+    const btn = document.getElementById("themeToggle");
+    if(btn) btn.textContent = (theme === "dark") ? "Light" : "Dark";
+  }
+
+  function initTheme(){
+    const saved = localStorage.getItem("cx_theme");
+    const theme = saved || "dark"; // default dark
+    applyTheme(theme);
+
+    const btn = document.getElementById("themeToggle");
+    if(btn){
+      btn.addEventListener("click", ()=>{
+        const next = (document.documentElement.dataset.theme === "dark") ? "light" : "dark";
+        localStorage.setItem("cx_theme", next);
+        applyTheme(next);
+      });
+    }
   }
 
   function route(){
@@ -1130,44 +1203,16 @@ Nhờ anh/chị hỗ trợ sắp lịch screening/PV giúp em ạ.`;
   window.copyBioLinks = copyBioLinks;
   window.hideModal = hideModal;
   window.closeModal = closeModal;
+  window.go = go;
 
   window.addEventListener("hashchange", route);
   window.addEventListener("load", ()=>{
+    initTheme();
     const url = new URL(location.href);
     const job = url.searchParams.get("job");
     if(job && JOBS.some(j=>j.id===job)) setSelectedJob(job);
     route();
   });
-  function applyTheme(theme){
-  document.documentElement.dataset.theme = theme;
-  const btn = document.getElementById("themeToggle");
-  if(btn) btn.textContent = (theme === "dark") ? "Light" : "Dark";
-}
-
-function initTheme(){
-  const saved = localStorage.getItem("cx_theme");
-  const prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
-  const theme = saved || (prefersDark ? "dark" : "light");
-  applyTheme(theme);
-
-  const btn = document.getElementById("themeToggle");
-  if(btn){
-    btn.addEventListener("click", ()=>{
-      const next = (document.documentElement.dataset.theme === "dark") ? "light" : "dark";
-      localStorage.setItem("cx_theme", next);
-      applyTheme(next);
-    });
-  }
-}
-
-window.addEventListener("load", initTheme);
-
 </script>
 </body>
 </html>
-
-
-
-
-
-
