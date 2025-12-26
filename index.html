@@ -11,11 +11,6 @@
 
   <style>
     :root{
-  --bg:#f6f7fb;
-  --panel:#ffffff;
-  --card:#ffffff;
-
-  /* Concentrix palette (RGB swatches) */
   --cx-blue:#003D5B;        /* Unifying Blue */
   --cx-seafoam:#25E2CC;     /* Seafoam Teal */
   --cx-jade:#007380;        /* Jade Green */
@@ -24,17 +19,22 @@
   --cx-yellow:#FBCA18;      /* Sunshine Yellow */
   --cx-coolgray:#F2F2F2;    /* Cool Gray */
   --cx-charcoal:#2A2B2C;    /* Charcoal Gray */
+  --cx-white:#FFFFFF;
+
+  --bg: #f7fafc;
+  --panel: var(--cx-white);
+  --card: var(--cx-white);
 
   --text: var(--cx-charcoal);
   --muted: rgba(42,43,44,.75);
   --line: rgba(42,43,44,.12);
 
-  /* Main brand accent */
+  /* Primary corporate */
   --accent: var(--cx-blue);
   --accent2: var(--cx-seafoam);
 
-  --danger:#dc2626;
-  --ok:#16a34a;
+  --danger: #dc2626;
+  --ok: #16a34a;
 
   --shadow: 0 12px 30px rgba(42,43,44,.10);
   --radius:18px;
@@ -73,10 +73,10 @@
       background: rgba(17,24,39,.03);
     }
     .chip.active{
-      color:var(--text);
-      border-color: rgba(91,92,255,.35);
-      background: rgba(91,92,255,.08);
-    }
+  color: var(--text);
+  border-color: rgba(0,61,91,.35);
+  background: rgba(37,226,204,.12);
+}
 
     .hero{
       padding:22px 0 6px;
@@ -162,11 +162,11 @@
 
     .warnline{
       margin-top:10px;
-      color:#7f1d1d;
+      color:#7a2e00;
       font-size:13px;
-      border-left: 3px solid rgba(220,38,38,.9);
+      border-left: 3px solid var(--cx-orange);
       padding:8px 10px;
-      background: rgba(220,38,38,.08);
+      background: rgba(255,132,0,.10);
       border-radius: 12px;
     }
 
@@ -1078,6 +1078,7 @@ Nhờ anh/chị hỗ trợ sắp lịch screening/PV giúp em ạ.`;
 </script>
 </body>
 </html>
+
 
 
 
