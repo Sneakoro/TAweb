@@ -396,9 +396,41 @@
   opacity: 1;
 }
 
+/* Modal animation (smooth open/close) */
+.modal-backdrop.open .modal{
+  /* override base transition to avoid double animation */
+  transition: none;
+  animation: modalIn 240ms cubic-bezier(.2,.9,.2,1) both;
+}
+.modal-backdrop.closing .modal{
+  transition: none;
+  animation: modalOut 160ms ease both;
+}
+
+/* subtle content entrance */
+.modal .meta, .modal .addr, .modal .warnline, .modal .hr, .modal ul, .modal .actions{
+  animation: contentIn 220ms ease both;
+  animation-delay: 60ms;
+}
+
+@keyframes modalIn{
+  from{ transform: translateY(14px) scale(.985); opacity: 0; }
+  to  { transform: translateY(0) scale(1); opacity: 1; }
+}
+@keyframes modalOut{
+  from{ transform: translateY(0) scale(1); opacity: 1; }
+  to  { transform: translateY(10px) scale(.99); opacity: 0; }
+}
+@keyframes contentIn{
+  from{ opacity: 0; transform: translateY(6px); }
+  to  { opacity: 1; transform: translateY(0); }
+}
+
+
 /* tôn trọng người dùng giảm chuyển động */
 @media (prefers-reduced-motion: reduce){
   .modal-backdrop, .modal { transition: none !important; }
+  .modal, .modal * { animation: none !important; }
 }
 
     .modal{
@@ -1069,14 +1101,19 @@
       </div>
     `;
     const bd = $("#modalBackdrop");
-bd.classList.add("open");
-document.body.style.overflow = "hidden";
-}
+    bd.classList.remove("closing");
+    bd.classList.add("open");
+    document.body.style.overflow = "hidden";
+  }
 
 function hideModal(){
   const bd = $("#modalBackdrop");
+  // play close animation
+  bd.classList.add("closing");
   bd.classList.remove("open");
   document.body.style.overflow = "";
+  // cleanup
+  setTimeout(()=>bd.classList.remove("closing"), 220);
 }
 
 function closeModal(e){
