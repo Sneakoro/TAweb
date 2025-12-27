@@ -625,6 +625,46 @@ html { scroll-behavior: smooth; }
   animation: pulseRing .9s ease-out;
   border-radius: 18px;
 }
+/* =========================
+   Motion Pack (subtle + premium)
+   ========================= */
+
+/* 1) Card hover: nổi nhẹ + viền seafoam */
+.card{
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease, background .18s ease;
+  will-change: transform;
+}
+.card:hover{
+  transform: translateY(-3px);
+  box-shadow: 0 18px 55px rgba(0,0,0,.35);
+  border-color: rgba(37,226,204,.28);
+}
+html[data-theme="light"] .card:hover{
+  box-shadow: 0 16px 40px rgba(0,0,0,.10);
+}
+
+/* 2) Fade-up khi card/section xuất hiện */
+@keyframes softPop{
+  from{ transform: translateY(8px); opacity: 0; }
+  to{   transform: translateY(0);   opacity: 1; }
+}
+.reveal{
+  animation: softPop .55s ease-out both;
+}
+
+/* 3) Click feedback cho nút (Apply/Copy/Chip) */
+.btn:active, .copybtn:active, .chip:active{
+  transform: translateY(1px) scale(.98);
+}
+
+/* 4) Background “breathing” nhẹ (nếu bạn đã có body::before) */
+@keyframes drift{
+  0%{   transform: translate3d(0,0,0) scale(1);   opacity:.90; }
+  50%{  transform: translate3d(16px,-10px,0) scale(1.03); opacity:1; }
+  100%{ transform: translate3d(0,0,0) scale(1);   opacity:.90; }
+}
+/* Nếu bạn đang dùng body::before để glow thì chỉ cần thêm animation */
+body::before{ animation: drift 10s ease-in-out infinite; }
 
   </style>
 </head>
@@ -1392,8 +1432,10 @@ Nhờ anh/chị hỗ trợ sắp lịch screening/PV giúp em ạ.`;
       }
     }else if(hash.startsWith("#/qa")){
       app.innerHTML = renderQA();
+      requestAnimationFrame(setupReveal);
     }else{
       app.innerHTML = renderHome();
+      requestAnimationFrame(setupReveal);
     }
   }
 
@@ -1418,6 +1460,22 @@ Nhờ anh/chị hỗ trợ sắp lịch screening/PV giúp em ạ.`;
     const job = url.searchParams.get("job");
     if(job && JOBS.some(j=>j.id===job)) setSelectedJob(job);
     route();
+    function setupReveal(){
+  const els = document.querySelectorAll(".card, .hero, .qa, .sticky-cta, .footer, .quick-qa");
+  els.forEach(el => el.classList.remove("reveal"));
+
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){
+        e.target.classList.add("reveal");
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  els.forEach(el => io.observe(el));
+}
+
   });
   function flashSection(id){
   const el = document.getElementById(id);
@@ -1447,6 +1505,7 @@ function animateVisibleSections(){
 <section id="qa" data-animate>...</section>
 
 </html>
+
 
 
 
