@@ -8,9 +8,10 @@
   <meta property="og:title" content="Concentrix HCM Tuyển dụng | Apply nhanh" />
   <meta property="og:description" content="Chọn vị trí phù hợp và apply 1 phút. Quận 12: Tòa nhà Tech Valley/QTSC1/QTSC9. Quận 11: Flemington (dự kiến OneHub Quận 9)." />
   <meta property="og:type" content="website" />
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800;900&display=swap&subset=vietnamese" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800;900&display=swap&subset=vietnamese" rel="stylesheet">
 
   <!-- Set theme ASAP to avoid flash; default = dark -->
   <script>
@@ -23,10 +24,6 @@
 
   <style>
     :root{
-        --btn-secondary-text: var(--text);
-  --btn-secondary-bg: rgba(0,0,0,.02);
-
-      /* Concentrix palette */
       --cx-blue:#003D5B;
       --cx-seafoam:#25E2CC;
       --cx-jade:#007380;
@@ -37,154 +34,129 @@
       --cx-charcoal:#2A2B2C;
       --cx-white:#FFFFFF;
 
-      /* Light (fallback) */
+      /* Light */
       --bg: #f7fafc;
       --panel: var(--cx-white);
       --card: var(--cx-white);
-
       --text: var(--cx-charcoal);
       --muted: rgba(42,43,44,.75);
       --line: rgba(42,43,44,.12);
 
-      /* Accent */
       --accent: var(--cx-blue);
       --accent2: var(--cx-seafoam);
 
-      /* Friendly note (instead of warning) */
       --note-bg: rgba(37,226,204,.12);
       --note-line: rgba(37,226,204,.55);
       --note-text: rgba(42,43,44,.85);
 
       --shadow: 0 12px 30px rgba(42,43,44,.10);
       --radius:18px;
+
+      --btn-secondary-text: var(--text);
+      --btn-secondary-bg: rgba(0,0,0,.02);
     }
 
     html[data-theme="dark"]{
-    --btn-secondary-text: rgba(255,255,255,.92);
-  --btn-secondary-bg: rgba(255,255,255,.05);
+      --bg: #040a0f;
+      --panel: #07131a;
+      --card: #0a1820;
 
-      /* Dark “đậm” */
-  --bg: #040a0f;            /* gần black */
-  --panel: #07131a;
-  --card: #0a1820;
+      --text: rgba(255,255,255,.92);
+      --muted: rgba(255,255,255,.68);
+      --line: rgba(255,255,255,.10);
 
-  --text: rgba(255,255,255,.92);
-  --muted: rgba(255,255,255,.68);
-  --line: rgba(255,255,255,.10);
+      --accent: var(--cx-seafoam);
+      --accent2: #2dd4bf;
 
-  --accent: var(--cx-seafoam);
-  --accent2: #2dd4bf;
+      --note-bg: rgba(37,226,204,.12);
+      --note-line: rgba(37,226,204,.70);
+      --note-text: rgba(255,255,255,.82);
 
-  --note-bg: rgba(37,226,204,.12);
-  --note-line: rgba(37,226,204,.70);
-  --note-text: rgba(255,255,255,.82);
+      --shadow: 0 18px 55px rgba(0,0,0,.55);
 
-  --shadow: 0 18px 55px rgba(0,0,0,.55);
-      
-}
+      --btn-secondary-text: rgba(255,255,255,.92);
+      --btn-secondary-bg: rgba(255,255,255,.06);
+    }
 
+    *{ box-sizing:border-box; }
 
-    *{ box-sizing: border-box; }
+    body{
+      margin:0;
+      font-family: "Be Vietnam Pro", ui-sans-serif, system-ui, -apple-system, "Segoe UI",
+                   Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      background: var(--bg);
+      color: var(--text);
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
 
-body{
-  margin:0;
-  font-family: "Be Vietnam Pro", ui-sans-serif, system-ui, -apple-system, "Segoe UI",
-               Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
-  background: var(--bg);
-  color: var(--text);
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+    body::before{
+      content:"";
+      position:fixed;
+      inset:-200px;
+      pointer-events:none;
+      background:
+        radial-gradient(800px 420px at 15% 10%, rgba(37,226,204,0.12), transparent 60%),
+        radial-gradient(700px 360px at 85% 18%, rgba(0,115,128,0.10), transparent 60%),
+        radial-gradient(900px 520px at 50% 95%, rgba(37,226,204,0.06), transparent 65%);
+      z-index:-1;
+      animation: drift 10s ease-in-out infinite;
+    }
 
-body::before{
-  content:"";
-  position:fixed;
-  inset:-200px;
-  pointer-events:none;
-  background:
-    radial-gradient(800px 420px at 15% 10%, rgba(37,226,204,0.12), transparent 60%),
-    radial-gradient(700px 360px at 85% 18%, rgba(0,115,128,0.10), transparent 60%),
-    radial-gradient(900px 520px at 50% 95%, rgba(37,226,204,0.06), transparent 65%);
-  z-index:-1;
-  animation: drift 10s ease-in-out infinite;
-}
-@keyframes drift {
-  0%   { transform: translate3d(0,0,0) scale(1); opacity:.9; }
-  50%  { transform: translate3d(18px,-10px,0) scale(1.03); opacity:1; }
-  100% { transform: translate3d(0,0,0) scale(1); opacity:.9; }
-}
-a{ color: inherit; text-decoration: none; }
+    @keyframes drift{
+      0%{transform:translate3d(0,0,0) scale(1);opacity:.90}
+      50%{transform:translate3d(16px,-10px,0) scale(1.03);opacity:1}
+      100%{transform:translate3d(0,0,0) scale(1);opacity:.90}
+    }
 
-    a{color:inherit; text-decoration:none}
-    .container{max-width:1080px; margin:0 auto; padding:18px}
+    a{ color:inherit; text-decoration:none; }
+
+    .container{max-width:1080px;margin:0 auto;padding:18px}
 
     .topbar{
-      position:sticky; top:0; z-index:50;
+      position:sticky;top:0;z-index:50;
       background: rgba(255,255,255,.75);
       backdrop-filter: blur(10px);
       border-bottom: 1px solid var(--line);
     }
-    html[data-theme="dark"] .topbar{
-      background: rgba(7,19,26,.72);
-    }
-    .topbar-inner{display:flex; align-items:center; justify-content:space-between; gap:12px; padding:14px 18px}
+    html[data-theme="dark"] .topbar{ background: rgba(7,19,26,.72); }
 
-    .brand{display:flex; align-items:center; gap:12px}
-    .brand h1{font-size:14px; margin:0; letter-spacing:.2px}
-    .brand p{margin:0; font-size:12px; color:var(--muted)}
+    .topbar-inner{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 18px}
+
+    .brand{display:flex;align-items:center;gap:12px}
+    .brand h1{font-size:14px;margin:0;letter-spacing:.2px}
+    .brand p{margin:0;font-size:12px;color:var(--muted)}
 
     .brandmark{
-  width: 190px;
-  height: 44px;
-  display:flex;
-  align-items:center;
-}
-.brandmark img{
-  height: 44px;
-  width: auto;
-  display:block;
-  object-fit: contain;
-}
+      width:190px;height:44px;
+      display:flex;align-items:center;
+      border-radius:12px;
+      padding:6px 10px;
+      background: rgba(255,255,255,.03);
+      border: 1px solid rgba(37,226,204,.18);
+    }
+    html[data-theme="light"] .brandmark{
+      background: rgba(0,61,91,.04);
+      border: 1px solid rgba(0,61,91,.12);
+    }
+    .brandmark img{
+      height:44px;width:auto;display:block;object-fit:contain;
+    }
 
+    .nav{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}
 
-
-/* Nếu đang dùng FullColor SVG (st1 là chữ xanh đậm), trên dark đổi sang sáng */
-html[data-theme="dark"] .brandmark svg .st1{ fill: #eaf7ff; }
-.brandmark{
-  border-radius: 12px;
-  padding: 6px 10px;
-  background: rgba(255,255,255,.03);
-  border: 1px solid rgba(37,226,204,.18);
-}
-html[data-theme="light"] .brandmark{
-  background: rgba(0,61,91,.04);
-  border: 1px solid rgba(0,61,91,.12);
-}
-
-
-    .nav{display:flex; gap:8px; flex-wrap:wrap; justify-content:flex-end}
     .chip{
-  font-size:12px;
-  color: var(--btn-secondary-text);
-  border:1px solid rgba(255,255,255,.14);
-  padding:8px 10px; border-radius:999px;
-  background: var(--btn-secondary-bg);
-  display:inline-flex; align-items:center; gap:6px;
-}
-html[data-theme="light"] .chip{
-  border-color: var(--line);
-}
-
-    button.chip{
-  cursor:pointer;
-  font-family:inherit;
-  color: inherit;
-  outline:none;
-  -webkit-appearance:none;
-  appearance:none;
-}
-
+      font-size:12px;
+      color: var(--btn-secondary-text);
+      border:1px solid rgba(255,255,255,.14);
+      padding:8px 10px;border-radius:999px;
+      background: var(--btn-secondary-bg);
+      display:inline-flex;align-items:center;gap:6px;
+      cursor:pointer;
+      font-family:inherit;
+    }
+    html[data-theme="light"] .chip{ border-color: var(--line); }
     .chip.active{
       color: var(--text);
       border-color: rgba(37,226,204,.35);
@@ -193,9 +165,9 @@ html[data-theme="light"] .chip{
 
     .hero{
       padding:22px 0 6px;
-      display:grid; grid-template-columns: 1.35fr .65fr; gap:16px;
+      display:grid;grid-template-columns:1.35fr .65fr;gap:16px;
     }
-    @media (max-width: 880px){ .hero{grid-template-columns:1fr} }
+    @media (max-width:880px){ .hero{grid-template-columns:1fr} }
 
     .panel{
       background: var(--panel);
@@ -204,57 +176,41 @@ html[data-theme="light"] .chip{
       box-shadow: var(--shadow);
       padding:18px;
     }
-    .hero h2{margin:0 0 8px; font-size:28px; letter-spacing:.2px}
-    .hero p{margin:0 0 12px; color:var(--muted); line-height:1.5}
 
-    .btnrow{display:flex; gap:10px; flex-wrap:wrap}
+    .hero h2{margin:0 0 8px;font-size:28px;letter-spacing:.2px}
+    .hero p{margin:0 0 12px;color:var(--muted);line-height:1.5}
+
+    .btnrow{display:flex;gap:10px;flex-wrap:wrap}
+
     .btn{
-      border:0; cursor:pointer;
-      padding:11px 14px;
-      border-radius: 14px;
+      border:0;cursor:pointer;
+      padding:11px 14px;border-radius:14px;
       font-weight:800;
-      color: #001820;
+      color:#001820;
       background: linear-gradient(135deg, var(--accent), var(--accent2));
       box-shadow: var(--shadow);
+      font-family: inherit;
     }
-    html[data-theme="dark"] .btn{ color:#001820; }
+
     .btn.secondary{
-  background: var(--btn-secondary-bg);
-  color: var(--btn-secondary-text);
-  border: 1px solid rgba(255,255,255,.14);
-  box-shadow:none;
-}
-    .btn.secondary:hover,
-.chip:hover,
-.copybtn:hover{
-  filter: brightness(1.08);
-}
-
-.btn.secondary:focus,
-.chip:focus,
-.copybtn:focus{
-  outline: 2px solid rgba(37,226,204,.35);
-  outline-offset: 2px;
-}
-
-html[data-theme="light"] .btn.secondary{
-  border-color: var(--line);
-}
-
-
-    .bullets{display:grid; gap:8px; margin-top:14px}
-    .bullet{
-      display:flex; gap:10px; align-items:flex-start;
-      color: var(--muted); font-size:13px;
+      background: var(--btn-secondary-bg);
+      color: var(--btn-secondary-text);
+      border: 1px solid rgba(255,255,255,.14);
+      box-shadow:none;
+      font-weight:800;
     }
-    .dot{width:10px; height:10px; border-radius:999px; background: var(--cx-seafoam); margin-top:4px}
-    .dot.note{background: var(--cx-jade)}
+    html[data-theme="light"] .btn.secondary{ border-color: var(--line); }
 
-    .grid{
-      display:grid; gap:12px;
-      grid-template-columns: repeat(2, 1fr);
-    }
-    @media (max-width: 820px){ .grid{grid-template-columns:1fr} }
+    .btn.secondary:hover,.chip:hover,.copybtn:hover{ filter:brightness(1.08); }
+    .btn:active,.copybtn:active,.chip:active{ transform: translateY(1px) scale(.98); }
+
+    .bullets{display:grid;gap:8px;margin-top:14px}
+    .bullet{display:flex;gap:10px;align-items:flex-start;color:var(--muted);font-size:13px}
+    .dot{width:10px;height:10px;border-radius:999px;background:var(--cx-seafoam);margin-top:4px}
+    .dot.note{background:var(--cx-jade)}
+
+    .grid{display:grid;gap:12px;grid-template-columns:repeat(2,1fr)}
+    @media (max-width:820px){ .grid{grid-template-columns:1fr} }
 
     .card{
       background: var(--card);
@@ -262,34 +218,25 @@ html[data-theme="light"] .btn.secondary{
       border-radius: var(--radius);
       padding:14px;
       box-shadow: 0 8px 20px rgba(0,0,0,.08);
+      transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+      will-change: transform;
     }
-    .card{
-  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
-  will-change: transform;
-}
-
-.card:hover{
-  transform: translateY(-3px);
-  box-shadow: 0 18px 55px rgba(0,0,0,.35);
-  border-color: rgba(37,226,204,.28);
-}
-
-html[data-theme="light"] .card:hover{
-  box-shadow: 0 16px 40px rgba(0,0,0,.10);
-}
-
     html[data-theme="light"] .card{ box-shadow: 0 8px 20px rgba(17,24,39,.06); }
+    .card:hover{
+      transform: translateY(-3px);
+      box-shadow: 0 18px 55px rgba(0,0,0,.35);
+      border-color: rgba(37,226,204,.28);
+    }
+    html[data-theme="light"] .card:hover{ box-shadow: 0 16px 40px rgba(0,0,0,.10); }
 
-    .card h3{margin:0 0 6px; font-size:16px}
-
-    .meta{display:flex; flex-wrap:wrap; gap:8px; margin:8px 0}
+    .card h3{margin:0 0 6px;font-size:16px}
+    .meta{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0}
     .badge{
-      font-size:12px; color: var(--muted);
+      font-size:12px;color:var(--muted);
       border: 1px solid var(--line);
       background: rgba(255,255,255,.04);
-      padding:6px 10px; border-radius:999px;
+      padding:6px 10px;border-radius:999px;
     }
-    /* keep class hot but make it friendly info, NOT red */
     .badge.hot{
       border-color: rgba(37,226,204,.35);
       background: rgba(37,226,204,.10);
@@ -297,9 +244,8 @@ html[data-theme="light"] .card:hover{
       font-weight:800;
     }
 
-    .addr{color: var(--muted); font-size:13px; line-height:1.45}
+    .addr{color:var(--muted);font-size:13px;line-height:1.45}
 
-    /* friendly note style (not warning) */
     .warnline{
       margin-top:10px;
       color: var(--note-text);
@@ -310,128 +256,112 @@ html[data-theme="light"] .card:hover{
       border-radius: 12px;
     }
 
-    .actions{display:flex; gap:10px; margin-top:12px; flex-wrap:wrap}
-    .actions .btn{padding:10px 12px; border-radius: 12px; font-size:13px}
-    .actions .btn.secondary{font-weight:800}
+    .actions{display:flex;gap:10px;margin-top:12px;flex-wrap:wrap}
+    .actions .btn{padding:10px 12px;border-radius:12px;font-size:13px}
 
-    .filters{display:flex; gap:10px; flex-wrap:wrap; align-items:flex-end;}
-    label{font-size:12px; color: var(--muted); display:block; margin-bottom:6px}
-    select, input, textarea{
+    label{font-size:12px;color:var(--muted);display:block;margin-bottom:6px}
+    select,input,textarea{
       width:100%;
       padding:10px 10px;
-      border-radius: 12px;
+      border-radius:12px;
       border:1px solid var(--line);
       background: rgba(255,255,255,.05);
       color: var(--text);
       outline:none;
+      font-family: inherit;
     }
-    textarea{min-height:90px; resize:vertical}
-    .filterbox{min-width: 180px; flex:1}
+    textarea{min-height:90px;resize:vertical}
 
-    .section-title{margin:18px 0 10px; font-size:16px; color: var(--text)}
-    .muted{color: var(--muted)}
+    .section-title{margin:18px 0 10px;font-size:16px;color:var(--text)}
+    .muted{color:var(--muted)}
+    .small{font-size:12px;color:var(--muted)}
 
-    .qa{border:1px solid var(--line); border-radius: var(--radius); overflow:hidden}
-    .qa details{
-  padding:12px 14px;
-  background: rgba(255,255,255,.04);
-  border-top:1px solid var(--line);
-}
-html[data-theme="dark"] .qa details{
-  background: rgba(255,255,255,.02);
-}
-
+    .qa{border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+    .qa details{padding:12px 14px;background:rgba(255,255,255,.04);border-top:1px solid var(--line)}
+    html[data-theme="dark"] .qa details{background:rgba(255,255,255,.02)}
     .qa details:first-child{border-top:0}
-    .qa summary{cursor:pointer; font-weight:800}
-    .qa p{margin:10px 0 0; color: var(--muted); line-height:1.55; white-space: pre-line}
-.qa summary{ color: var(--text); }
-.qa p{ color: var(--muted); }
+    .qa summary{cursor:pointer;font-weight:800;color:var(--text)}
+    .qa p{margin:10px 0 0;color:var(--muted);line-height:1.55;white-space:pre-line}
 
     .footer{
-  margin:18px 0 90px;
-  color: var(--muted);
-  font-size:12px;
-  display:flex;
-  gap:10px;
-  flex-wrap:wrap;
-  align-items:center;
-  justify-content:space-between;
-  border-top:1px solid var(--line);
-  padding-top:14px;
-}
+      margin:18px 0 90px;
+      color: var(--muted);
+      font-size:12px;
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      align-items:center;
+      justify-content:space-between;
+      border-top:1px solid var(--line);
+      padding-top:14px;
+    }
 
     .copybtn{
-  border:1px solid rgba(255,255,255,.14);
-  background: var(--btn-secondary-bg);
-  color: var(--btn-secondary-text);
-  padding:8px 10px;
-  border-radius: 12px;
-  cursor:pointer;
-  font-weight:900;
-  font-size:12px;
-}
-html[data-theme="light"] .copybtn{
-  border-color: var(--line);
-}
-
+      border:1px solid rgba(255,255,255,.14);
+      background: var(--btn-secondary-bg);
+      color: var(--btn-secondary-text);
+      padding:8px 10px;
+      border-radius:12px;
+      cursor:pointer;
+      font-weight:900;
+      font-size:12px;
+      font-family: inherit;
+    }
+    html[data-theme="light"] .copybtn{ border-color: var(--line); }
 
     .sticky-cta{
-  position:fixed; left:0; right:0; bottom:0; z-index:60;
-  background: rgba(255,255,255,.70);
-  backdrop-filter: blur(10px);
-  border-top: 1px solid var(--line);
-}
-html[data-theme="dark"] .sticky-cta{
-  background: rgba(4,10,15,.78);
-}
+      position:fixed;left:0;right:0;bottom:0;z-index:60;
+      background: rgba(255,255,255,.70);
+      backdrop-filter: blur(10px);
+      border-top: 1px solid var(--line);
+    }
+    html[data-theme="dark"] .sticky-cta{ background: rgba(4,10,15,.78); }
 
     .sticky-inner{
-      max-width:1080px; margin:0 auto;
-      padding:12px 16px; display:flex; gap:10px; align-items:center; justify-content:space-between;
+      max-width:1080px;margin:0 auto;
+      padding:12px 16px;display:flex;gap:10px;align-items:center;justify-content:space-between;
     }
-    .sticky-inner .left{display:flex; flex-direction:column; gap:2px}
-    .sticky-title{font-size:12px; color: var(--muted)}
-    .sticky-job{font-size:13px; font-weight:900}
+    .sticky-inner .left{display:flex;flex-direction:column;gap:2px}
+    .sticky-title{font-size:12px;color:var(--muted)}
+    .sticky-job{font-size:13px;font-weight:900}
 
     .toast{
-      position:fixed; top:14px; right:14px; z-index:100;
+      position:fixed;top:14px;right:14px;z-index:100;
       background: rgba(255,255,255,.95);
       border:1px solid var(--line);
       padding:10px 12px;
-      border-radius: 14px;
+      border-radius:14px;
       box-shadow: var(--shadow);
       color: var(--text);
       font-size:13px;
       display:none;
     }
-    html[data-theme="dark"] .toast{
-      background: rgba(11,31,41,.95);
-    }
+    html[data-theme="dark"] .toast{ background: rgba(11,31,41,.95); }
 
-    .hr{height:1px; background: var(--line); margin:12px 0}
-    .small{font-size:12px; color: var(--muted)}
-    .pillbox{display:flex; gap:8px; flex-wrap:wrap}
+    .hr{height:1px;background:var(--line);margin:12px 0}
+
+    .pillbox{display:flex;gap:8px;flex-wrap:wrap}
     .pill{
       font-size:12px;
       padding:7px 10px;
-      border-radius: 999px;
+      border-radius:999px;
       border:1px solid var(--line);
       background: rgba(255,255,255,.04);
       color: var(--muted);
     }
 
-    .two-col{display:grid; grid-template-columns: 1fr 1fr; gap:12px}
-    @media (max-width: 820px){ .two-col{grid-template-columns:1fr} }
+    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    @media (max-width:820px){ .two-col{grid-template-columns:1fr} }
 
     .hidden{display:none !important}
 
     .modal-backdrop{
-      position:fixed; inset:0; background: rgba(0,0,0,.55);
-      display:none; align-items:center; justify-content:center;
-      padding:16px; z-index:200;
+      position:fixed;inset:0;background:rgba(0,0,0,.55);
+      display:none;align-items:center;justify-content:center;
+      padding:16px;z-index:200;
     }
     .modal{
-      max-width: 720px; width:100%;
+      max-width:720px;width:100%;
       background: var(--panel);
       border:1px solid var(--line);
       border-radius: var(--radius);
@@ -445,241 +375,57 @@ html[data-theme="dark"] .sticky-cta{
       background: rgba(255,255,255,.04);
       color: var(--text);
       padding:8px 10px;
-      border-radius: 12px;
+      border-radius:12px;
       cursor:pointer;
       font-weight:900;
+      font-family: inherit;
     }
 
     /* Floating actions */
     .float-actions{
-      position:fixed;
-      right:16px;
-      bottom:86px;
-      z-index:80;
-      display:flex;
-      flex-direction:column;
-      gap:10px;
+      position:fixed;right:16px;bottom:86px;z-index:80;
+      display:flex;flex-direction:column;gap:10px;
     }
     .float-btn{
-      width:52px;
-      height:52px;
-      border-radius: 16px;
+      width:52px;height:52px;border-radius:16px;
       border:1px solid var(--line);
       background: var(--panel);
       box-shadow: var(--shadow);
-      display:flex;
-      align-items:center;
-      justify-content:center;
+      display:flex;align-items:center;justify-content:center;
       cursor:pointer;
       transition: transform .12s ease;
       color: var(--accent);
     }
     .float-btn:hover{ transform: translateY(-1px); }
-    .float-btn svg{ width:26px; height:26px; }
+    .float-btn svg{ width:26px;height:26px; }
     .float-btn svg path{ stroke: currentColor; }
+
     .float-label{
-      position:absolute;
-      right:62px;
+      position:absolute;right:62px;
       background: rgba(0,0,0,.72);
       color:#fff;
-      padding:6px 10px;
-      border-radius: 999px;
-      font-size:12px;
-      white-space:nowrap;
-      opacity:0;
-      transform: translateX(6px);
-      transition: .18s ease;
+      padding:6px 10px;border-radius:999px;
+      font-size:12px;white-space:nowrap;
+      opacity:0;transform:translateX(6px);
+      transition:.18s ease;
     }
     html[data-theme="dark"] .float-label{ background: rgba(255,255,255,.12); }
     .float-wrap{ position:relative; }
     .float-wrap:hover .float-label{ opacity:1; transform: translateX(0); }
-    /* =========================
-   DARK MODE CONTRAST FIX
-   ========================= */
-html[data-theme="dark"] .btn.secondary,
-html[data-theme="dark"] .copybtn,
-html[data-theme="dark"] .chip{
-  color: rgba(255,255,255,.92) !important;          /* chữ nổi rõ */
-  background: rgba(255,255,255,.06) !important;     /* nền sáng nhẹ */
-  border: 1px solid rgba(37,226,204,.30) !important;/* border seafoam */
-  opacity: 1 !important;                             /* tránh bị look disabled */
-}
 
-/* chữ trong các nút ở khu actions đôi khi bị “đè” */
-html[data-theme="dark"] .actions .btn.secondary{
-  color: rgba(255,255,255,.92) !important;
-}
+    /* ===== OPTION 2: Scroll Reveal (safe) ===== */
+    [data-reveal]{
+      opacity:0;
+      transform: translateY(10px);
+      transition: opacity .55s ease, transform .55s ease;
+      will-change: opacity, transform;
+    }
+    [data-reveal].is-visible{
+      opacity:1;
+      transform: translateY(0);
+    }
 
-/* Hover/focus rõ ràng */
-html[data-theme="dark"] .btn.secondary:hover,
-html[data-theme="dark"] .copybtn:hover,
-html[data-theme="dark"] .chip:hover{
-  background: rgba(255,255,255,.09) !important;
-  box-shadow: 0 0 0 3px rgba(37,226,204,.14) !important;
-  transform: translateY(-1px);
-}
-
-html[data-theme="dark"] .btn.secondary:focus,
-html[data-theme="dark"] .copybtn:focus,
-html[data-theme="dark"] .chip:focus{
-  outline: 2px solid rgba(37,226,204,.38);
-  outline-offset: 2px;
-}
-html[data-theme="dark"] .btn.secondary,
-html[data-theme="dark"] .copybtn,
-html[data-theme="dark"] .chip{
-  color: rgba(255,255,255,.92) !important;
-  background: rgba(255,255,255,.07) !important;
-  border: 1px solid rgba(37,226,204,.30) !important; /* seafoam border */
-  opacity: 1 !important;
-  font-weight: 900;
-}
-
-html[data-theme="dark"] .btn.secondary:hover,
-html[data-theme="dark"] .copybtn:hover,
-html[data-theme="dark"] .chip:hover{
-  background: rgba(255,255,255,.10) !important;
-  box-shadow: 0 0 0 3px rgba(37,226,204,.14) !important;
-}
-
-html[data-theme="dark"] .btn.secondary:focus,
-html[data-theme="dark"] .copybtn:focus,
-html[data-theme="dark"] .chip:focus{
-  outline: 2px solid rgba(37,226,204,.40);
-  outline-offset: 2px;
-}
-/* =========================
-   TYPOGRAPHY (Vietnamese OK)
-   ========================= */
-:root{
-  font-synthesis: none;
-}
-
-body{
-  font-family: "Be Vietnam Pro", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji" !important;
-  font-weight: 500;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-/* Headings */
-h1, h2, h3{
-  letter-spacing: .15px;
-}
-.hero h2{
-  font-weight: 800 !important;
-}
-.card h3,
-.section-title{
-  font-weight: 800 !important;
-}
-
-/* Buttons / chips */
-.btn{
-  font-family: "Be Vietnam Pro", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial !important;
-  font-weight: 800 !important;
-  letter-spacing: .1px;
-}
-.btn.secondary{
-  font-weight: 800 !important;
-}
-.chip,
-.copybtn{
-  font-family: "Be Vietnam Pro", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial !important;
-  font-weight: 700 !important;
-}
-
-/* Small text clarity */
-.small,
-.muted,
-.addr{
-  font-weight: 500;
-}
-
-/* Q&A */
-.qa summary{
-  font-weight: 800 !important;
-}
-.qa p{
-  font-weight: 500;
-  line-height: 1.6;
-}
-html { scroll-behavior: smooth; }
-
-@keyframes softPop {
-  from { transform: translateY(6px); opacity: .0; }
-  to   { transform: translateY(0);   opacity: 1; }
-}
-
-.section-animate {
-  animation: softPop .55s ease-out both;
-}
-
-@keyframes pulseRing {
-  0%   { box-shadow: 0 0 0 0 rgba(37,226,204,.20); }
-  70%  { box-shadow: 0 0 0 10px rgba(37,226,204,0); }
-  100% { box-shadow: 0 0 0 0 rgba(37,226,204,0); }
-}
-.section-flash {
-  animation: pulseRing .9s ease-out;
-  border-radius: 18px;
-}
-/* =========================
-   Motion Pack (subtle + premium)
-   ========================= */
-
-/* 1) Card hover: nổi nhẹ + viền seafoam */
-.card{
-  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease, background .18s ease;
-  will-change: transform;
-}
-.card:hover{
-  transform: translateY(-3px);
-  box-shadow: 0 18px 55px rgba(0,0,0,.35);
-  border-color: rgba(37,226,204,.28);
-}
-html[data-theme="light"] .card:hover{
-  box-shadow: 0 16px 40px rgba(0,0,0,.10);
-}
-
-/* 2) Fade-up khi card/section xuất hiện */
-@keyframes softPop{
-  from{ transform: translateY(8px); opacity: 0; }
-  to{   transform: translateY(0);   opacity: 1; }
-}
-.reveal{
-  animation: softPop .55s ease-out both;
-}
-
-/* 3) Click feedback cho nút (Apply/Copy/Chip) */
-.btn:active, .copybtn:active, .chip:active{
-  transform: translateY(1px) scale(.98);
-}
-
-/* 4) Background “breathing” nhẹ (nếu bạn đã có body::before) */
-@keyframes drift{
-  0%{   transform: translate3d(0,0,0) scale(1);   opacity:.90; }
-  50%{  transform: translate3d(16px,-10px,0) scale(1.03); opacity:1; }
-  100%{ transform: translate3d(0,0,0) scale(1);   opacity:.90; }
-}
-/* Nếu bạn đang dùng body::before để glow thì chỉ cần thêm animation */
-body::before{ animation: drift 10s ease-in-out infinite; }
-/* Route transition */
-#app{
-  transition: opacity .18s ease, transform .18s ease;
-  transform: translateY(0);
-  opacity: 1;
-}
-#app.is-leaving{
-  opacity: 0;
-  transform: translateY(6px);
-}
-#app.is-entering{
-  opacity: 0;
-  transform: translateY(6px);
-}
-
+    html { scroll-behavior:smooth; }
   </style>
 </head>
 
@@ -688,11 +434,9 @@ body::before{ animation: drift 10s ease-in-out infinite; }
     <div class="topbar-inner container">
       <div class="brand" onclick="go('#/')" style="cursor:pointer">
         <div class="brandmark">
-  <img id="cxLogo" src="assets/cnx-logo-dark.svg" alt="Concentrix" />
-</div>
-
-
-
+          <!-- IMPORTANT: dark theme dùng logo LIGHT -->
+          <img id="cxLogo" src="assets/cnx-logo-light.svg" alt="Concentrix" />
+        </div>
         <div>
           <h1>Concentrix HCM Tuyển dụng</h1>
           <p>Recruiter: Minh Hieu • Zalo/Phone: 0349865229 • Email: minhhieupk02.ta@gmail.com</p>
@@ -879,7 +623,7 @@ body::before{ animation: drift 10s ease-in-out infinite; }
         "Chỉ phù hợp nếu: ok outbound + đi làm Quận 11 (và/hoặc Quận 9 khi chuyển)."
       ],
       warn: ""
-    },
+    }
   ];
 
   const FULL_QA = [
@@ -956,7 +700,8 @@ body::before{ animation: drift 10s ease-in-out infinite; }
   function setSelectedJob(id){
     state.selectedJobId = id;
     const job = JOBS.find(j=>j.id===id);
-    $("#stickyJob").textContent = job ? job.title : "Chọn vị trí phù hợp";
+    const sticky = $("#stickyJob");
+    if(sticky) sticky.textContent = job ? job.title : "Chọn vị trí phù hợp";
   }
 
   function navActive(){
@@ -975,7 +720,7 @@ body::before{ animation: drift 10s ease-in-out infinite; }
       return `<span class="badge ${hot}">${escapeHtml(b)}</span>`;
     }).join("");
     return `
-      <div class="card">
+      <div class="card" data-reveal>
         <h3>${escapeHtml(job.title)}</h3>
         <div class="meta">${badges}</div>
         <div class="addr">📍 ${escapeHtml(job.address)}</div>
@@ -1000,8 +745,8 @@ body::before{ animation: drift 10s ease-in-out infinite; }
     `).join("");
 
     return `
-      <div class="hero">
-        <div class="panel">
+      <div class="hero" data-reveal>
+        <div class="panel" data-reveal>
           <h2>Concentrix HCM Tuyển dụng</h2>
           <p>Chọn vị trí phù hợp và apply 1 phút. Với job English 24/7: <span style="color:var(--accent);font-weight:900">có xoay ca</span> và ca do <b>Team Lead sắp xếp (không chọn ca)</b>.</p>
           <div class="btnrow">
@@ -1016,7 +761,7 @@ body::before{ animation: drift 10s ease-in-out infinite; }
           </div>
         </div>
 
-        <div class="panel">
+        <div class="panel" data-reveal>
           <div class="section-title" style="margin-top:0">Liên hệ nhanh</div>
           <div class="muted">Recruiter: <b>${escapeHtml(RECRUITER_NAME)}</b></div>
           <div class="muted" style="margin-top:8px">Zalo/Phone: <b>${escapeHtml(PHONE)}</b></div>
@@ -1032,16 +777,16 @@ body::before{ animation: drift 10s ease-in-out infinite; }
         </div>
       </div>
 
-      <div class="section-title">Vị trí đang tuyển</div>
+      <div class="section-title" data-reveal>Vị trí đang tuyển</div>
       <div class="grid">${jobsHtml}</div>
 
-      <div class="section-title">Q&A siêu nhanh</div>
-      <div class="panel">
+      <div class="section-title" data-reveal>Q&A siêu nhanh</div>
+      <div class="panel" data-reveal>
         <div class="pillbox">${shortList}</div>
       </div>
 
-      <div class="section-title">Q&A chi tiết</div>
-      <div class="qa">${qaHtml}</div>
+      <div class="section-title" data-reveal>Q&A chi tiết</div>
+      <div class="qa" data-reveal>${qaHtml}</div>
 
       ${footer()}
     `;
@@ -1068,21 +813,20 @@ body::before{ animation: drift 10s ease-in-out infinite; }
     });
 
     const cards = filtered.map(jobCard).join("") || `
-      <div class="panel">
+      <div class="panel" data-reveal>
         <b>Không có kết quả phù hợp.</b>
         <div class="muted" style="margin-top:6px">Bạn thử đổi bộ lọc hoặc vào mục Apply để team tư vấn job khác nha.</div>
       </div>
     `;
 
     return `
-      <div class="panel">
+      <div class="panel" data-reveal>
         <h2 style="margin:0 0 6px">Vị trí đang tuyển</h2>
         <div class="muted">Lọc nhanh để ra job phù hợp. Nguồn: <b>${escapeHtml(state.src)}</b></div>
-
         <div class="hr"></div>
 
-        <div class="filters">
-          <div class="filterbox">
+        <div class="filters" style="display:flex;gap:10px;flex-wrap:wrap;align-items:flex-end">
+          <div style="min-width:180px;flex:1">
             <label>Location</label>
             <select onchange="setFilter('loc', this.value)">
               <option value="all" ${state.filters.loc==="all"?"selected":""}>Tất cả</option>
@@ -1091,7 +835,7 @@ body::before{ animation: drift 10s ease-in-out infinite; }
               <option value="Q9" ${state.filters.loc==="Q9"?"selected":""}>Quận 9 (dự kiến)</option>
             </select>
           </div>
-          <div class="filterbox">
+          <div style="min-width:180px;flex:1">
             <label>English</label>
             <select onchange="setFilter('english', this.value)">
               <option value="all" ${state.filters.english==="all"?"selected":""}>Tất cả</option>
@@ -1099,7 +843,7 @@ body::before{ animation: drift 10s ease-in-out infinite; }
               <option value="no" ${state.filters.english==="no"?"selected":""}>Không</option>
             </select>
           </div>
-          <div class="filterbox">
+          <div style="min-width:180px;flex:1">
             <label>Schedule</label>
             <select onchange="setFilter('schedule', this.value)">
               <option value="all" ${state.filters.schedule==="all"?"selected":""}>Tất cả</option>
@@ -1107,13 +851,13 @@ body::before{ animation: drift 10s ease-in-out infinite; }
               <option value="not-24-7" ${state.filters.schedule==="not-24-7"?"selected":""}>Không 24/7</option>
             </select>
           </div>
-          <div class="filterbox" style="min-width:140px; flex:0">
+          <div style="min-width:140px;flex:0">
             <button class="btn secondary" onclick="resetFilters()">Reset</button>
           </div>
         </div>
       </div>
 
-      <div class="section-title">Kết quả</div>
+      <div class="section-title" data-reveal>Kết quả</div>
       <div class="grid">${cards}</div>
 
       ${footer()}
@@ -1122,20 +866,18 @@ body::before{ animation: drift 10s ease-in-out infinite; }
 
   function renderApply(){
     const job = state.selectedJobId ? JOBS.find(j=>j.id===state.selectedJobId) : null;
-
     const note = job && job.schedule === "24-7"
-      ? `<div class="warnline">ℹ️ Lưu ý: Dự án xoay ca 24/7. Ca do Team Lead sắp xếp (không chọn ca).</div>`
-      : "";
+      ? `<div class="warnline">ℹ️ Lưu ý: Dự án xoay ca 24/7. Ca do Team Lead sắp xếp (không chọn ca).</div>` : "";
 
     const jobSummary = job ? `
-      <div class="card" style="margin-top:12px">
+      <div class="card" style="margin-top:12px" data-reveal>
         <h3 style="margin:0 0 6px">Bạn đang apply: ${escapeHtml(job.title)}</h3>
         <div class="addr">📍 ${escapeHtml(job.address)}</div>
         ${note}
         <div class="small" style="margin-top:10px"><b>Tip:</b> Bạn nhớ chuẩn bị sẵn thời gian bắt đầu đi làm + ca có thể xoay (nếu là job 24/7).</div>
       </div>
     ` : `
-      <div class="card" style="margin-top:12px">
+      <div class="card" style="margin-top:12px" data-reveal>
         <h3 style="margin:0 0 6px">Chưa chọn vị trí</h3>
         <div class="muted">Bạn có thể chọn job ở trang “Vị trí”, hoặc chọn ngay trong Quick Apply bên dưới.</div>
       </div>
@@ -1144,7 +886,7 @@ body::before{ animation: drift 10s ease-in-out infinite; }
     const options = JOBS.map(j=>`<option value="${j.id}" ${job && job.id===j.id ? "selected":""}>${escapeHtml(j.title)}</option>`).join("");
 
     return `
-      <div class="panel">
+      <div class="panel" data-reveal>
         <h2 style="margin:0 0 6px">Apply</h2>
         <div class="muted">Nguồn: <b>${escapeHtml(state.src)}</b>. Lưu ý: Form Google có tải CV nên Google có thể yêu cầu đăng nhập.</div>
 
@@ -1202,7 +944,7 @@ body::before{ animation: drift 10s ease-in-out infinite; }
           </div>
         </form>
 
-        <div id="quickResult" class="card hidden" style="margin-top:12px"></div>
+        <div id="quickResult" class="card hidden" style="margin-top:12px" data-reveal></div>
       </div>
 
       ${footer()}
@@ -1226,7 +968,7 @@ body::before{ animation: drift 10s ease-in-out infinite; }
     const shortList = SHORT_QA.map(x=>`<span class="pill">• ${escapeHtml(x)}</span>`).join("");
 
     return `
-      <div class="panel">
+      <div class="panel" data-reveal>
         <h2 style="margin:0 0 6px">Q&A</h2>
         <div class="muted">Giải đáp nhanh trước khi apply. (Nguồn: <b>${escapeHtml(state.src)}</b>)</div>
 
@@ -1236,11 +978,11 @@ body::before{ animation: drift 10s ease-in-out infinite; }
             oninput="state.qaSearch=this.value; render()" />
         </div>
 
-        <div class="section-title">Q&A siêu nhanh</div>
-        <div class="pillbox">${shortList}</div>
+        <div class="section-title" data-reveal>Q&A siêu nhanh</div>
+        <div class="pillbox" data-reveal>${shortList}</div>
 
-        <div class="section-title">Q&A chi tiết</div>
-        <div class="qa">${qaHtml}</div>
+        <div class="section-title" data-reveal>Q&A chi tiết</div>
+        <div class="qa" data-reveal>${qaHtml}</div>
       </div>
 
       ${footer()}
@@ -1249,7 +991,7 @@ body::before{ animation: drift 10s ease-in-out infinite; }
 
   function footer(){
     return `
-      <div class="footer">
+      <div class="footer" data-reveal>
         <div>
           <div><b>${escapeHtml(RECRUITER_NAME)}</b> • Zalo/Phone: <b>${escapeHtml(PHONE)}</b> • Email: <b>${escapeHtml(EMAIL)}</b></div>
           <div class="small" style="margin-top:4px">Nguồn: <b>${escapeHtml(state.src)}</b> • Form có tải CV nên Google có thể yêu cầu đăng nhập.</div>
@@ -1299,9 +1041,7 @@ body::before{ animation: drift 10s ease-in-out infinite; }
     toast("Đã chọn vị trí ✅");
   }
 
-  function openForm(){
-    window.open(FORM_URL, "_blank", "noopener,noreferrer");
-  }
+  function openForm(){ window.open(FORM_URL, "_blank", "noopener,noreferrer"); }
 
   function onQuickJobChange(jobId){
     const j = JOBS.find(x=>x.id===jobId);
@@ -1387,8 +1127,6 @@ Nhờ anh/chị hỗ trợ sắp lịch screening/PV giúp em ạ.`;
     copy(block);
   }
 
- 
-  
   function applyTheme(theme){
     document.documentElement.dataset.theme = theme;
 
@@ -1397,24 +1135,19 @@ Nhờ anh/chị hỗ trợ sắp lịch screening/PV giúp em ạ.`;
 
     const logo = document.getElementById("cxLogo");
     if(logo){
-      // Dark theme -> logo chữ sáng
-      // Light theme -> logo chữ tối
+      // FIX: Dark theme -> dùng logo LIGHT; Light theme -> dùng logo DARK
       logo.src = (theme === "dark")
-        ? "assets/cnx-logo-dark.svg"
-        : "assets/cnx-logo-light.svg";
+        ? "assets/cnx-logo-light.svg"
+        : "assets/cnx-logo-dark.svg";
     }
   }
 
-
-
   function initTheme(){
-    // chỉ dùng 1 key thống nhất
     const saved = localStorage.getItem("cx_theme");
-    const theme = saved || "dark"; // default dark
+    const theme = saved || "dark";
     applyTheme(theme);
 
     const btn = document.getElementById("themeToggle");
-    // tránh bind nhiều lần
     if(btn && !btn.dataset.bound){
       btn.dataset.bound = "1";
       btn.addEventListener("click", ()=>{
@@ -1425,42 +1158,50 @@ Nhờ anh/chị hỗ trợ sắp lịch screening/PV giúp em ạ.`;
     }
   }
 
+  // OPTION 2: reveal on scroll
+  function setupReveal(){
+    const els = document.querySelectorAll("[data-reveal]");
+    if(!els.length) return;
 
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting){
+          e.target.classList.add("is-visible");
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    els.forEach(el=> io.observe(el));
+  }
 
   function route(){
     readSrc();
     navActive();
+
     const hash = location.hash || "#/";
     const app = document.querySelector("#app");
+    if(!app) return;
 
     if(state.selectedJobId) setSelectedJob(state.selectedJobId);
 
-    app.classList.add("is-leaving");
+    if(hash.startsWith("#/jobs")){
+      app.innerHTML = renderJobs();
+    } else if(hash.startsWith("#/apply")){
+      app.innerHTML = renderApply();
+    } else if(hash.startsWith("#/qa")){
+      app.innerHTML = renderQA();
+    } else {
+      app.innerHTML = renderHome();
+    }
 
-setTimeout(()=>{
-  // --- render view như hiện tại ---
-  if(hash.startsWith("#/jobs")){
-    app.innerHTML = renderJobs();
-  } else if(hash.startsWith("#/apply")){
-    app.innerHTML = renderApply();
-  } else if(hash.startsWith("#/qa")){
-    app.innerHTML = renderQA();
-  } else {
-    app.innerHTML = renderHome();
+    // run reveal after DOM update
+    requestAnimationFrame(setupReveal);
   }
-
-  // enter animation
-  app.classList.remove("is-leaving");
-  app.classList.add("is-entering");
-  requestAnimationFrame(()=>{
-    app.classList.remove("is-entering");
-    requestAnimationFrame(setupReveal); // nếu bạn dùng reveal cards
-  });
-}, 120);
-
 
   function render(){ route(); }
 
+  // expose
   window.openJobModal = openJobModal;
   window.selectAndApply = selectAndApply;
   window.openForm = openForm;
@@ -1480,64 +1221,7 @@ setTimeout(()=>{
     const job = url.searchParams.get("job");
     if(job && JOBS.some(j=>j.id===job)) setSelectedJob(job);
     route();
-    function setupReveal(){
-  const els = document.querySelectorAll(".card, .hero, .qa, .sticky-cta, .footer, .quick-qa");
-  els.forEach(el => el.classList.remove("reveal"));
-
-  const io = new IntersectionObserver((entries)=>{
-    entries.forEach(e=>{
-      if(e.isIntersecting){
-        e.target.classList.add("reveal");
-        io.unobserve(e.target);
-      }
-    });
-  }, { threshold: 0.12 });
-
-  els.forEach(el => io.observe(el));
-}
-
   });
-  function flashSection(id){
-  const el = document.getElementById(id);
-  if(!el) return;
-  el.classList.remove("section-flash");
-  void el.offsetWidth; // reflow để replay animation
-  el.classList.add("section-flash");
-}
-
-function animateVisibleSections(){
-  const els = document.querySelectorAll("[data-animate]");
-  const io = new IntersectionObserver((entries)=>{
-    entries.forEach(e=>{
-      if(e.isIntersecting){
-        e.target.classList.add("section-animate");
-        io.unobserve(e.target);
-      }
-    });
-  }, { threshold: 0.12 });
-
-  els.forEach(el=>io.observe(el));
-}
-
 </script>
 </body>
-  <section id="jobs" data-animate>...</section>
-<section id="qa" data-animate>...</section>
-
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
