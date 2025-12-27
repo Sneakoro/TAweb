@@ -120,17 +120,17 @@
 
     .brandmark{
   width: 190px;
-  height: 42px;
+  height: 44px;
   display:flex;
   align-items:center;
-  justify-content:flex-start;
 }
 .brandmark img{
-  height: 42px;
+  height: 44px;
   width: auto;
   display:block;
   object-fit: contain;
 }
+
 
 
 /* Nếu đang dùng FullColor SVG (st1 là chữ xanh đậm), trên dark đổi sang sáng */
@@ -488,6 +488,29 @@ html[data-theme="dark"] .chip:focus{
   outline: 2px solid rgba(37,226,204,.38);
   outline-offset: 2px;
 }
+html[data-theme="dark"] .btn.secondary,
+html[data-theme="dark"] .copybtn,
+html[data-theme="dark"] .chip{
+  color: rgba(255,255,255,.92) !important;
+  background: rgba(255,255,255,.07) !important;
+  border: 1px solid rgba(37,226,204,.30) !important; /* seafoam border */
+  opacity: 1 !important;
+  font-weight: 900;
+}
+
+html[data-theme="dark"] .btn.secondary:hover,
+html[data-theme="dark"] .copybtn:hover,
+html[data-theme="dark"] .chip:hover{
+  background: rgba(255,255,255,.10) !important;
+  box-shadow: 0 0 0 3px rgba(37,226,204,.14) !important;
+}
+
+html[data-theme="dark"] .btn.secondary:focus,
+html[data-theme="dark"] .copybtn:focus,
+html[data-theme="dark"] .chip:focus{
+  outline: 2px solid rgba(37,226,204,.40);
+  outline-offset: 2px;
+}
 
   </style>
 </head>
@@ -497,8 +520,9 @@ html[data-theme="dark"] .chip:focus{
     <div class="topbar-inner container">
       <div class="brand" onclick="go('#/')" style="cursor:pointer">
         <div class="brandmark">
-  <img src="assets/concentrix-logo.png" alt="Concentrix" />
+  <img id="cxLogo" src="assets/cnx-logo-dark.svg" alt="Concentrix" />
 </div>
+
 
         <div>
           <h1>Concentrix HCM Tuyển dụng</h1>
@@ -1212,6 +1236,9 @@ Nhờ anh/chị hỗ trợ sắp lịch screening/PV giúp em ạ.`;
         localStorage.setItem("cx_theme", next);
         applyTheme(next);
       });
+    const logo = document.getElementById("cxLogo");
+if (logo) logo.src = (theme === "dark") ? "assets/cnx-logo-dark.svg" : "assets/cnx-logo-light.svg";
+
     }
   }
 
@@ -1264,6 +1291,7 @@ Nhờ anh/chị hỗ trợ sắp lịch screening/PV giúp em ạ.`;
 </script>
 </body>
 </html>
+
 
 
 
