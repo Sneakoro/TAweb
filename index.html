@@ -8,6 +8,9 @@
   <meta property="og:title" content="Concentrix HCM Tuyển dụng | Apply nhanh" />
   <meta property="og:description" content="Chọn vị trí phù hợp và apply 1 phút. Quận 12: Tòa nhà Tech Valley/QTSC1/QTSC9. Quận 11: Flemington (dự kiến OneHub Quận 9)." />
   <meta property="og:type" content="website" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800;900&display=swap&subset=vietnamese" rel="stylesheet">
 
   <!-- Set theme ASAP to avoid flash; default = dark -->
   <script>
@@ -84,9 +87,16 @@
     *{box-sizing:border-box}
     body{
   margin:0;
-  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+  body{
+  margin:0;
+  font-family: "Be Vietnam Pro", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
   background: var(--bg);
   color:var(--text);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
       body::before{
   content:"";
   position:fixed;
@@ -1291,6 +1301,7 @@ if (logo) logo.src = (theme === "dark") ? "assets/cnx-logo-dark.svg" : "assets/c
 </script>
 </body>
 </html>
+
 
 
 
