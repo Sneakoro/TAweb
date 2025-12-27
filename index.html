@@ -1289,42 +1289,45 @@ Nhờ anh/chị hỗ trợ sắp lịch screening/PV giúp em ạ.`;
     copy(block);
   }
 
+  <script>
   function applyTheme(theme){
-  document.documentElement.dataset.theme = theme;
+    document.documentElement.dataset.theme = theme;
 
-  // Đổi chữ nút theme (nếu bạn dùng id="themeToggle")
-  const btn = document.getElementById("themeToggle");
-  if(btn) btn.textContent = (theme === "dark") ? "Light" : "Dark";
+    // Đổi chữ nút theme
+    const btn = document.getElementById("themeToggle");
+    if(btn) btn.textContent = (theme === "dark") ? "Light" : "Dark";
 
-  // Đổi logo theo theme
-  const logo = document.getElementById("cxLogo");
-  if(logo){
-    logo.src = (theme === "dark")
-      ? "assets/cnx-logo-dark.svg"
-      : "assets/cnx-logo-light.svg";
+    // Đổi logo theo theme (đúng tương phản)
+    const logo = document.getElementById("cxLogo");
+    if(logo){
+      // Dark theme -> dùng logo chữ sáng (cnx-logo-light.svg)
+      // Light theme -> dùng logo chữ tối (cnx-logo-dark.svg)
+      logo.src = (theme === "dark")
+        ? "assets/cnx-logo-light.svg"
+        : "assets/cnx-logo-dark.svg";
+      logo.alt = "Concentrix";
+    }
   }
-}
 
-
-  (function initTheme(){
-  const saved = localStorage.getItem("theme");
-  const theme = saved ? saved : "dark";   // default dark
-  applyTheme(theme);
-})();
-
+  function initTheme(){
+    // chỉ dùng 1 key thống nhất
+    const saved = localStorage.getItem("cx_theme");
+    const theme = saved || "dark"; // default dark
+    applyTheme(theme);
 
     const btn = document.getElementById("themeToggle");
-    if(btn){
+    // tránh bind nhiều lần
+    if(btn && !btn.dataset.bound){
+      btn.dataset.bound = "1";
       btn.addEventListener("click", ()=>{
         const next = (document.documentElement.dataset.theme === "dark") ? "light" : "dark";
         localStorage.setItem("cx_theme", next);
         applyTheme(next);
       });
-    const logo = document.getElementById("cxLogo");
-if (logo) logo.src = (theme === "dark") ? "assets/cnx-logo-dark.svg" : "assets/cnx-logo-light.svg";
-
     }
   }
+</script>
+
 
   function route(){
     readSrc();
@@ -1375,6 +1378,7 @@ if (logo) logo.src = (theme === "dark") ? "assets/cnx-logo-dark.svg" : "assets/c
 </script>
 </body>
 </html>
+
 
 
 
