@@ -665,6 +665,20 @@ html[data-theme="light"] .card:hover{
 }
 /* Nếu bạn đang dùng body::before để glow thì chỉ cần thêm animation */
 body::before{ animation: drift 10s ease-in-out infinite; }
+/* Route transition */
+#app{
+  transition: opacity .18s ease, transform .18s ease;
+  transform: translateY(0);
+  opacity: 1;
+}
+#app.is-leaving{
+  opacity: 0;
+  transform: translateY(6px);
+}
+#app.is-entering{
+  opacity: 0;
+  transform: translateY(6px);
+}
 
   </style>
 </head>
@@ -1421,23 +1435,29 @@ Nhờ anh/chị hỗ trợ sắp lịch screening/PV giúp em ạ.`;
 
     if(state.selectedJobId) setSelectedJob(state.selectedJobId);
 
-    if(hash.startsWith("#/jobs")){
-      app.innerHTML = renderJobs();
-    }else if(hash.startsWith("#/apply")){
-      app.innerHTML = renderApply();
-      const sel = document.querySelector('select[name="jobId"]');
-      if(sel){
-        sel.value = state.selectedJobId || sel.value;
-        onQuickJobChange(sel.value);
-      }
-    }else if(hash.startsWith("#/qa")){
-      app.innerHTML = renderQA();
-      requestAnimationFrame(setupReveal);
-    }else{
-      app.innerHTML = renderHome();
-      requestAnimationFrame(setupReveal);
-    }
+    app.classList.add("is-leaving");
+
+setTimeout(()=>{
+  // --- render view như hiện tại ---
+  if(hash.startsWith("#/jobs")){
+    app.innerHTML = renderJobs();
+  } else if(hash.startsWith("#/apply")){
+    app.innerHTML = renderApply();
+  } else if(hash.startsWith("#/qa")){
+    app.innerHTML = renderQA();
+  } else {
+    app.innerHTML = renderHome();
   }
+
+  // enter animation
+  app.classList.remove("is-leaving");
+  app.classList.add("is-entering");
+  requestAnimationFrame(()=>{
+    app.classList.remove("is-entering");
+    requestAnimationFrame(setupReveal); // nếu bạn dùng reveal cards
+  });
+}, 120);
+
 
   function render(){ route(); }
 
@@ -1505,6 +1525,7 @@ function animateVisibleSections(){
 <section id="qa" data-animate>...</section>
 
 </html>
+
 
 
 
