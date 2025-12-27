@@ -1137,8 +1137,14 @@ Nhờ anh/chị hỗ trợ sắp lịch screening/PV giúp em ạ.`;
     if(logo){
       // FIX: Dark theme -> dùng logo LIGHT; Light theme -> dùng logo DARK
       logo.src = (theme === "dark")
-        ? "assets/cnx-logo-light.svg"
-        : "assets/cnx-logo-dark.svg";
+  ? "assets/cnx-logo-light.svg"   // nền tối -> logo sáng
+  : "assets/cnx-logo-dark.svg";   // nền sáng -> logo tối
+const src = (theme === "dark")
+  ? "assets/cnx-logo-light.svg"
+  : "assets/cnx-logo-dark.svg";
+
+logo.src = src + "?t=" + theme;
+
     }
   }
 
@@ -1225,3 +1231,4 @@ Nhờ anh/chị hỗ trợ sắp lịch screening/PV giúp em ạ.`;
 </script>
 </body>
 </html>
+
