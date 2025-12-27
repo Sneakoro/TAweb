@@ -594,6 +594,7 @@ h1, h2, h3{
 </div>
 
 
+
         <div>
           <h1>Concentrix HCM Tuyển dụng</h1>
           <p>Recruiter: Minh Hieu • Zalo/Phone: 0349865229 • Email: minhhieupk02.ta@gmail.com</p>
@@ -1289,15 +1290,28 @@ Nhờ anh/chị hỗ trợ sắp lịch screening/PV giúp em ạ.`;
   }
 
   function applyTheme(theme){
-    document.documentElement.dataset.theme = theme;
-    const btn = document.getElementById("themeToggle");
-    if(btn) btn.textContent = (theme === "dark") ? "Light" : "Dark";
-  }
+  document.documentElement.dataset.theme = theme;
 
-  function initTheme(){
-    const saved = localStorage.getItem("cx_theme");
-    const theme = saved || "dark"; // default dark
-    applyTheme(theme);
+  // Đổi chữ nút theme (nếu bạn dùng id="themeToggle")
+  const btn = document.getElementById("themeToggle");
+  if(btn) btn.textContent = (theme === "dark") ? "Light" : "Dark";
+
+  // Đổi logo theo theme
+  const logo = document.getElementById("cxLogo");
+  if(logo){
+    logo.src = (theme === "dark")
+      ? "assets/cnx-logo-dark.svg"
+      : "assets/cnx-logo-light.svg";
+  }
+}
+
+
+  (function initTheme(){
+  const saved = localStorage.getItem("theme");
+  const theme = saved ? saved : "dark";   // default dark
+  applyTheme(theme);
+})();
+
 
     const btn = document.getElementById("themeToggle");
     if(btn){
@@ -1361,6 +1375,7 @@ if (logo) logo.src = (theme === "dark") ? "assets/cnx-logo-dark.svg" : "assets/c
 </script>
 </body>
 </html>
+
 
 
 
