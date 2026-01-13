@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Concentrix Thành phố Hồ Chí Minh | Tuyển dụng - Ứng tuyển nhanh</title>
-  <meta name="description" content="Concentrix Thành phố Hồ Chí Minh tuyển dụng (Quận 12/Quận 11/Quận 9). Chọn vị trí phù hợp và ứng tuyển nhanh. Với vị trí xoay ca 24/7, ca do trưởng nhóm sắp xếp." />
-  <meta property="og:title" content="Concentrix Thành phố Hồ Chí Minh | Tuyển dụng - Ứng tuyển nhanh" />
-  <meta property="og:description" content="Danh sách vị trí đang tuyển tại Concentrix Thành phố Hồ Chí Minh (Quận 12/Quận 11/Quận 9). Ứng tuyển nhanh qua biểu mẫu." />
+  <title>Concentrix HCM Tuyển dụng | Apply nhanh</title>
+  <meta name="description" content="Concentrix HCM tuyển dụng (Q12/Q11/Q9). Chọn vị trí phù hợp và apply 1 phút. Job English 24/7 (Travel/Flight/Content Moderator) xoay ca theo sắp xếp Team Lead." />
+  <meta property="og:title" content="Concentrix HCM Tuyển dụng | Apply nhanh" />
+  <meta property="og:description" content="Chọn vị trí phù hợp và apply 1 phút. Q12: QTSC1/QTSC9. Q11: Flemington. Q9: OneHub. Job English 24/7 xoay ca theo Team Lead." />
   <meta property="og:type" content="website" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -521,17 +521,17 @@
           <img id="cxLogo" src="assets/cnx-logo-dark.svg" alt="Concentrix" />
         </div>
         <div>
-          <h1>Concentrix Thành phố Hồ Chí Minh - Tuyển dụng</h1>
-          <p>Phụ trách tuyển dụng: Minh Hieu • Zalo / Điện thoại: 0349865229 • Thư điện tử: minhhieupk02.ta@gmail.com</p>
+          <h1>Concentrix HCM Tuyển dụng</h1>
+          <p>Recruiter: Minh Hieu • Zalo/Phone: 0349865229 • Email: minhhieupk02.ta@gmail.com</p>
         </div>
       </div>
 
       <div class="nav" id="nav">
-        <a class="chip" href="#/">Trang chủ</a>
+        <a class="chip" href="#/">Home</a>
         <a class="chip" href="#/jobs">Vị trí</a>
-        <a class="chip" href="#/apply">Ứng tuyển</a>
-        <a class="chip" href="#/qa">Hỏi đáp</a>
-        <button class="chip" id="themeToggle" type="button">Chế độ sáng</button>
+        <a class="chip" href="#/apply">Apply</a>
+        <a class="chip" href="#/qa">Q&A</a>
+        <button class="chip" id="themeToggle" type="button">Light</button>
       </div>
     </div>
   </div>
@@ -541,12 +541,12 @@
   <div class="sticky-cta">
     <div class="sticky-inner">
       <div class="left">
-        <div class="sticky-title">Ứng tuyển nhanh</div>
+        <div class="sticky-title">Apply nhanh</div>
         <div class="sticky-job" id="stickyJob">Chọn vị trí phù hợp</div>
       </div>
       <div style="display:flex; gap:10px; align-items:center">
         <button class="btn secondary" onclick="go('#/jobs')">Xem vị trí</button>
-        <button class="btn" onclick="go('#/apply')">Ứng tuyển ngay</button>
+        <button class="btn" onclick="go('#/apply')">Apply ngay</button>
       </div>
     </div>
   </div>
@@ -600,213 +600,229 @@
   const JOBS = [
     {
       id: "mxh",
-      status: "paused", // tạm ngưng tuyển
-      title: "Chăm sóc khách hàng – Ứng dụng mạng xã hội",
+      status: "paused", // tạm ngưng tuyển (ẩn khỏi danh sách)
+      title: "CSKH Ứng dụng Mạng xã hội",
       locationGroup: "Q12",
-      address: "Quận 12 – Tòa nhà Tech Valley, Công viên Phần mềm Quang Trung",
-      mapQuery: "Tòa nhà Tech Valley, Công viên Phần mềm Quang Trung, Quận 12, Thành phố Hồ Chí Minh",
-      formUrl: FORM_URL,
-      jdUrl: "",
+      address: "Quận 12 – Tòa nhà Tech Valley, Công viên Phần mềm Quang Trung (Onsite)",
+      mapQuery: "Tòa nhà Tech Valley, Công viên Phần mềm Quang Trung, Quận 12, TP.HCM",
+      formUrl: FORM_URL, // TODO: dán link Google Form RIÊNG cho vị trí này (nếu có)
+      jdUrl: "", // TODO: ví dụ "assets/jd/ten-file.pdf"
 
       english: "basic-writing",
       schedule: "fixed-window",
-      badges: ["Quận 12", "7,4–8,0 triệu", "Tiếng Anh B1", "Nghỉ 2 ngày/tuần", "Thử việc nhận đủ lương"],
-      summary: "Hỗ trợ khách hàng qua cuộc gọi, thư điện tử và tin nhắn trực tuyến; cập nhật thông tin trên hệ thống (hiện đang tạm ngưng tuyển).",
+      badges: ["Tạm ngưng", "Quận 12", "7.4–8.0tr", "Tiếng Anh cơ bản", "Off 2 ngày/tuần", "100% lương thử việc"],
+      summary: "CSKH app mạng xã hội qua call/email/chat, làm việc văn phòng tại Quận 12.",
       details: [
-        "Công việc: tiếp nhận và hỗ trợ khách hàng liên quan đến sản phẩm qua cuộc gọi, thư điện tử và tin nhắn trực tuyến.",
-        "Thu nhập trung bình: 7.400.000 – 8.000.000 đồng/tháng (lương cơ bản + phụ cấp + thưởng theo chỉ tiêu).",
-        "Thử việc: 2 tháng nhận đủ 100% lương.",
-        "Lịch làm việc: 5 ngày/tuần, nghỉ 2 ngày bất kỳ; làm theo ca được phân công.",
-        "Phúc lợi: bảo hiểm xã hội, bảo hiểm y tế, bảo hiểm thất nghiệp; bảo hiểm tai nạn 24/7; 14 ngày phép/năm; lương tháng 13; khám sức khỏe định kỳ.",
-        "Yêu cầu: tốt nghiệp trung học phổ thông; tiếng Anh tương đương B1; đánh máy nhanh và chính xác."
+        "📌 Công việc: nhận cuộc gọi/email/chat từ khách hàng liên quan đến sản phẩm.",
+        "📌 Công việc: cung cấp kiến thức sản phẩm và hỗ trợ xử lý yêu cầu của khách.",
+        "💰 Thu nhập TB: 7.400.000 – 8.000.000 VNĐ/tháng.",
+        "🎁 Phúc lợi: 100% lương trong 2 tháng thử việc, 14 ngày phép/năm, lương tháng 13.",
+        "🎁 Phúc lợi: BHXH, BHYT, bảo hiểm tai nạn 24/7 đầy đủ.",
+        "🕒 Thời gian: Full-time, xoay ca, làm 5 ngày/tuần – off 2 ngày bất kỳ.",
+        "🎯 Yêu cầu: Tốt nghiệp THPT; Tiếng Anh cơ bản; đánh máy nhanh và chính xác."
       ],
       warn: ""
     },
     {
       id: "travel",
-      title: "Chăm sóc khách hàng (tiếng Anh) – Ứng dụng du lịch",
+      title: "Customer Service (English) – Travel App",
       locationGroup: "Q12",
-      address: "Quận 12 – Tòa nhà QTSC1, Công viên Phần mềm Quang Trung",
-      mapQuery: "Tòa nhà QTSC1, Công viên Phần mềm Quang Trung, Quận 12, Thành phố Hồ Chí Minh",
-      formUrl: FORM_URL,
-      jdUrl: "",
+      address: "Quận 12 – Tòa nhà QTSC1, Công viên Phần mềm Quang Trung (Onsite)",
+      mapQuery: "Tòa nhà QTSC1, Công viên Phần mềm Quang Trung, Quận 12, TP.HCM",
+      formUrl: FORM_URL, // TODO: dán link Google Form RIÊNG cho vị trí này (nếu có)
+      jdUrl: "", // TODO: ví dụ "assets/jd/ten-file.pdf"
 
       english: "yes",
       schedule: "24-7",
-      badges: ["Quận 12", "Tiếng Anh", "24/7", "10–12 triệu", "Nghỉ 2 ngày/tuần", "Thử việc nhận đủ lương"],
-      summary: "Hỗ trợ khách hàng của ứng dụng du lịch qua cuộc gọi, tin nhắn trực tuyến và thư điện tử; làm việc hoàn toàn bằng tiếng Anh.",
+      badges: ["English", "24/7", "10–12tr", "Off 2 ngày/tuần", "100% lương thử việc"],
+      summary: "Hỗ trợ khách dùng app du lịch qua điện thoại/chat/email, làm việc 100% tiếng Anh.",
       details: [
-        "Công việc: hỗ trợ khách hàng liên quan đến tư vấn chuyến đi/nơi ở, thay đổi/hủy đặt chỗ và khiếu nại mức độ cơ bản.",
-        "Thu nhập trung bình: 10.000.000 – 12.000.000 đồng/tháng.",
-        "Cấu trúc thu nhập tham khảo: lương cơ bản 7.500.000 + phụ cấp ăn 500.000 + phụ cấp ca đêm 30% lương cơ bản + thưởng theo chỉ tiêu 900.000 – 1.200.000 + phụ cấp công việc 1.000.000 (áp dụng cho tuyến điện thoại sau 2 tháng thử việc).",
-        "Thử việc: 2 tháng nhận đủ 100% lương.",
-        "Lịch làm việc: 5 ngày/tuần, nghỉ 2 ngày bất kỳ; xoay ca 24/7 (9 giờ/ca gồm 1,5 giờ nghỉ).",
-        "Địa điểm làm việc: Tòa nhà QTSC1, Công viên Phần mềm Quang Trung, Quận 12, Thành phố Hồ Chí Minh.",
-        "Phúc lợi: bảo hiểm theo quy định; bảo hiểm tai nạn 24/7; 14 ngày phép/năm; lương tháng 13; khám sức khỏe định kỳ.",
-        "Yêu cầu: tốt nghiệp trung học phổ thông; sử dụng tốt tiếng Anh nghe–nói–đọc–viết (làm việc hoàn toàn bằng tiếng Anh)."
+        "📌 Công việc: hỗ trợ khách sử dụng app du lịch qua điện thoại, chat, email, tin nhắn.",
+        "📌 Công việc: tư vấn chuyến đi/chỗ ở, xử lý đặt – đổi – hủy và thắc mắc cơ bản.",
+        "📌 Công việc: thao tác hệ thống, tuân thủ quy trình, đảm bảo trải nghiệm khách hàng.",
+        "💰 Thu nhập TB: 10.000.000 – 12.000.000 VNĐ/tháng.",
+        "💯 Thử việc: 2 tháng nhận 100% lương.",
+        "🎁 Phúc lợi: BHXH, BHYT, BH tai nạn 24/7; 14 ngày phép/năm; lương tháng 13; khám sức khỏe định kỳ.",
+        "🕒 Lịch làm: 5 ngày/tuần, off 2 ngày bất kỳ; xoay ca 24/7.",
+        "🎯 Yêu cầu: THPT trở lên; Tiếng Anh tốt 4 kỹ năng (làm việc 100% bằng tiếng Anh).",
+        "Chỉ phù hợp nếu: xác nhận làm được 24/7 theo sắp xếp TL."
       ],
-      warn: "Lưu ý: dự án vận hành 24/7. Ca làm do trưởng nhóm sắp xếp (không chọn ca)."
+      warn: "Lưu ý: Dự án xoay ca 24/7. Ca do Team Lead sắp xếp (không chọn ca)."
     },
     {
       id: "flight",
-      title: "Chăm sóc khách hàng (tiếng Anh) – Ứng dụng đặt vé máy bay",
+      title: "Customer Service (English) – Flight Ticket App",
       locationGroup: "Q12",
-      address: "Quận 12 – Tòa nhà QTSC1, Công viên Phần mềm Quang Trung",
-      mapQuery: "QTSC Building 1, No. 14 Street, Tan Chanh Hiep, District 12, Ho Chi Minh City",
-      formUrl: FORM_URL,
-      jdUrl: "",
+      address: "Quận 12 – Tòa nhà QTSC1, Công viên Phần mềm Quang Trung (Onsite)",
+      mapQuery: "Tòa nhà QTSC1, Công viên Phần mềm Quang Trung, Quận 12, TP.HCM",
+      formUrl: FORM_URL, // TODO: dán link Google Form RIÊNG cho vị trí này (nếu có)
+      jdUrl: "", // TODO: ví dụ "assets/jd/ten-file.pdf"
 
       english: "yes",
       schedule: "24-7",
-      badges: ["Quận 12", "Tiếng Anh", "24/7", "11–13 triệu", "Thử việc nhận đủ lương"],
-      summary: "Hỗ trợ khách hàng và đối tác của ứng dụng đặt vé máy bay; xử lý thay đổi/hủy, khiếu nại, tư vấn chuyến đi; làm việc hoàn toàn bằng tiếng Anh.",
+      badges: ["English", "24/7", "11–13tr", "100% lương thử việc", "BH sau thử việc"],
+      summary: "CSKH app vé máy bay: hỗ trợ khách book vé và xử lý yêu cầu cơ bản (call/chat/email), dùng tiếng Anh mỗi ngày.",
       details: [
-        "Công việc: hỗ trợ qua cuộc gọi vào/gọi ra, thư điện tử và tin nhắn trực tuyến; xử lý thay đổi, hủy, khiếu nại mức độ nhẹ.",
-        "Thu nhập: 11.000.000 – 13.000.000 đồng/tháng.",
-        "Cấu trúc thu nhập tham khảo: lương cơ bản 8.000.000 + phụ cấp ăn 500.000 + phụ cấp ca đêm 30% lương cơ bản + phụ cấp thoại 1.000.000 (nếu xử lý kênh thoại) + thưởng theo chỉ tiêu 900.000 – 1.200.000.",
-        "Thử việc: 2 tháng nhận đủ 100% lương.",
-        "Lịch làm việc: 5 ngày/tuần, nghỉ 2 ngày bất kỳ; xoay ca 24/7 theo phân công của trưởng nhóm.",
-        "Địa điểm làm việc: Tòa nhà QTSC1, Công viên Phần mềm Quang Trung, Quận 12, Thành phố Hồ Chí Minh.",
-        "Phúc lợi: bảo hiểm theo quy định; bảo hiểm tai nạn 24/7; 14 ngày phép/năm; lương tháng 13; khám sức khỏe định kỳ.",
-        "Yêu cầu: tốt nghiệp trung học phổ thông; sử dụng tốt tiếng Anh nghe–nói–đọc–viết (làm việc hoàn toàn bằng tiếng Anh)."
+        "📌 Công việc: nhận call/chat/email, hỗ trợ khách book vé máy bay, xử lý yêu cầu cơ bản.",
+        "📌 Điểm mạnh: phù hợp làm “cửa vào ngành” BPO, học quy trình CSKH & làm với khách quốc tế.",
+        "💰 Thu nhập TB: 11.000.000 – 13.000.000 VNĐ/tháng.",
+        "💯 Thử việc: 2 tháng nhận 100% lương.",
+        "🎁 Phúc lợi: BHXH, BHYT, BHTN + BH tai nạn 24/7 sau 2 tháng thử việc; 14 ngày phép/năm; lương tháng 13.",
+        "🕒 Lịch làm: xoay ca 24/7 (có ca tối/đêm, cuối tuần, ngày lễ).",
+        "🎯 Yêu cầu: THPT trở lên; Tiếng Anh 4 kỹ năng ổn.",
+        "Chỉ phù hợp nếu: xác nhận làm được 24/7 theo sắp xếp TL."
       ],
-      warn: "Lưu ý: dự án vận hành 24/7. Ca làm do trưởng nhóm sắp xếp (không chọn ca)."
+      warn: "Lưu ý: Dự án xoay ca 24/7. Ca do Team Lead sắp xếp (không chọn ca)."
     },
     {
       id: "musicmod",
       title: "Kiểm duyệt nội dung – Nền tảng âm nhạc",
       locationGroup: "Q12",
-      address: "Quận 12 – Tòa nhà QTSC1, Công viên Phần mềm Quang Trung",
-      mapQuery: "QTSC1, Công viên Phần mềm Quang Trung, Quận 12, Thành phố Hồ Chí Minh",
-      formUrl: FORM_URL,
-      jdUrl: "",
+      address: "Quận 12 – QTSC1, Quang Trung Software City (Onsite)",
+      mapQuery: "QTSC1, Quang Trung Software City, Quận 12, TP.HCM",
+      formUrl: FORM_URL, // TODO: dán link Google Form RIÊNG cho vị trí này (nếu có)
+      jdUrl: "", // TODO: ví dụ "assets/jd/spo_content_moderator_music.pdf"
 
       english: "yes",
       schedule: "24-7",
-      badges: ["Quận 12", "24/7", "8,0–9,2 triệu", "Tiếng Anh B2+", "Nghỉ 2 ngày/tuần", "Thử việc nhận đủ lương"],
-      summary: "Kiểm duyệt nội dung trên nền tảng mạng xã hội âm nhạc theo bộ hướng dẫn và cập nhật kết quả trên hệ thống.",
+      badges: ["Quận 12", "English 100%", "24/7", "8.0–9.2tr", "B2+", "100% lương thử việc"],
+      summary: "Kiểm duyệt nội dung (podcast/video/playlist/profile/album art/UGC/livestream…) theo guideline. Làm việc 100% tiếng Anh.",
       details: [
-        "Công việc: kiểm duyệt nội dung như podcast, video, tiêu đề danh sách phát, hồ sơ người dùng, hình bìa album, nội dung do người dùng tạo, phát trực tiếp… theo bộ hướng dẫn.",
-        "Thao tác: nhận yêu cầu trên công cụ của khách hàng, đánh giá nội dung và cập nhật kết quả trên hệ thống.",
-        "Thu nhập trung bình: 8.000.000 – 9.200.000 đồng/tháng (lương cơ bản + phụ cấp + thưởng theo chỉ tiêu).",
-        "Thử việc: 2 tháng nhận đủ 100% lương.",
-        "Lịch làm việc: 5 ngày/tuần, nghỉ 2 ngày bất kỳ; xoay ca 24/7 (9 giờ/ca gồm 1,5 giờ nghỉ).",
-        "Địa điểm làm việc: Tòa nhà QTSC1, Công viên Phần mềm Quang Trung, Quận 12, Thành phố Hồ Chí Minh.",
-        "Phúc lợi: môi trường đa văn hóa; 14 ngày phép/năm; lương tháng 13; khám sức khỏe định kỳ.",
-        "Yêu cầu: tiếng Anh tối thiểu B2; giao tiếp và viết tốt; hiểu tiếng lóng/văn hóa đại chúng; cẩn thận; linh hoạt xoay ca (kể cả cuối tuần và ngày lễ)."
+        "🎧 Công việc: kiểm duyệt các loại nội dung như podcast, video, playlist title, user profile, playlist, album art, UGC và livestream theo Community Guidelines.",
+        "🔎 Thao tác: nhận lead trên tool, đánh giá nội dung, ghi nhận kết quả trên hệ thống (tool/spreadsheet).",
+        "🌍 Ngôn ngữ làm việc: 100% tiếng Anh.",
+        "🕒 Lịch làm: 5 ngày/tuần, off 2 ngày bất kỳ; xoay ca 24/7 theo sắp xếp Team Lead.",
+        "⏱️ Ca làm: 9 giờ/ca (bao gồm 1.5 giờ nghỉ).",
+        "💰 Thu nhập TB: 8.000.000 – 9.200.000 VNĐ/tháng (7.500.000 lương cứng + 500.000 phụ cấp ăn + KPI đến 1.200.000).",
+        "💯 Thử việc: 2 tháng nhận 100% lương.",
+        "🎁 Phúc lợi: môi trường đa văn hoá; 14 ngày phép/năm; lương tháng 13; khám sức khỏe định kỳ.",
+        "📍 Địa điểm: QTSC1, Quang Trung Software City, Quận 12, TP.HCM.",
+        "🎯 Yêu cầu: Tiếng Anh B2+ (giao tiếp & viết tốt); hiểu slang/pop culture; cẩn thận, judgment tốt; linh hoạt xoay ca (bao gồm cuối tuần/ngày lễ)."
       ],
-      warn: "Lưu ý: dự án vận hành 24/7. Ca làm do trưởng nhóm sắp xếp (không chọn ca)."
+      warn: "Lưu ý: Dự án xoay ca 24/7. Ca do Team Lead sắp xếp (không chọn ca)."
     },
     {
       id: "milk",
-      title: "Nhân viên tư vấn chốt đơn – Sản phẩm sữa",
-      locationGroup: ["Q12","Q11"],
-      address: "Quận 12 – Tòa nhà QTSC9 (Công viên Phần mềm Quang Trung) hoặc Quận 11 – Tòa nhà Flemington, 182 Lê Đại Hành",
-      mapQuery: [
-        { label: "Bản đồ QTSC9 (Quận 12)", query: "Tòa nhà QTSC9, Công viên Phần mềm Quang Trung, Quận 12, Thành phố Hồ Chí Minh" },
-        { label: "Bản đồ Flemington (Quận 11)", query: "Tòa nhà Flemington, 182 Lê Đại Hành, Quận 11, Thành phố Hồ Chí Minh" }
+      title: "Tư vấn chốt đơn – Sản phẩm sữa",
+      locationGroup: "Q12",
+      locationGroups: ["Q12","Q11"],
+      address: "Onsite: QTSC9 (Quận 12) hoặc Flemington (Quận 11 – 182 Lê Đại Hành)",
+      maps: [
+        { label: "QTSC9 (Q12)", query: "Tòa nhà QTSC9, Công viên Phần mềm Quang Trung, Quận 12, TP.HCM" },
+        { label: "Flemington (Q11)", query: "Tòa nhà Flemington, 182 Lê Đại Hành, Quận 11, TP.HCM" }
       ],
-      formUrl: FORM_URL,
-      jdUrl: "",
+      mapQuery: "Tòa nhà QTSC9, Công viên Phần mềm Quang Trung, Quận 12, TP.HCM",
+      formUrl: FORM_URL, // TODO: dán link Google Form RIÊNG cho vị trí này (nếu có)
+      jdUrl: "", // TODO: ví dụ "assets/jd/ten-file.pdf"
 
       english: "no",
       schedule: "office",
-      badges: ["Giờ hành chính", "9–25 triệu", "Có sẵn danh sách khách hàng", "Thử việc nhận đủ lương"],
-      summary: "Gọi điện tư vấn sản phẩm sữa theo danh sách khách hàng công ty cung cấp; chăm sóc và chốt đơn theo chỉ tiêu.",
+      badges: ["2 sites", "Giờ hành chính", "9–25tr", "Có sẵn data", "100% lương thử việc"],
+      summary: "Telesales tư vấn sữa theo data có sẵn, chốt đơn và bám KPI.",
       details: [
-        "Công việc: liên hệ khách hàng theo thông tin công ty cung cấp để tư vấn sản phẩm sữa; chăm sóc và giải đáp thắc mắc.",
-        "Thu nhập: 9.000.000 – 25.000.000 đồng/tháng (tùy năng lực và kết quả chỉ tiêu).",
-        "Cấu trúc thu nhập tham khảo: lương cơ bản 5.750.000 + phụ cấp 750.000 + phụ cấp ăn 500.000 + thưởng theo chỉ tiêu tùy năng lực.",
-        "Thử việc: 60 ngày nhận đủ 100% lương.",
-        "Lịch làm việc: giờ hành chính 08:00 – 18:30, từ thứ Hai đến thứ Bảy.",
-        "Địa điểm làm việc: lầu 6–7, Tòa nhà QTSC9, Công viên Phần mềm Quang Trung, Quận 12 hoặc Tòa nhà Flemington, 182 Lê Đại Hành, Quận 11.",
-        "Phúc lợi: bảo hiểm theo quy định; bảo hiểm tai nạn 24/7; 14 ngày phép/năm; lương tháng 13; lộ trình thăng tiến rõ ràng.",
-        "Yêu cầu: tốt nghiệp trung học phổ thông; giọng nói rõ ràng, dễ nghe; có mục tiêu thu nhập; sẵn sàng học hỏi."
+        "📌 Công việc: gọi khách theo data có sẵn, tư vấn sản phẩm sữa phù hợp.",
+        "📌 Công việc: chăm sóc khách, giải đáp thắc mắc, chốt đơn, bám chỉ tiêu/KPI.",
+        "💰 Thu nhập: 9.000.000 – 25.000.000 VNĐ/tháng (tùy năng lực).",
+        "💯 Thử việc: 2 tháng thử việc nhận 100% lương.",
+        "🎁 Phúc lợi: BHXH, BHYT, BHTN theo quy định sau 2 tháng thử việc.",
+        "🎁 Phúc lợi: 14 ngày phép/năm, lương tháng 13.",
+        "🕒 Thời gian: T2–T7, 8:00–18:30.",
+        "📍 Địa điểm: QTSC9 (Quận 12) hoặc Flemington (Quận 11 – 182 Lê Đại Hành).",
+        "🎯 Yêu cầu: THPT trở lên; giọng rõ ràng, dễ nghe; có mục tiêu thu nhập, chịu khó học hỏi.",
+        "Chỉ phù hợp nếu: ok KPI + đi làm onsite Q12 hoặc Q11."
       ],
       warn: ""
     },
     {
       id: "fee",
-      title: "Chăm sóc khách hàng Sau Vay / Nhân viên nhắc phí & Gia hạn phí",
-      locationGroup: ["Q11","Q9"],
-      address: "Quận 11 – Tòa nhà Flemington, 182 Lê Đại Hành hoặc Quận 9 – Tòa nhà OneHub, Khu Công nghệ cao",
-      mapQuery: [
-        { label: "Bản đồ Flemington (Quận 11)", query: "Tòa nhà Flemington, 182 Lê Đại Hành, Quận 11, Thành phố Hồ Chí Minh" },
-        { label: "Bản đồ OneHub (Quận 9)", query: "Tòa nhà OneHub, Khu Công nghệ cao, Quận 9, Thành phố Hồ Chí Minh" }
+      title: "Chăm sóc khách hàng Sau Vay / Nhân viên nhắc & Gia hạn phí",
+      locationGroup: "Q9",
+      locationGroups: ["Q9","Q11"],
+      address: "Onsite: OneHub (Quận 9 – Khu CNC) hoặc Flemington (Quận 11 – 182 Lê Đại Hành)",
+      maps: [
+        { label: "OneHub (Q9)", query: "Tòa nhà OneHub, Khu Công nghệ cao, Quận 9, TP.HCM" },
+        { label: "Flemington (Q11)", query: "Tòa nhà Flemington, 182 Lê Đại Hành, Quận 11, TP.HCM" }
       ],
-      formUrl: FORM_URL,
-      jdUrl: "",
+      mapQuery: "Tòa nhà OneHub, Khu Công nghệ cao, Quận 9, TP.HCM",
+      formUrl: FORM_URL, // TODO: dán link Google Form RIÊNG cho vị trí này (nếu có)
+      jdUrl: "", // TODO: ví dụ "assets/jd/ten-file.pdf"
 
       english: "no",
       schedule: "office",
-      badges: ["Gọi ra chủ động", "8–25 triệu", "Không yêu cầu kinh nghiệm", "Không tăng ca", "Nghỉ Chủ nhật"],
-      summary: "Gọi theo danh sách khách hàng để nhắc phí và gia hạn phí; thu nhập gồm lương cơ bản và hoa hồng.",
+      badges: ["2 sites", "Outbound", "8–25tr", "Không yêu cầu kinh nghiệm", "Không tăng ca"],
+      summary: "Gọi theo data khách vay có sẵn để nhắc phí & gia hạn phí, định hướng thu nhập theo KPI.",
       details: [
-        "Công việc: gọi ra cho khách hàng theo danh sách công ty cung cấp để nhắc nhở thanh toán đúng hạn; hỗ trợ điểm thanh toán; hướng dẫn gia hạn phí khi cần.",
-        "Thu nhập trung bình: 8.000.000 – 25.000.000 đồng/tháng.",
-        "Cấu trúc thu nhập tham khảo: lương cơ bản 5.580.000 + phụ cấp ăn 500.000 + hoa hồng 5.000.000 – 20.000.000.",
-        "Thử việc: 2 tháng nhận đủ 100% lương.",
-        "Thời gian làm việc: 08:00 – 18:15; nghỉ trưa 1 giờ 20 phút; nghỉ cố định Chủ nhật; không tăng ca.",
-        "Địa điểm làm việc: Tòa nhà Flemington (Quận 11) hoặc Tòa nhà OneHub (Quận 9).",
-        "Phúc lợi: bảo hiểm xã hội, bảo hiểm y tế, bảo hiểm thất nghiệp; bảo hiểm tai nạn 24/7; 14 ngày phép/năm; lương tháng 13; xét duyệt điều chỉnh lương hằng năm.",
-        "Yêu cầu: tốt nghiệp trung học cơ sở trở lên; không yêu cầu kinh nghiệm; giao tiếp ổn; có mục tiêu thu nhập."
+        "📌 Công việc: gọi và thuyết phục khách theo data có sẵn; nhắc phí & gia hạn phí.",
+        "💰 Thu nhập TB: 8.000.000 – 25.000.000 VNĐ/tháng.",
+        "💯 Thử việc: 2 tháng thử việc nhận 100% lương.",
+        "🕒 Thời gian: 08:00–18:15, nghỉ trưa 1h20; off Chủ nhật (trừ CN đầu tiên của tháng).",
+        "🕒 Không tăng ca.",
+        "🎁 Phúc lợi: BHXH, BHYT, BHTN, BH tai nạn 24/7; 14 ngày phép/năm; lương tháng 13.",
+        "📍 Địa điểm: OneHub (Quận 9 – Khu Công nghệ cao) hoặc Flemington (Quận 11 – 182 Lê Đại Hành).",
+        "🎯 Yêu cầu: THCS trở lên; không yêu cầu kinh nghiệm; có mục tiêu về thu nhập.",
+        "Chỉ phù hợp nếu: ok outbound + đi làm onsite Q9 hoặc Q11."
       ],
       warn: ""
-    }
+    },
+
+    {
+      id: "jp-ecom",
+      title: "Chăm sóc Khách hàng – App Thương mại điện tử (Tiếng Nhật)",
+      locationGroup: "Q11",
+      locationGroups: ["Q11"],
+      address: "Quận 11 – The Flemington Tower, 182 Lê Đại Hành, Phường 15 (Onsite)",
+      maps: [
+        { label: "Flemington (Q11)", query: "The Flemington Tower, 182 Lê Đại Hành, Phường 15, Quận 11, TP.HCM" }
+      ],
+      mapQuery: "The Flemington Tower, 182 Lê Đại Hành, Phường 15, Quận 11, TP.HCM",
+      formUrl: FORM_URL, // TODO: dán link Google Form RIÊNG cho vị trí này (nếu có)
+      jdUrl: "", // TODO: ví dụ "assets/jd/cskh_ecommerce_jp.pdf"
+
+      english: "no",
+      schedule: "fixed-window",
+      badges: ["Tiếng Nhật N1/N2", "Xoay ca 07–22", "Q11", "Up to 23.2tr", "100% lương thử việc"],
+      summary: "CSKH app thương mại điện tử bằng tiếng Nhật (call/email/chat/voice). Hỗ trợ giải đáp & xử lý khiếu nại theo quy trình.",
+      details: [
+        "📌 Công việc: tư vấn/tiếp nhận hotline, email và tin nhắn (chat/voice) từ khách hàng để giải đáp thắc mắc, hỗ trợ xử lý khiếu nại về sản phẩm & dịch vụ trên nền tảng TMĐT; cập nhật thông tin trên hệ thống; thực hiện các nhiệm vụ khác theo phân công.",
+        "💰 Thu nhập (giữ nguyên chi tiết): Income up to 22.000.000 – 23.200.000 VND/tháng; Base salary: 21.500.000 VND; Meal allowance: 500.000 VND; KPI incentive: 900.000 – 1.200.000 VND; Night shift allowance: 30% base salary; Thử việc 2 tháng nhận 100% lương.",
+        "🕒 Lịch làm: xoay ca, off 2 ngày bất kỳ/tuần; khung giờ 07:00 – 22:00 (9 giờ/ca, gồm 1 giờ nghỉ).",
+        "🎁 Phúc lợi: BH theo Luật Lao động; Bảo hiểm tai nạn 24/7; 14 ngày phép/năm; khám sức khỏe định kỳ; đào tạo kỹ năng & lộ trình thăng tiến rõ ràng.",
+        "🎯 Yêu cầu: Tiếng Nhật tốt (nghe/nói/đọc/viết) – JLPT N1 hoặc N2 (hoặc đang sống/học tập tại Nhật); tốt nghiệp THPT trở lên; kinh nghiệm CS là lợi thế; giọng rõ ràng, giao tiếp tốt."
+      ],
+      warn: ""
+    },
   ];
 
-
   const FULL_QA = [
-    {
-      q: "Ứng tuyển như thế nào?",
-      a: "Bấm “Ứng tuyển” để mở biểu mẫu Google và điền thông tin. Nếu hồ sơ phù hợp, bộ phận tuyển dụng sẽ liên hệ lại trong 24–48 giờ."
-    },
+    { q: "Apply như thế nào?", a: "Bấm “Apply ngay” để mở Google Form và điền thông tin. Team liên hệ trong 24–48h nếu phù hợp." },
     {
       q: "Địa điểm làm việc",
       a:
-        "• Chăm sóc khách hàng – Ứng dụng mạng xã hội (đang tạm ngưng): Quận 12 – Tòa nhà Tech Valley, Công viên Phần mềm Quang Trung\n" +
-        "• Chăm sóc khách hàng (tiếng Anh) – Ứng dụng du lịch: Quận 12 – Tòa nhà QTSC1, Công viên Phần mềm Quang Trung\n" +
-        "• Chăm sóc khách hàng (tiếng Anh) – Ứng dụng đặt vé máy bay: Quận 12 – Tòa nhà QTSC1, Công viên Phần mềm Quang Trung\n" +
-        "• Kiểm duyệt nội dung – Nền tảng âm nhạc: Quận 12 – Tòa nhà QTSC1, Công viên Phần mềm Quang Trung\n" +
-        "• Nhân viên tư vấn chốt đơn – Sản phẩm sữa: Quận 12 – Tòa nhà QTSC9 hoặc Quận 11 – Tòa nhà Flemington\n" +
-        "• Chăm sóc khách hàng Sau Vay / Nhân viên nhắc phí & Gia hạn phí: Quận 11 – Tòa nhà Flemington hoặc Quận 9 – Tòa nhà OneHub (Khu Công nghệ cao)"
+        "• CS Travel App (English): Quận 12 – QTSC1\n" +
+        "• CS Flight Ticket App (English): Quận 12 – QTSC1\n" +
+        "• Kiểm duyệt nội dung – Nền tảng âm nhạc: Quận 12 – QTSC1\n" +
+        "• Tư vấn chốt đơn – Sản phẩm sữa: QTSC9 (Q12) hoặc Flemington (Q11)\n" +
+        "• Chăm sóc khách hàng Sau Vay / Nhân viên nhắc & Gia hạn phí: OneHub (Q9) hoặc Flemington (Q11)\n" +
+        "• CSKH Ứng dụng Mạng xã hội: (tạm ngưng tuyển)"
     },
-    {
-      q: "Có nhận ứng viên chưa có kinh nghiệm không?",
-      a: "Có. Với một số vị trí, công ty sẽ đào tạo quy trình và kỹ năng khi nhận việc. Bạn cứ ứng tuyển và để lại thông tin nhé."
-    },
-    {
-      q: "Vị trí tiếng Anh có xoay ca 24/7 không?",
-      a: "Có. Các vị trí chăm sóc khách hàng (tiếng Anh) và kiểm duyệt nội dung vận hành 24/7. Bạn làm theo ca xoay, ca do trưởng nhóm sắp xếp (không chọn ca)."
-    },
-    {
-      q: "24/7 nghĩa là gì? Có phải làm 24 tiếng/ngày không?",
-      a: "Không. 24/7 nghĩa là dự án vận hành cả ngày; bạn làm theo ca (mỗi ca có khung giờ và thời lượng nghỉ theo quy định)."
-    },
-    {
-      q: "Bao lâu có phản hồi sau khi ứng tuyển?",
-      a: "Nếu thông tin của bạn phù hợp tiêu chí (địa điểm, ca làm, tiếng Anh…), bộ phận tuyển dụng thường liên hệ trong 24–48 giờ. Bạn cũng có thể nhắn Zalo hoặc gửi thư điện tử để được hỗ trợ nhanh."
-    },
-    {
-      q: "Có làm việc từ xa không?",
-      a: "Hiện các vị trí đang tuyển làm việc tại văn phòng. Khi có vị trí phù hợp làm việc từ xa, mình sẽ cập nhật trên trang này."
-    },
-    {
-      q: "Nếu không làm xoay ca 24/7 thì nên ứng tuyển vị trí nào?",
-      a: "Bạn có thể cân nhắc: Nhân viên tư vấn chốt đơn – Sản phẩm sữa (giờ hành chính) hoặc Chăm sóc khách hàng Sau Vay / Nhân viên nhắc phí & Gia hạn phí (giờ hành chính, nghỉ Chủ nhật)."
-    }
+    { q: "Có nhận ứng viên chưa có kinh nghiệm không?", a: "Nếu bạn chưa có kinh nghiệm, công ty sẽ đào tạo bài bản." },
+    { q: "Job Kiểm duyệt nội dung – Nền tảng âm nhạc yêu cầu tiếng Anh như thế nào?", a: "Dự án làm việc 100% tiếng Anh. Yêu cầu tối thiểu B2+ (giao tiếp & viết tốt) và hiểu slang/pop culture." },
+    { q: "Job English có xoay ca 24/7 không?", a: "Có. Travel/Flight/Content Moderator xoay ca 24/7 (có ca tối/đêm, cuối tuần, lễ). Ca do Team Lead sắp xếp, không chọn ca." },
+    { q: "24/7 nghĩa là gì? Có phải làm 24 tiếng/ngày không?", a: "Không phải. 24/7 nghĩa là dự án vận hành cả ngày, bạn làm theo ca xoay theo lịch phân công." },
+    { q: "Bao lâu có phản hồi sau khi apply?", a: "Nếu phù hợp tiêu chí (địa điểm/ca/tiếng Anh/kinh nghiệm), team thường liên hệ trong 24–48h. Bạn cũng có thể nhắn Zalo/email để được hỗ trợ nhanh." },
+    { q: "Có remote/WFH không?", a: "Hiện các vị trí đang tuyển là onsite tại văn phòng. Khi có hybrid/remote team sẽ cập nhật." },
+    { q: "Không làm 24/7 được thì chọn job nào?", a: "Bạn có thể chọn Tư vấn chốt đơn – Sản phẩm sữa hoặc Chăm sóc khách hàng Sau Vay/Nhắc & Gia hạn (không phải 24/7)." }
   ];
-
 
   const SHORT_QA = [
-    "Ứng tuyển: bấm “Ứng tuyển” và điền biểu mẫu trong 1 phút.",
-    "Địa điểm: Quận 12 (Tech Valley/QTSC1/QTSC9) + Quận 11 (Flemington) + Quận 9 (OneHub).",
-    "Chưa có kinh nghiệm: có đào tạo khi nhận việc (tùy vị trí).",
-    "Vị trí tiếng Anh và kiểm duyệt nội dung: xoay ca 24/7 (ca do trưởng nhóm sắp xếp).",
-    "24/7: làm theo ca, không phải làm 24 giờ/ngày.",
-    "Phản hồi: thường trong 24–48 giờ nếu phù hợp tiêu chí."
+    "Apply: bấm link, điền form 1 phút.",
+    "Địa điểm: Quận 12 (QTSC1/QTSC9) + Quận 11 (Flemington) + Quận 9 (OneHub). Một số job có 2 site.",
+    "Fresher: công ty đào tạo bài bản.",
+    "Content Moderator (Music): 100% English (B2+).",
+    "Travel/Flight/Content Moderator: xoay ca 24/7 (TL sắp ca, không chọn ca).",
+    "24/7: xoay ca theo lịch, không phải làm 24h/ngày.",
+    "Phản hồi: 24–48h nếu phù hợp."
   ];
-
 
   const state = { src: "website", selectedJobId: null, filters: { loc: "all", schedule: "all" }, qaSearch: "" };
 
@@ -926,61 +942,65 @@
         ${warnHtml}
         <div class="actions">
           <button class="btn secondary" onclick="openJobModal('${job.id}')">Xem chi tiết</button>
-          <button class="btn" onclick="selectAndApply('${job.id}')">Ứng tuyển</button>
+          <button class="btn" onclick="selectAndApply('${job.id}')">Apply</button>
         </div>
       </div>
     `;
   }
 
   function renderHome(){
-    const openJobs = JOBS.filter(j=>j.status !== "paused");
-    const jobsHtml = openJobs.map(jobCard).join("");
+    const jobsHtml = JOBS.filter(j=>j.status!=="paused").map(jobCard).join("");
     const shortList = SHORT_QA.map(x=>`<span class="pill">• ${escapeHtml(x)}</span>`).join("");
+    const qaHtml = FULL_QA.map(item=>`
+      <details>
+        <summary>${escapeHtml(item.q)}</summary>
+        <p>${escapeHtml(item.a)}</p>
+      </details>
+    `).join("");
 
     return `
       <div class="hero" data-reveal>
         <div class="panel" data-reveal>
-          <h2>Concentrix Thành phố Hồ Chí Minh - Tuyển dụng</h2>
-          <p>Chọn vị trí phù hợp và ứng tuyển nhanh. Với các vị trí xoay ca <b>24/7</b>, bạn làm theo ca xoay và ca do <b>trưởng nhóm</b> sắp xếp (không chọn ca).</p>
-
+          <h2>Concentrix HCM Tuyển dụng</h2>
+          <p>Chọn vị trí phù hợp và apply 1 phút. Với job English 24/7: <span style="color:var(--accent);font-weight:900">có xoay ca</span> và ca do <b>Team Lead sắp xếp (không chọn ca)</b>.</p>
           <div class="btnrow">
-            <button class="btn" onclick="go('#/apply')">Ứng tuyển ngay</button>
+            <button class="btn" onclick="go('#/apply')">Apply ngay</button>
             <button class="btn secondary" onclick="go('#/jobs')">Xem vị trí</button>
-            <button class="btn secondary" onclick="copyBioLinks()">Sao chép liên kết trang cá nhân</button>
+            <button class="btn secondary" onclick="copyBioLinks()">Copy link Bio</button>
           </div>
-
           <div class="bullets">
-            <div class="bullet"><span class="dot"></span><span>Làm việc tại văn phòng. Địa điểm: Quận 12 (Công viên Phần mềm Quang Trung), Quận 11 (Tòa nhà Flemington), Quận 9 (Tòa nhà OneHub).</span></div>
-            <div class="bullet"><span class="dot"></span><span>Một số vị trí không yêu cầu kinh nghiệm; sẽ được đào tạo khi nhận việc.</span></div>
-            <div class="bullet"><span class="dot note"></span><span>Lưu ý với vị trí 24/7: có thể gồm ca tối/đêm, cuối tuần và ngày lễ.</span></div>
+            <div class="bullet"><span class="dot"></span><span>Onsite: Quận 12 / Quận 11 / Quận 9 (OneHub). Một số job có 2 site. Team liên hệ trong 24–48h nếu phù hợp.</span></div>
+            <div class="bullet"><span class="dot"></span><span>Nếu bạn chưa có kinh nghiệm, công ty sẽ đào tạo bài bản.</span></div>
+            <div class="bullet"><span class="dot note"></span><span>Job Travel/Flight/Content Moderator xoay ca 24/7 theo lịch Team Lead.</span></div>
           </div>
         </div>
 
         <div class="panel" data-reveal>
           <div class="section-title" style="margin-top:0">Liên hệ nhanh</div>
-          <div class="muted">Phụ trách tuyển dụng: <b>${escapeHtml(RECRUITER_NAME)}</b></div>
-          <div class="muted" style="margin-top:8px">Zalo / Điện thoại: <b>${escapeHtml(PHONE)}</b></div>
-          <div class="muted" style="margin-top:6px">Thư điện tử: <b><a class="link" href="mailto:${escapeHtml(EMAIL)}">${escapeHtml(EMAIL)}</a></b></div>
+          <div class="muted">Recruiter: <b>${escapeHtml(RECRUITER_NAME)}</b></div>
+          <div class="muted" style="margin-top:8px">Zalo/Phone: <b>${escapeHtml(PHONE)}</b></div>
+          <div class="muted" style="margin-top:6px">Email: <b><a href="mailto:${escapeHtml(EMAIL)}">${escapeHtml(EMAIL)}</a></b></div>
           <div class="actions" style="margin-top:12px">
-            <button class="btn secondary" onclick="copy('${PHONE}')">Sao chép số điện thoại</button>
-            <button class="btn secondary" onclick="copy('${EMAIL}')">Sao chép thư điện tử</button>
-            <button class="btn" onclick="go('#/apply')">Mở trang ứng tuyển</button>
+            <button class="btn secondary" onclick="copy('${PHONE}')">Copy số</button>
+            <button class="btn secondary" onclick="copy('${EMAIL}')">Copy email</button>
+            <button class="btn" onclick="go('#/apply')">Mở trang Apply</button>
           </div>
-
           <div class="hr"></div>
-          <div class="small">Nguồn truy cập: <b>${escapeHtml(state.src)}</b></div>
-          <div class="small" style="margin-top:8px">Lưu ý: một số biểu mẫu có thể yêu cầu đăng nhập tài khoản Google (nếu có phần tải hồ sơ).</div>
+          <div class="small">Nguồn: <b>${escapeHtml(state.src)}</b></div>
+          <div class="small" style="margin-top:8px">Lưu ý: Form có tải CV nên Google có thể yêu cầu đăng nhập.</div>
         </div>
       </div>
 
       <div class="section-title" data-reveal>Vị trí đang tuyển</div>
       <div class="grid">${jobsHtml}</div>
 
-      <div class="section-title" data-reveal>Hỏi đáp nhanh</div>
+      <div class="section-title" data-reveal>Q&A siêu nhanh</div>
       <div class="panel" data-reveal>
         <div class="pillbox">${shortList}</div>
-        <div class="small" style="margin-top:10px">Cần chi tiết hơn? Xem mục <a class="link" href="#/qa">Hỏi đáp</a>.</div>
       </div>
+
+      <div class="section-title" data-reveal>Q&A chi tiết</div>
+      <div class="qa" data-reveal>${qaHtml}</div>
 
       ${footer()}
     `;
@@ -989,58 +1009,58 @@
   function renderJobs(){
     const filtered = JOBS.filter(j=>{
       if(j.status === "paused") return false;
-
       const f = state.filters;
-
       if(f.loc !== "all"){
-        const g = j.locationGroup;
-        const ok = Array.isArray(g) ? g.includes(f.loc) : g === f.loc;
-        if(!ok) return false;
+        const groups = Array.isArray(j.locationGroups) && j.locationGroups.length
+          ? j.locationGroups
+          : (j.locationGroup ? [j.locationGroup] : []);
+        if(!groups.includes(f.loc)) return false;
       }
-
       if(f.schedule !== "all"){
         if(f.schedule === "24-7" && j.schedule !== "24-7") return false;
         if(f.schedule === "not-24-7" && j.schedule === "24-7") return false;
       }
-
       return true;
     });
 
     const cards = filtered.map(jobCard).join("") || `
       <div class="panel" data-reveal>
-        <div class="muted">Không có vị trí phù hợp với bộ lọc hiện tại.</div>
+        <b>Không có kết quả phù hợp.</b>
+        <div class="muted" style="margin-top:6px">Bạn thử đổi bộ lọc hoặc vào mục Apply để team tư vấn job khác nha.</div>
       </div>
     `;
 
     return `
       <div class="panel" data-reveal>
         <h2 style="margin:0 0 6px">Vị trí đang tuyển</h2>
-        <div class="muted">Bạn có thể lọc theo địa điểm và ca làm.</div>
+        <div class="muted">Lọc nhanh để ra job phù hợp. Nguồn: <b>${escapeHtml(state.src)}</b></div>
+        <div class="hr"></div>
 
-        <div class="filters">
-          <div style="min-width:220px;flex:1">
-            <label>Địa điểm</label>
+        <div class="filters" style="display:flex;gap:10px;flex-wrap:wrap;align-items:flex-end">
+          <div style="min-width:180px;flex:1">
+            <label>Location</label>
             <select onchange="setFilter('loc', this.value)">
               <option value="all" ${state.filters.loc==="all"?"selected":""}>Tất cả</option>
-              <option value="Q12" ${state.filters.loc==="Q12"?"selected":""}>Quận 12 (Công viên Phần mềm Quang Trung)</option>
-              <option value="Q11" ${state.filters.loc==="Q11"?"selected":""}>Quận 11 (Tòa nhà Flemington)</option>
-              <option value="Q9" ${state.filters.loc==="Q9"?"selected":""}>Quận 9 (Tòa nhà OneHub)</option>
+              <option value="Q12" ${state.filters.loc==="Q12"?"selected":""}>Quận 12</option>
+              <option value="Q11" ${state.filters.loc==="Q11"?"selected":""}>Quận 11</option>
+              <option value="Q9" ${state.filters.loc==="Q9"?"selected":""}>Quận 9 (OneHub)</option>
             </select>
           </div>
-          <div style="min-width:220px;flex:1">
-            <label>Ca làm</label>
+          <div style="min-width:180px;flex:1">
+            <label>Schedule</label>
             <select onchange="setFilter('schedule', this.value)">
               <option value="all" ${state.filters.schedule==="all"?"selected":""}>Tất cả</option>
-              <option value="24-7" ${state.filters.schedule==="24-7"?"selected":""}>Xoay ca 24/7</option>
-              <option value="not-24-7" ${state.filters.schedule==="not-24-7"?"selected":""}>Không xoay ca 24/7</option>
+              <option value="24-7" ${state.filters.schedule==="24-7"?"selected":""}>24/7</option>
+              <option value="not-24-7" ${state.filters.schedule==="not-24-7"?"selected":""}>Không 24/7</option>
             </select>
           </div>
-          <div style="display:flex; align-items:flex-end">
-            <button class="btn secondary" onclick="resetFilters()">Đặt lại</button>
+          <div style="min-width:140px;flex:0">
+            <button class="btn secondary" onclick="resetFilters()">Reset</button>
           </div>
         </div>
       </div>
 
+      <div class="section-title" data-reveal>Kết quả</div>
       <div class="grid">${cards}</div>
 
       ${footer()}
@@ -1048,71 +1068,74 @@
   }
 
   function renderApply(){
-    const job = state.selectedJobId ? JOBS.find(j=>j.id===state.selectedJobId) : null;
-
-    const note247 = (job && job.schedule === "24-7")
-      ? `<div class="warnline">ℹ️ Lưu ý: dự án vận hành 24/7. Ca làm do trưởng nhóm sắp xếp (không chọn ca).</div>`
-      : "";
+    const job = state.selectedJobId ? JOBS.find(j=>j.id===state.selectedJobId && j.status!=="paused") : null;
+    const pausedJob = (!job && state.selectedJobId) ? JOBS.find(j=>j.id===state.selectedJobId && j.status==="paused") : null;
+    const note = job && job.schedule === "24-7"
+      ? `<div class="warnline">ℹ️ Lưu ý: Dự án xoay ca 24/7. Ca do Team Lead sắp xếp (không chọn ca).</div>` : "";
 
     const jobSummary = job ? `
       <div class="card" style="margin-top:12px" data-reveal>
-        <h3 style="margin:0 0 6px">Bạn đang ứng tuyển: ${escapeHtml(job.title)}</h3>
+        <h3 style="margin:0 0 6px">Bạn đang apply: ${escapeHtml(job.title)}</h3>
         <div class="addr">📍 ${escapeHtml(job.address)}</div>
-        ${note247}
-        <div class="small" style="margin-top:10px"><b>Gợi ý:</b> chuẩn bị họ và tên, số điện thoại, thời gian có thể bắt đầu đi làm và ghi chú về lịch/ca (nếu có).</div>
+        ${note}
+        <div class="small" style="margin-top:10px"><b>Tip:</b> Bạn nhớ chuẩn bị: Họ tên + SĐT + Thời gian có thể bắt đầu đi làm + lưu ý ca có thể xoay (nếu là job 24/7).</div>
+      </div>
+    ` : pausedJob ? `
+      <div class="card" style="margin-top:12px" data-reveal>
+        <h3 style="margin:0 0 6px">Vị trí đang tạm ngưng tuyển</h3>
+        <div class="muted">Vị trí <b>${escapeHtml(pausedJob.title)}</b> hiện đang tạm ngưng. Bạn chọn vị trí khác ở trang “Vị trí” nhé.</div>
+        <div class="actions" style="margin-top:10px">
+          <button class="btn secondary" onclick="go('#/jobs')">Xem vị trí khác</button>
+        </div>
       </div>
     ` : `
       <div class="card" style="margin-top:12px" data-reveal>
         <h3 style="margin:0 0 6px">Chưa chọn vị trí</h3>
-        <div class="muted">Bạn có thể chọn vị trí ở trang “Vị trí”, hoặc chọn ngay trong phần “Ứng tuyển nhanh” bên dưới.</div>
+        <div class="muted">Bạn có thể chọn job ở trang “Vị trí”, hoặc chọn ngay trong Quick Apply bên dưới.</div>
       </div>
     `;
 
-    const options = JOBS
-      .filter(j=>j.status !== "paused")
-      .map(j=>`<option value="${j.id}" ${(job && job.id===j.id)?"selected":""}>${escapeHtml(j.title)}</option>`)
-      .join("");
+    const options = JOBS.filter(j=>j.status!=="paused").map(j=>`<option value="${j.id}" ${job && job.id===j.id ? "selected":""}>${escapeHtml(j.title)}</option>`).join("");
 
     return `
       <div class="panel" data-reveal>
-        <h2 style="margin:0 0 6px">Ứng tuyển</h2>
-        <div class="muted">Nguồn truy cập: <b>${escapeHtml(state.src)}</b>. Lưu ý: một số biểu mẫu có thể yêu cầu đăng nhập tài khoản Google (nếu có phần tải hồ sơ).</div>
+        <h2 style="margin:0 0 6px">Apply</h2>
+        <div class="muted">Nguồn: <b>${escapeHtml(state.src)}</b>. Lưu ý: Form Google có tải CV nên Google có thể yêu cầu đăng nhập.</div>
 
         ${jobSummary}
 
         <div class="actions" style="margin-top:12px">
-          <button class="btn" onclick="openForm()">Mở biểu mẫu ứng tuyển</button>
-          <button class="btn secondary" onclick="copy('${PHONE}')">Sao chép số điện thoại</button>
-          <button class="btn secondary" onclick="copy('${EMAIL}')">Sao chép thư điện tử</button>
+          <button class="btn" onclick="openForm()">Mở form ứng tuyển (Google Form)</button>
+          <button class="btn secondary" onclick="copy('${PHONE}')">Copy số</button>
+          <button class="btn secondary" onclick="copy('${EMAIL}')">Copy email</button>
         </div>
 
         <div class="hr"></div>
 
-        <h3 style="margin:0 0 8px">Ứng tuyển nhanh (không cần gửi hồ sơ)</h3>
-        <div class="small">Điền nhanh để tạo tin nhắn gửi Zalo cho bộ phận tuyển dụng (không cần tải tệp).</div>
+        <h3 style="margin:0 0 8px">Quick Apply (không cần CV)</h3>
+        <div class="small">Điền nhanh để tạo tin nhắn gửi Zalo cho recruiter (không cần upload file).</div>
 
         <form id="quickApplyForm" onsubmit="submitQuickApply(event)" style="margin-top:12px">
           <div class="two-col">
             <div>
               <label>Họ và tên</label>
-              <input required name="name" placeholder="Ví dụ: Nguyễn Văn A" />
+              <input required name="name" placeholder="VD: Nguyễn Văn A" />
             </div>
             <div>
-              <label>Số điện thoại / Zalo</label>
-              <input required name="phone" placeholder="Ví dụ: 09xxxxxxxx" />
+              <label>SĐT/Zalo</label>
+              <input required name="phone" placeholder="VD: 09xxxxxxxx" />
             </div>
           </div>
 
           <div class="two-col" style="margin-top:10px">
             <div>
               <label>Vị trí quan tâm</label>
-              <select name="jobId" required onchange="onQuickJobChange(this.value)">
-                <option value="" disabled ${job ? "" : "selected"}>— Chọn vị trí —</option>
+              <select name="jobId" onchange="onQuickJobChange(this.value)">
                 ${options}
               </select>
             </div>
             <div>
-              <label>Bạn có thể làm việc tại văn phòng không?</label>
+              <label>Đi làm onsite được không?</label>
               <select name="onsite">
                 <option value="Có" selected>Có</option>
                 <option value="Không">Không</option>
@@ -1123,13 +1146,13 @@
           <div id="quickConditional" style="margin-top:10px"></div>
 
           <div style="margin-top:10px">
-            <label>Ghi chú (tùy chọn)</label>
-            <textarea name="note" placeholder="Ví dụ: có thể bắt đầu từ ngày..., vướng lịch..., kinh nghiệm liên quan..."></textarea>
+            <label>Ghi chú (tuỳ chọn)</label>
+            <textarea name="note" placeholder="VD: Có thể bắt đầu từ..., kinh nghiệm..., vướng lịch..."></textarea>
           </div>
 
           <div class="actions" style="margin-top:12px">
             <button class="btn" type="submit">Tạo tin nhắn gửi Zalo</button>
-            <button class="btn secondary" type="button" onclick="go('#/jobs')">Quay lại chọn vị trí</button>
+            <button class="btn secondary" type="button" onclick="go('#/jobs')">Quay lại chọn job</button>
           </div>
         </form>
 
@@ -1158,23 +1181,20 @@
 
     return `
       <div class="panel" data-reveal>
-        <h2 style="margin:0 0 6px">Hỏi đáp</h2>
-        <div class="muted">Giải đáp nhanh trước khi ứng tuyển. (Nguồn truy cập: <b>${escapeHtml(state.src)}</b>)</div>
+        <h2 style="margin:0 0 6px">Q&A</h2>
+        <div class="muted">Giải đáp nhanh trước khi apply. (Nguồn: <b>${escapeHtml(state.src)}</b>)</div>
 
         <div style="margin-top:12px">
-          <label>Tìm nhanh theo từ khóa</label>
-          <input placeholder="Ví dụ: 24/7, địa điểm, chưa có kinh nghiệm..." value="${escapeHtml(state.qaSearch)}"
+          <label>Tìm nhanh</label>
+          <input placeholder="VD: 24/7, địa điểm, fresher..." value="${escapeHtml(state.qaSearch)}"
             oninput="state.qaSearch=this.value; render()" />
         </div>
 
-        <div class="hr"></div>
+        <div class="section-title" data-reveal>Q&A siêu nhanh</div>
+        <div class="pillbox" data-reveal>${shortList}</div>
 
-        <div class="section-title" style="margin-top:0">Gợi ý nhanh</div>
-        <div class="pillbox">${shortList}</div>
-
-        <div class="hr"></div>
-
-        <div class="qa">${qaHtml}</div>
+        <div class="section-title" data-reveal>Q&A chi tiết</div>
+        <div class="qa" data-reveal>${qaHtml}</div>
       </div>
 
       ${footer()}
@@ -1185,22 +1205,21 @@
     return `
       <div class="footer" data-reveal>
         <div>
-          <div><b>${escapeHtml(RECRUITER_NAME)}</b> • Zalo / Điện thoại: <b>${escapeHtml(PHONE)}</b> • Thư điện tử: <b>${escapeHtml(EMAIL)}</b></div>
-          <div class="small" style="margin-top:4px">Nguồn truy cập: <b>${escapeHtml(state.src)}</b> • Một số biểu mẫu có thể yêu cầu đăng nhập tài khoản Google (nếu có phần tải hồ sơ).</div>
+          <div><b>${escapeHtml(RECRUITER_NAME)}</b> • Zalo/Phone: <b>${escapeHtml(PHONE)}</b> • Email: <b>${escapeHtml(EMAIL)}</b></div>
+          <div class="small" style="margin-top:4px">Nguồn: <b>${escapeHtml(state.src)}</b> • Form có tải CV nên Google có thể yêu cầu đăng nhập.</div>
         </div>
         <div style="display:flex; gap:8px; flex-wrap:wrap; justify-content:flex-end">
-          <button class="copybtn" onclick="copy('${PHONE}')">Sao chép số điện thoại</button>
-          <button class="copybtn" onclick="copy('${EMAIL}')">Sao chép thư điện tử</button>
-          <button class="copybtn" onclick="copyBioLinks()">Sao chép liên kết trang cá nhân</button>
+          <button class="copybtn" onclick="copy('${PHONE}')">Copy số</button>
+          <button class="copybtn" onclick="copy('${EMAIL}')">Copy email</button>
+          <button class="copybtn" onclick="copyBioLinks()">Copy link bio</button>
         </div>
       </div>
     `;
   }
 
   function openJobModal(id){
-    const job = getJobById(id);
+    const job = JOBS.find(j=>j.id===id);
     if(!job) return;
-
     if(job.status === "paused"){
       toast("Vị trí này hiện đang tạm ngưng tuyển 🙏");
       return;
@@ -1214,35 +1233,30 @@
     const list = job.details.map(x=>`<li class="muted" style="margin:6px 0">${escapeHtml(x)}</li>`).join("");
 
     const jdBtn = job.jdUrl
-      ? `<button class="btn secondary" onclick="openJD('${job.id}')">Xem mô tả công việc</button>`
+      ? `<button class="btn secondary" onclick="openJD('${job.id}')">Xem JD</button>`
       : "";
 
-    let mapBtns = "";
-    if(Array.isArray(job.mapQuery)){
-      mapBtns = job.mapQuery.map((it,i)=>{
-        const label = (it && typeof it === "object") ? (it.label || "Bản đồ") : "Bản đồ";
-        return `<button class="btn secondary" onclick="openMap('${job.id}', ${i})">${escapeHtml(label)}</button>`;
-      }).join("");
-    } else {
-      mapBtns = `<button class="btn secondary" onclick="openMap('${job.id}')">Mở bản đồ</button>`;
-    }
+    const maps = getMapsForJob(job);
+    const mapBtns = maps.map((m,i)=>
+      `<button class="btn secondary" onclick="openMap('${job.id}', ${i})">${escapeHtml(m.label)}</button>`
+    ).join("");
 
     $("#modalContent").innerHTML = `
-      <div class="modal-title">${escapeHtml(job.title)}</div>
+      <h3>${escapeHtml(job.title)}</h3>
       <div class="meta" style="margin:8px 0">${badges}</div>
       <div class="addr">📍 ${escapeHtml(job.address)}</div>
       ${note}
       <div class="hr"></div>
-      <div class="muted"><b>Tóm tắt</b></div>
+      <div class="muted"><b>Mô tả nhanh</b></div>
       <div class="small" style="margin-top:6px">${escapeHtml(job.summary)}</div>
       <div class="hr"></div>
-      <div class="muted"><b>Thông tin chi tiết</b></div>
+      <div class="muted"><b>Thông tin/tiêu chí</b></div>
       <ul style="margin:8px 0 0; padding-left:18px">${list}</ul>
 
       <div class="actions" style="margin-top:12px">
-        <button class="btn" onclick="selectAndApply('${job.id}')">Ứng tuyển vị trí này</button>
-        <button class="btn secondary" onclick="openForm('${job.id}')">Mở biểu mẫu ứng tuyển</button>
-        <button class="btn secondary" onclick="copyJobLink('${job.id}')">Sao chép liên kết vị trí</button>
+        <button class="btn" onclick="selectAndApply('${job.id}')">Apply job này</button>
+        <button class="btn secondary" onclick="openForm('${job.id}')">Mở Google Form</button>
+        <button class="btn secondary" onclick="copyJobLink('${job.id}')">Copy link job</button>
         ${mapBtns}
         ${jdBtn}
         <button class="btn secondary" onclick="hideModal()">Đóng</button>
@@ -1270,12 +1284,14 @@ function closeModal(e){
   if(e && e.target && e.target.id === "modalBackdrop") hideModal();
 }
 function setFilter(key, value){ state.filters[key]=value; render(); }
-  function resetFilters(){
-    state.filters = { loc: "all", schedule: "all" };
-    render();
-  }
+  function resetFilters(){ state.filters={loc:"all", schedule:"all"}; render(); }
 
   function selectAndApply(id){
+    const job = getJobById(id);
+    if(job && job.status === "paused"){
+      toast("Vị trí này hiện đang tạm ngưng tuyển 🙏");
+      return;
+    }
     setSelectedJob(id);
     const bd = $("#modalBackdrop");
     if(bd && bd.classList.contains("open")) hideModal();
@@ -1292,6 +1308,11 @@ function setFilter(key, value){ state.filters[key]=value; render(); }
 
   function openForm(jobId){
     const id = jobId || state.selectedJobId;
+    const job = getJobById(id);
+    if(job && job.status === "paused"){
+      toast("Vị trí này hiện đang tạm ngưng tuyển 🙏");
+      return;
+    }
     cxTrackApply(id, "form");
     const url = getFormUrl(id);
     window.open(url, "_blank", "noopener,noreferrer");
@@ -1305,23 +1326,23 @@ function setFilter(key, value){ state.filters[key]=value; render(); }
 
   function copyJobLink(jobId){ copy(jobShareLink(jobId)); }
 
+  function getMapsForJob(job){
+    if(!job) return [];
+    if(Array.isArray(job.maps) && job.maps.length) return job.maps;
+    const q = job.mapQuery || job.address || "";
+    return q ? [{ label: "Bản đồ", query: q }] : [];
+  }
+
   function openMap(jobId, idx){
     const job = getJobById(jobId);
-    if(!job) return;
-
-    let q = "";
-
-    if(Array.isArray(job.mapQuery)){
-      const it = job.mapQuery[(typeof idx === "number" ? idx : 0)] || job.mapQuery[0];
-      if(it && typeof it === "object") q = it.query || "";
-      else q = (it || "").toString();
-    } else if(job.mapQuery){
-      if(job.mapQuery && typeof job.mapQuery === "object") q = job.mapQuery.query || "";
-      else q = job.mapQuery.toString();
+    if(job && job.status === "paused"){
+      toast("Vị trí này hiện đang tạm ngưng tuyển 🙏");
+      return;
     }
 
-    if(!q) q = job.address || "";
-
+    const maps = getMapsForJob(job);
+    const picked = (typeof idx === "number" && maps[idx]) ? maps[idx] : maps[0];
+    const q = picked ? picked.query : (job ? job.address : "");
     const url = "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(q);
     window.open(url, "_blank", "noopener,noreferrer");
   }
@@ -1331,7 +1352,7 @@ function setFilter(key, value){ state.filters[key]=value; render(); }
     if(job && job.jdUrl){
       window.open(job.jdUrl, "_blank", "noopener,noreferrer");
     }else{
-      toast("Chưa có liên kết mô tả công việc cho vị trí này.");
+      toast("JD chưa được gắn link cho vị trí này.");
     }
   }
 
@@ -1344,7 +1365,7 @@ function setFilter(key, value){ state.filters[key]=value; render(); }
     if(j && j.schedule === "24-7"){
       html = `
         <div>
-          <label>Xác nhận có thể xoay ca 24/7 (ca do trưởng nhóm sắp xếp, không chọn ca)</label>
+          <label>Xác nhận làm được xoay ca 24/7 (TL sắp ca, không chọn ca)</label>
           <select name="confirm247" required>
             <option value="Có" selected>Có</option>
             <option value="Không">Không</option>
@@ -1369,35 +1390,35 @@ function setFilter(key, value){ state.filters[key]=value; render(); }
 
     let extra = "";
     if(job && job.schedule === "24-7"){
-      extra += `\n- Xác nhận xoay ca 24/7 (ca do trưởng nhóm sắp xếp): ${fd.get("confirm247") || ""}`;
+      extra += `\n- Xác nhận 24/7 (TL sắp ca, không chọn ca): ${fd.get("confirm247") || ""}`;
     }
 
     const msg =
 `Chào anh/chị ${RECRUITER_NAME}, em muốn ứng tuyển Concentrix.
-- Họ và tên: ${name}
-- Số điện thoại / Zalo: ${phone}
+- Họ tên: ${name}
+- SĐT/Zalo: ${phone}
 - Vị trí: ${job ? job.title : jobId}
-- Có thể làm việc tại văn phòng: ${onsite}
-- Nguồn truy cập: ${state.src}${extra}${note ? `\n- Ghi chú: ${note}` : ""}
+- Onsite: ${onsite}
+- Nguồn: ${state.src}${extra}${note ? `\n- Ghi chú: ${note}` : ""}
 
-Nhờ anh/chị hỗ trợ sắp lịch sàng lọc và phỏng vấn giúp em ạ.`;
+Nhờ anh/chị hỗ trợ sắp lịch screening/PV giúp em ạ.`;
 
     const result = document.querySelector("#quickResult");
     result.classList.remove("hidden");
     result.innerHTML = `
-      <h3 style="margin:0 0 8px">Hoàn tất ✅</h3>
-      <div class="small">Sao chép tin nhắn dưới đây và gửi qua Zalo hoặc tin nhắn điện thoại tới <b>${escapeHtml(PHONE)}</b> (hoặc gửi thư điện tử tới <b>${escapeHtml(EMAIL)}</b>).</div>
+      <h3 style="margin:0 0 8px">Xong rồi ✅</h3>
+      <div class="small">Copy tin nhắn dưới đây và gửi Zalo/SMS tới <b>${escapeHtml(PHONE)}</b> (hoặc email <b>${escapeHtml(EMAIL)}</b>).</div>
       <div class="hr"></div>
       <pre style="white-space:pre-wrap; margin:0; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas; color: var(--text);
                   background: rgba(255,255,255,.04); border:1px solid var(--line); border-radius: 14px; padding:12px">${escapeHtml(msg)}</pre>
       <div class="actions" style="margin-top:12px">
-        <button class="btn" onclick="copy(${JSON.stringify(msg)})">Sao chép tin nhắn</button>
-        <button class="btn secondary" onclick="copy('${PHONE}')">Sao chép số điện thoại</button>
-        <button class="btn secondary" onclick="copy('${EMAIL}')">Sao chép thư điện tử</button>
-        <button class="btn secondary" onclick="openForm(${JSON.stringify(jobId)})">Mở biểu mẫu ứng tuyển</button>
+        <button class="btn" onclick="copy(${JSON.stringify(msg)})">Copy tin nhắn</button>
+        <button class="btn secondary" onclick="copy('${PHONE}')">Copy số</button>
+        <button class="btn secondary" onclick="copy('${EMAIL}')">Copy email</button>
+        <button class="btn secondary" onclick="openForm(${JSON.stringify(jobId)})">Mở form Google</button>
       </div>
     `;
-    toast("Đã tạo tin nhắn ✅");
+    toast("Tạo tin nhắn thành công ✅");
   }
 
   function copyBioLinks(){
@@ -1405,8 +1426,7 @@ Nhờ anh/chị hỗ trợ sắp lịch sàng lọc và phỏng vấn giúp em �
     const tiktok = base + "tiktok.html";
     const threads = base + "threads.html";
     const fb = base + "fb.html";
-    const website = base;
-    const block = `Liên kết trang cá nhân:\n- TikTok: ${tiktok}\n- Threads: ${threads}\n- Facebook: ${fb}\n- Trang web: ${website}`;
+    const block = `Bio links:\n- TikTok: ${tiktok}\n- Threads: ${threads}\n- Facebook: ${fb}`;
     copy(block);
   }
 
@@ -1414,14 +1434,20 @@ Nhờ anh/chị hỗ trợ sắp lịch sàng lọc và phỏng vấn giúp em �
     document.documentElement.dataset.theme = theme;
 
     const btn = document.getElementById("themeToggle");
-    if(btn) btn.textContent = (theme === "dark") ? "Chế độ sáng" : "Chế độ tối";
+    if(btn) btn.textContent = (theme === "dark") ? "Light" : "Dark";
 
     const logo = document.getElementById("cxLogo");
     if(logo){
       // Bạn đang dùng 2 file:
       // - assets/cnx-logo-light.svg: logo chữ MÀU ĐẬM (hợp nền sáng)
       // - assets/cnx-logo-dark.svg : logo chữ MÀU SÁNG (hợp nền tối)
-      logo.src = (theme === "dark") ? "assets/cnx-logo-dark.svg" : "assets/cnx-logo-light.svg";
+      const LOGO_FOR_LIGHT_THEME = "assets/cnx-logo-light.svg";
+      const LOGO_FOR_DARK_THEME  = "assets/cnx-logo-dark.svg";
+      const src = (theme === "dark") ? LOGO_FOR_DARK_THEME : LOGO_FOR_LIGHT_THEME;
+
+      // thêm query để tránh cache khi đổi theme
+      logo.src = src + "?v=" + theme;
+      logo.alt = "Concentrix";
     }
   }
 
@@ -1516,7 +1542,7 @@ Nhờ anh/chị hỗ trợ sắp lịch sàng lọc và phỏng vấn giúp em �
     window.addEventListener("keydown", (e)=>{ if(e.key === "Escape") hideModal(); });
     const url = new URL(location.href);
     const job = url.searchParams.get("job");
-    if(job && JOBS.some(j=>j.id===job)) setSelectedJob(job);
+    if(job && JOBS.some(j=>j.id===job && j.status!=="paused")) setSelectedJob(job);
     route();
   });
 </script>
