@@ -601,6 +601,7 @@
     {
       id: "mxh",
       title: "CSKH Ứng dụng Mạng xã hội",
+      status: "paused", // tạm ngưng tuyển (ẩn khỏi danh sách)
       locationGroup: "Q12",
       address: "Quận 12 – Tòa nhà Tech Valley, Công viên Phần mềm Quang Trung (Onsite)",
       mapQuery: 'Tòa nhà Tech Valley, Công viên Phần mềm Quang Trung, Quận 12, TP.HCM',
@@ -628,11 +629,7 @@
       title: "Customer Service (English) – Travel App",
       locationGroup: "Q12",
       address: "Quận 12 – Tòa nhà QTSC1, Công viên Phần mềm Quang Trung (Onsite)",
-      mapQuery: 'Tòa nhà QTSC1, Công viên Phần mềm Quang Trung, Quận 12, TP.HCM',
-      formUrl: FORM_URL, // TODO: dán link Google Form RIÊNG cho vị trí này (nếu có)
-      jdUrl: "", // TODO: ví dụ "assets/jd/ten-file.pdf"
-
-      mapQuery: 'Tòa nhà QTSC1, Công viên Phần mềm Quang Trung, Quận 12, TP.HCM',
+      mapQuery: "Tòa nhà QTSC1, Công viên Phần mềm Quang Trung, Quận 12, TP.HCM",
       formUrl: FORM_URL, // TODO: dán link Google Form RIÊNG cho vị trí này (nếu có)
       jdUrl: "", // TODO: ví dụ "assets/jd/ten-file.pdf"
 
@@ -645,10 +642,10 @@
         "📌 Công việc: tư vấn chuyến đi/chỗ ở, xử lý đặt – đổi – hủy và thắc mắc cơ bản.",
         "📌 Công việc: thao tác hệ thống, tuân thủ quy trình, đảm bảo trải nghiệm khách hàng.",
         "💰 Thu nhập TB: 10.000.000 – 12.000.000 VNĐ/tháng.",
-        "🎁 Phúc lợi: 100% lương trong 2 tháng thử việc; BHXH, BHYT, BH tai nạn 24/7.",
-        "🎁 Phúc lợi: 14 ngày phép/năm, lương tháng 13, khám sức khỏe định kỳ.",
-        "🕒 Thời gian: làm 5 ngày/tuần, nghỉ 2 ngày bất kỳ; xoay ca 24/7.",
-        "🎯 Yêu cầu: Tốt nghiệp THPT; Tiếng Anh thành thạo 4 kỹ năng; làm việc 100% bằng tiếng Anh.",
+        "💯 Thử việc: 2 tháng nhận 100% lương.",
+        "🎁 Phúc lợi: BHXH, BHYT, BH tai nạn 24/7; 14 ngày phép/năm; lương tháng 13; khám sức khỏe định kỳ.",
+        "🕒 Lịch làm: 5 ngày/tuần, off 2 ngày bất kỳ; xoay ca 24/7.",
+        "🎯 Yêu cầu: THPT trở lên; Tiếng Anh tốt 4 kỹ năng (làm việc 100% bằng tiếng Anh).",
         "Chỉ phù hợp nếu: xác nhận làm được 24/7 theo sắp xếp TL."
       ],
       warn: "Lưu ý: Dự án xoay ca 24/7. Ca do Team Lead sắp xếp (không chọn ca)."
@@ -658,6 +655,10 @@
       title: "Customer Service (English) – Flight Ticket App",
       locationGroup: "Q12",
       address: "Quận 12 – Tòa nhà QTSC1, Công viên Phần mềm Quang Trung (Onsite)",
+      mapQuery: "Tòa nhà QTSC1, Công viên Phần mềm Quang Trung, Quận 12, TP.HCM",
+      formUrl: FORM_URL, // TODO: dán link Google Form RIÊNG cho vị trí này (nếu có)
+      jdUrl: "", // TODO: ví dụ "assets/jd/ten-file.pdf"
+
       english: "yes",
       schedule: "24-7",
       badges: ["English", "24/7", "11–13tr", "100% lương thử việc", "BH sau thử việc"],
@@ -666,12 +667,37 @@
         "📌 Công việc: nhận call/chat/email, hỗ trợ khách book vé máy bay, xử lý yêu cầu cơ bản.",
         "📌 Điểm mạnh: phù hợp làm “cửa vào ngành” BPO, học quy trình CSKH & làm với khách quốc tế.",
         "💰 Thu nhập TB: 11.000.000 – 13.000.000 VNĐ/tháng.",
-        "💯 Thử việc: 2 tháng thử việc nhận 100% lương.",
-        "🎁 Phúc lợi: BHXH, BHYT, BHTN + BH tai nạn 24/7 sau 2 tháng thử việc.",
-        "🎁 Phúc lợi: 14 ngày phép/năm, lương tháng 13.",
-        "🕒 Thời gian: xoay ca 24/7 (có ca tối/đêm, cuối tuần, ngày lễ).",
+        "💯 Thử việc: 2 tháng nhận 100% lương.",
+        "🎁 Phúc lợi: BHXH, BHYT, BHTN + BH tai nạn 24/7 sau 2 tháng thử việc; 14 ngày phép/năm; lương tháng 13.",
+        "🕒 Lịch làm: xoay ca 24/7 (có ca tối/đêm, cuối tuần, ngày lễ).",
         "🎯 Yêu cầu: THPT trở lên; Tiếng Anh 4 kỹ năng ổn.",
         "Chỉ phù hợp nếu: xác nhận làm được 24/7 theo sắp xếp TL."
+      ],
+      warn: "Lưu ý: Dự án xoay ca 24/7. Ca do Team Lead sắp xếp (không chọn ca)."
+    },
+    {
+      id: "musicmod",
+      title: "Kiểm duyệt nội dung – Nền tảng âm nhạc",
+      locationGroup: "Q12",
+      address: "Quận 12 – QTSC1, Quang Trung Software City (Onsite)",
+      mapQuery: "QTSC1, Quang Trung Software City, Quận 12, TP.HCM",
+      formUrl: FORM_URL, // TODO: dán link Google Form RIÊNG cho vị trí này (nếu có)
+      jdUrl: "", // TODO: ví dụ "assets/jd/spo_content_moderator_music.pdf"
+
+      english: "yes",
+      schedule: "24-7",
+      badges: ["Quận 12", "24/7", "8.0–9.2tr", "B2+", "Off 2 ngày/tuần", "100% lương thử việc"],
+      summary: "Kiểm duyệt nội dung (podcast/video/playlist/title/profile/album art/UGC/livestream…) theo guideline và cập nhật kết quả trên hệ thống.",
+      details: [
+        "🎧 Công việc: kiểm duyệt các loại nội dung như podcast, video, playlist title, user profile, playlist, album art, UGC và livestream theo Community Guidelines.",
+        "🔎 Thao tác: nhận lead trên tool, đánh giá nội dung, ghi nhận kết quả trên hệ thống (tool/spreadsheet).",
+        "🕒 Lịch làm: 5 ngày/tuần, off 2 ngày bất kỳ; xoay ca 24/7 theo sắp xếp Team Lead.",
+        "⏱️ Ca làm: 9 giờ/ca (bao gồm 1.5 giờ nghỉ).",
+        "💰 Thu nhập TB: 8.000.000 – 9.200.000 VNĐ/tháng (7.500.000 lương cứng + 500.000 phụ cấp ăn + KPI đến 1.200.000).",
+        "💯 Thử việc: 2 tháng nhận 100% lương.",
+        "🎁 Phúc lợi: môi trường đa văn hoá; 14 ngày phép/năm; lương tháng 13; khám sức khỏe định kỳ.",
+        "📍 Địa điểm: QTSC1, Quang Trung Software City, Quận 12, TP.HCM.",
+        "🎯 Yêu cầu: Tiếng Anh B2+ (giao tiếp & viết tốt); hiểu slang/pop culture; cẩn thận, judgement tốt; linh hoạt xoay ca (bao gồm cuối tuần/ngày lễ)."
       ],
       warn: "Lưu ý: Dự án xoay ca 24/7. Ca do Team Lead sắp xếp (không chọn ca)."
     },
@@ -884,7 +910,7 @@
   }
 
   function renderHome(){
-    const jobsHtml = JOBS.map(jobCard).join("");
+    const jobsHtml = JOBS.filter(j=>j.status!=="paused").map(jobCard).join("");
     const shortList = SHORT_QA.map(x=>`<span class="pill">• ${escapeHtml(x)}</span>`).join("");
     const qaHtml = FULL_QA.map(item=>`
       <details>
@@ -943,6 +969,7 @@
 
   function renderJobs(){
     const filtered = JOBS.filter(j=>{
+      if(j.status === "paused") return false;
       const f = state.filters;
       if(f.loc !== "all"){
         if(f.loc === "Q9"){
@@ -1001,7 +1028,8 @@
   }
 
   function renderApply(){
-    const job = state.selectedJobId ? JOBS.find(j=>j.id===state.selectedJobId) : null;
+    const job = state.selectedJobId ? JOBS.find(j=>j.id===state.selectedJobId && j.status!=="paused") : null;
+    const pausedJob = (!job && state.selectedJobId) ? JOBS.find(j=>j.id===state.selectedJobId && j.status==="paused") : null;
     const note = job && job.schedule === "24-7"
       ? `<div class="warnline">ℹ️ Lưu ý: Dự án xoay ca 24/7. Ca do Team Lead sắp xếp (không chọn ca).</div>` : "";
 
@@ -1010,7 +1038,15 @@
         <h3 style="margin:0 0 6px">Bạn đang apply: ${escapeHtml(job.title)}</h3>
         <div class="addr">📍 ${escapeHtml(job.address)}</div>
         ${note}
-        <div class="small" style="margin-top:10px"><b>Tip:</b> Bạn nhớ chuẩn bị sẵn thời gian bắt đầu đi làm + ca có thể xoay (nếu là job 24/7).</div>
+        <div class="small" style="margin-top:10px"><b>Tip:</b> Bạn nhớ chuẩn bị: Họ tên + SĐT + Thời gian có thể bắt đầu đi làm + lưu ý ca có thể xoay (nếu là job 24/7).</div>
+      </div>
+    ` : pausedJob ? `
+      <div class="card" style="margin-top:12px" data-reveal>
+        <h3 style="margin:0 0 6px">Vị trí đang tạm ngưng tuyển</h3>
+        <div class="muted">Vị trí <b>${escapeHtml(pausedJob.title)}</b> hiện đang tạm ngưng. Bạn chọn vị trí khác ở trang “Vị trí” nhé.</div>
+        <div class="actions" style="margin-top:10px">
+          <button class="btn secondary" onclick="go('#/jobs')">Xem vị trí khác</button>
+        </div>
       </div>
     ` : `
       <div class="card" style="margin-top:12px" data-reveal>
@@ -1019,7 +1055,7 @@
       </div>
     `;
 
-    const options = JOBS.map(j=>`<option value="${j.id}" ${job && job.id===j.id ? "selected":""}>${escapeHtml(j.title)}</option>`).join("");
+    const options = JOBS.filter(j=>j.status!=="paused").map(j=>`<option value="${j.id}" ${job && job.id===j.id ? "selected":""}>${escapeHtml(j.title)}</option>`).join("");
 
     return `
       <div class="panel" data-reveal>
@@ -1144,6 +1180,10 @@
   function openJobModal(id){
     const job = JOBS.find(j=>j.id===id);
     if(!job) return;
+    if(job.status === "paused"){
+      toast("Vị trí này hiện đang tạm ngưng tuyển 🙏");
+      return;
+    }
 
     const badges = job.badges
       .map(b=>`<span class="badge ${b.includes("24/7")?"hot":""}">${escapeHtml(b)}</span>`)
@@ -1202,6 +1242,11 @@ function setFilter(key, value){ state.filters[key]=value; render(); }
   function resetFilters(){ state.filters={loc:"all", schedule:"all"}; render(); }
 
   function selectAndApply(id){
+    const job = getJobById(id);
+    if(job && job.status === "paused"){
+      toast("Vị trí này hiện đang tạm ngưng tuyển 🙏");
+      return;
+    }
     setSelectedJob(id);
     const bd = $("#modalBackdrop");
     if(bd && bd.classList.contains("open")) hideModal();
@@ -1218,6 +1263,11 @@ function setFilter(key, value){ state.filters[key]=value; render(); }
 
   function openForm(jobId){
     const id = jobId || state.selectedJobId;
+    const job = getJobById(id);
+    if(job && job.status === "paused"){
+      toast("Vị trí này hiện đang tạm ngưng tuyển 🙏");
+      return;
+    }
     cxTrackApply(id, "form");
     const url = getFormUrl(id);
     window.open(url, "_blank", "noopener,noreferrer");
@@ -1433,7 +1483,7 @@ Nhờ anh/chị hỗ trợ sắp lịch screening/PV giúp em ạ.`;
     window.addEventListener("keydown", (e)=>{ if(e.key === "Escape") hideModal(); });
     const url = new URL(location.href);
     const job = url.searchParams.get("job");
-    if(job && JOBS.some(j=>j.id===job)) setSelectedJob(job);
+    if(job && JOBS.some(j=>j.id===job && j.status!=="paused")) setSelectedJob(job);
     route();
   });
 </script>
